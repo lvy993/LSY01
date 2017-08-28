@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录界面</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/loadHead.css" />
+		<link rel="stylesheet" type="text/css" href="css/headAndfoot.css" />
+		<link rel="stylesheet" type="text/css" href="css/a-Login_Register.css" />
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div class="a_head">
+			<div class="a_headIn">
+				<span>所在城市：<a href="a-Switch_City.html">北京</a></span>
+				<a href="###">400-800-8820</a>
+				<a href="###">我是商家&nbsp;<strong>|</strong></a>
+				<a>欢迎光临易和生活港&nbsp;<strong>|</strong></a>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="a_roof">
+			<div class="a_roofIn">
+				<h1><a href="###"><img class="logo" src="img/img-b/b-logo2.png"/></a></h1>
+				<a href="###">会员登录</a>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--内容层-->
+		<div class="a_content">
+			<div class="win">
+				<div class="login">
+					<div class="border">
+						<div class="a_up">
+							<span>登录</span>
+							<a href="a-Phone_verification.html">手机验证码登录</a>
+							<div class="clear"></div>
+						</div>
+						<input type="text" placeholder="请输入手机号" id="phone" />
+						<img src="img/img-a/check .png" id="chacke" />
+						<div class="clear"></div>
+						<div class="warning">手机号不正确，请重新输入</div>
+						<input type="password" placeholder="请输入密码" />
+						<div class="validation">
+							<input type="text" placeholder="验证码" value="" />
+							<input id="yzm" type="text" readonly="readonly"><strong>看不清换一张</strong></input>
+							<div class="clear"></div>
+						</div>
+						<div class="forget">
+							<input type="checkbox" id="" value="">&nbsp;自动登录</input>
+							<a href="###">忘记密码？</a>
+							<div class="clear"></div>
+						</div>
+						<button>登录</button>
+						<button>会员注册</button>
+						<div class="clear"></div>
+						<div class="a_left"></div>
+						<div class="a_con">
+							<span>用合作网站登录</span>
+							<img src="img/img-a/log05.png" alt="" /><img src="img/img-a/log03.png" alt="" />
+							<div class="clear"></div>
+						</div>
+						<div class="a_right"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--尾部-->
+
+		<div class="foot">
+			<div class="foot1">
+				<div class="f1-mid">
+					<span>正品保障</span>
+					<span>全程追踪</span>
+					<span>客户监督</span>
+					<span>售后无忧</span>
+					<span>准时送达</span>
+				</div>
+			</div>
+			<div class="foot2">
+				<div class="f2-mid">
+					<div class="logo2"></div>
+					<div class="weixin">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>官方微信</span>
+					</div>
+					<div class="app">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>APP下载</span>
+					</div>
+					<dl>
+						<dt>关于易和</dt>
+						<dd>
+							<a href="###">新用户注册</a>
+						</dd>
+						<dd>
+							<a href="###">在线下单</a>
+						</dd>
+						<dd>
+							<a href="###">支付方式</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>配送说明</dt>
+						<dd>
+							<a href="###">运费说明</a>
+						</dd>
+						<dd>
+							<a href="###">配送方式</a>
+						</dd>
+						<dd>
+							<a href="###">发票说明</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="###">退换货规则</a>
+						</dd>
+						<dd>
+							<a href="###">服务保障承诺</a>
+						</dd>
+						<dd>
+							<a href="###">验货与签收</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>加盟易和</dt>
+						<dd>
+							<a href="###">加盟条款</a>
+						</dd>
+						<dd>
+							<a href="###">公司简介</a>
+						</dd>
+						<dd>
+							<a href="###">服务协议</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot3">
+				<ul>
+					<li>版权所有 © 2016易和生活港 保留所有权利 | 沪ICP备12042163</li>
+					<li>易和生活 纵享品质</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/top.js"></script>
+	<script type="text/javascript">
+		var num, num0, num1, num2, num3, num4, num5, num6, num7;
+		var a = num0,
+			b = num2,
+			c = num3;
+		$("#phone").on("input", function() {
+			num = $("#phone").val();
+			var txt = /^1(3|4|5|7|8)\d{9}$/
+			if(txt.test(num) == true) {
+				$(".warning").animate({
+					opacity: '0'
+				}, 20);
+				$("#chacke").show();
+			} else {
+				$(".warning").animate({
+					opacity: '1'
+				}, 20);
+				$("#chacke").hide();
+			}
+		})
+		$("#phone").on("input", function() {
+			if(!$("#phone").val()) {
+				$(".warning").animate({
+					opacity: '0'
+				}, 20);
+			}
+		})
+
+		function random() {
+			num0 = Math.floor(Math.random() * 9);
+			num1 = Math.floor(Math.random() * 25);
+			num2 = Math.floor(Math.random() * 25 + 26);
+			num3 = Math.floor(Math.random() * 25 + 51);
+			num4 = String.fromCharCode(65 + num1);
+			num5 = String.fromCharCode(72 + num2);
+			num6 = String.fromCharCode(47 + num3);
+			num7 = num6 + num5 + num0 + num4;
+			return num7;
+		}
+		random();
+		$("#yzm").val(num7);
+		$("strong").on("mousedown", function(e) {
+			e.preventDefault();
+			random();
+			$("#yzm").val(num7);
+		})
+		$("#yzm").on("mousedown", function(e) {
+			e.preventDefault();
+			random();
+			$("#yzm").val(num7);
+		})
+		$(".win button:nth-child(9)").on("click", function() {
+
+			if($(".validation>input:nth-child(1)").val() == $("#yzm").val()) {
+				window.open("b-Home.html", "_self");
+			} else {
+				alert("验证失败")
+			}
+		})
+		$(".win button:nth-child(10)").on("click", function() {
+			if($(".validation>input:nth-child(1)").val() == $("#yzm").val()) {
+				window.open("a-registered.html", "_self");
+			} else {
+				alert("验证失败")
+			}
+		})
+	</script>
+
+</html>

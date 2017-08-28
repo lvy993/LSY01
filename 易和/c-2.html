@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>积分商城</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				background: rgb(242,242,242);
+			}
+			.chuangkou{
+				width: 100%;
+				height: 362px;
+				position: relative;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			.chuangkou .content{
+				width: 700%;
+				height: 362px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.content img{
+				width:14.285%;
+				height: 362px;
+			}
+			.anniu {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				text-align: center;
+				padding-bottom: 10px;
+			}
+			
+			.anniu span {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+				color: white;
+				text-align: center;
+				line-height: 20px;
+			}
+			
+			.anniu .dian {
+				background: red;
+			}
+			
+			.anniu .meidian {
+				background: black;
+			}
+			.neirong{
+				width: 1180px;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			.neirong ul li{
+				width: 218px;
+				height: 390px;
+				display: inline-block;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				border: 1px solid rgb(225,225,225);
+				background: #FFFFFF;
+			}
+			.neirong ul li:nth-child(1){
+				width: 218px;
+				height: 390px;
+				display: inline-block;
+				border: 1px solid rgb(255,108,0);
+				margin-right: 20px;
+				margin-bottom: 20px;
+			}
+			.neirong ul li:nth-child(5n){
+				margin-right:0;
+			}
+			.neirong ul li img{
+				display: block;
+			}
+			.neirong ul li span:nth-of-type(1){
+				display: block;
+				line-height: 20px;
+				margin: 20px;
+				height: 40px;
+				font-size: 14px;
+				color: #666666;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+			.neirong ul li span:nth-of-type(2){
+				font-size: 18px;
+				color: #EA0000;
+				margin-left: 20px;
+			}
+			.neirong ul li span:nth-of-type(3){
+				font-size: 14px;
+				color: #666666;
+				margin-left: 25px;
+			}
+			.neirong ul li button{
+				display: block;
+				margin: 0 auto;
+				margin-top: 20px;
+				width: 90px;
+				height: 30px;
+				border: none;
+				border-radius: 5px;
+				background: rgb(236,106,23);
+				color: #FFFFFF;
+			}
+			
+			
+			
+			.yeshu{
+				width: 949px;
+				height: 80px;
+				padding-top: 40px;
+				padding-left: 110px;
+				margin: 0 auto;
+			}
+			 .yeshu button{
+				width: 37px;
+				height: 32px;
+				font-size: 16px;
+				color: #666666;
+				text-align: center;
+				background: #FFFFFF;
+				border: 1px solid rgb(210,210,210);
+				outline: none;
+			}
+			.yeshu button:nth-child(1){
+				width: 61px;
+				height: 32px;
+				color: #008de1;	
+			}
+			.yeshu button:nth-child(2){
+				width: 88px;
+				height: 32px;
+				margin-left: 20px;
+			}
+			.yeshu button:nth-child(3){
+				background: rgb(0,141,225);
+				color: #FFFFFF;
+			}
+			.yeshu button:nth-child(6){
+				border: none;
+				margin-left: -4px;
+			}
+			.yeshu button:nth-child(3),.yeshu button:nth-child(4),.yeshu button:nth-child(5),.yeshu button:nth-child(7),.yeshu button:nth-child(8),.yeshu button:nth-child(9){
+				margin-left: -5px;
+			}
+			.yeshu button:nth-child(9){
+				width: 88px;
+				height: 32px;
+			}
+			.yeshu span{
+				font-size: 16px;
+				color: #666666;
+			}
+			.yeshu span:nth-of-type(1){
+				margin-left: 20px;
+			}
+			.yeshu input{
+				width: 50px;
+				height: 30px;
+				border: 1px solid rgb(210,210,210);
+			}
+			.yeshu button:nth-of-type(10){
+				width: 90px;
+				height: 35px;
+				margin-left: 20px;
+				color: #FFFFFF;
+				background: rgb(0,141,225);
+				border: none;
+				border-radius: 5px;
+			}
+			.yeshu span:nth-of-type(3){
+				margin-left: 10px;
+			}
+			.san{
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.5);
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.san .neirong1{
+				width: 646px;
+				height: 400px;
+				border: 5px solid rgb(226,226,226);
+				position: fixed;
+				left: 614px;
+				top: 150px;
+				background: #FFFFFF;
+			}
+			.san .neirong1 .shouhuodizhi{
+				width: 616px;
+				height: 57px;
+				text-align: left;
+				padding-left: 30px;
+				line-height: 57px;
+				font-size: 18px;
+				color: #008DE1;
+				border-bottom: 1px solid rgb(211,211,211);
+			}
+			.san .neirong1 ul{
+				width:626px ;
+				height: 220px;
+				margin-top: 30px;
+			}
+			
+			.san .neirong1 ul li{
+				width:626px;
+				height: 35px;
+				line-height: 35px;
+				font-size: 18px;
+				color: #333333;
+				padding-left: 20px;
+				margin-bottom: 20px;
+			}
+			.san .neirong1 ul li div:nth-child(1){
+				width: 120px;
+				text-align: right;
+				height: 35px;
+				line-height: 35px;
+				display:inline-block;
+			}
+			.san .neirong1 ul li:nth-child(2) div:nth-child(1){
+				position: relative;
+				bottom: 10px;
+			}
+			.san .neirong1 ul li:nth-child(1) input{
+				width: 328px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				display: inline-block;
+			}
+			
+			.san .neirong1 ul li:nth-child(3) input{
+				width: 427px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				display: inline-block;
+			}
+			
+			.san .neirong1 ul li:nth-child(4) input:nth-of-type(1){
+				width: 130px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				display: inline-block;
+			}
+			
+			.san .neirong1 ul li:nth-child(4) input:nth-of-type(2){
+				width: 38px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				display: inline-block;
+			}
+			
+			.san .neirong1 ul li:nth-child(4) input:nth-of-type(3){
+				width: 130px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				display: inline-block;
+			}
+			
+			.san .neirong1 ul li:nth-child(4) div:nth-of-type(2){
+				width: 110px;
+				text-align:right;
+				height: 35px;
+				line-height: 35px;
+				display:inline-block;
+			}
+			
+			/*下拉菜单省份*/
+			.san .neirong1 ul li:nth-child(2) .shengfen{
+				width: 138px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				background: url(img/img-c/c-2/9.png) no-repeat right 10px center;
+				position: relative;
+				display: inline-block;
+			}
+			.san .neirong1 ul li:nth-child(2) .shengfen .mrsf{
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+			}
+			.san .neirong1 ul li:nth-child(2) .shengfen .sf{
+				width: 140px;
+				height: 70px;
+				position: absolute;
+				top: 33px;
+				left: -1px;
+				text-align: left;
+				line-height: 33px;
+				display: none;
+				background: #fcfcfc;
+				z-index: 2;
+			}
+			.san .neirong1 ul li:nth-child(2) .shengfen .sf div:nth-child(1){
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+				border: 1px solid rgb(211,211,211);
+				line-height: 33px;
+			}
+			.san .neirong1 ul li:nth-child(2) .shengfen .sf div:nth-child(2){
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 34px;
+				left: 0;
+				text-align: left;
+				border: 1px solid rgb(211,211,211);
+				line-height: 33px;
+			}
+			
+			
+			
+			/*下拉菜单城市*/
+			.san .neirong1 ul li:nth-child(2) .chengshi{
+				width: 138px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				background: url(img/img-c/c-2/9.png) no-repeat right 10px center;
+				position: relative;
+				display: inline-block;
+			}
+			.san .neirong1 ul li:nth-child(2) .chengshi .mrcs{
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+			}
+			.san .neirong1 ul li:nth-child(2) .chengshi .cs{
+				width: 140px;
+				height: 70px;
+				position: absolute;
+				top: 33px;
+				left: -1px;
+				text-align: left;
+				line-height: 33px;
+				display: none;
+				background: #fcfcfc;
+				z-index: 2;
+			}
+			.san .neirong1 ul li:nth-child(2) .chengshi .cs div:nth-child(1){
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+				border: 1px solid rgb(211,211,211);
+				line-height: 33px;
+			}
+			.san .neirong1 ul li:nth-child(2) .chengshi .cs div:nth-child(2){
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 34px;
+				left: 0;
+				text-align: left;
+				border: 1px solid rgb(211,211,211);
+				line-height: 33px;
+			}
+			
+			
+			/*下拉菜单地区*/
+			.san .neirong1 ul li:nth-child(2) .diqu{
+				width: 138px;
+				height: 33px;
+				border: 1px solid rgb(211,211,211);
+				background: url(img/img-c/c-2/9.png) no-repeat right 10px center;
+				position: relative;
+				display: inline-block;
+			}
+			.san .neirong1 ul li:nth-child(2) .diqu .mrdq{
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+			}
+			.san .neirong1 ul li:nth-child(2) .diqu .dq{
+				width: 140px;
+				height: 70px;
+				position: absolute;
+				top: 33px;
+				left: -1px;
+				text-align: left;
+				line-height: 33px;
+				display: none;
+				background: #fcfcfc;
+				z-index: 2;
+			}
+			.san .neirong1 ul li:nth-child(2) .diqu .dq div:nth-child(1){
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: left;
+				border: 1px solid rgb(211,211,211);
+				line-height: 33px;
+			}
+			.san .neirong1 ul li:nth-child(2) .diqu .dq div:nth-child(2){
+				width: 128px;
+				height: 33px;
+				padding-left: 10px;
+				position: absolute;
+				top: 34px;
+				left: 0;
+				text-align: left;
+				border: 1px solid rgb(211,211,211);
+				line-height: 33px;
+			}
+			.san .neirong1 .queren{
+				width: 326px;
+				height: 35px;
+				padding: 28px 160px;
+				overflow: hidden;
+			}
+			.san .neirong1 .queren button{
+				width: 90px;
+				height: 35px;
+				border: none;
+				border-radius: 5px;
+				color: #FFFFFF;
+				font-size: 18px;
+			}
+			.san .neirong1 .queren button:nth-child(1){
+				background: rgb(153,153,153);
+				float: left;
+			}
+			.san .neirong1 .queren button:nth-child(2){
+				background: rgb(236,106,23);
+				float: right;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/headAndfoot.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="top">
+			<!--上部分-->
+			<div class="top1">
+				<div class="top1-mid">
+					<div class="mt-city">
+						<span>所在城市：</span>
+						<span id="citys">北京</span>
+					</div>
+					<div class="mt-infor">
+						<span>您好，<a href="###"  class="username">17701269859</a></span>
+						<span><a href="###">退出</a></span>
+						<span><a href="###">我的订单</a></span>
+						<span><a href="###">我的消息</a></span>
+						<span><a href="###">我是商家</a></span>
+						<span>
+							<a href="###">400-800-8888</a>							
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--下部分-->
+			<div class="top2">
+				<div class="top2-mid">
+					<!--头部中间-->
+					<div class="search">	
+						<!--logo-->
+						<h1>
+							<a href="###"><img src="img/img-b/b-logo1.png"/></a>				
+						</h1>
+						<!--搜索-->
+						<div class="goods">
+							<div class="fenlei">
+								<span class="select">商家</span>
+								<span>商品</span>
+							</div>
+							<div class="sousuo">
+								<input type="text" value="" placeholder="请输入关键字进行筛选"/>
+								<span></span>
+							</div>
+							<div class="hot">
+								<span><strong>热门:</strong></span>
+								<a href="###">酒店</a>
+								<a href="###">洗车</a>
+								<a href="###">餐饮</a>
+								<a href="###">进口</a>
+								<a href="###">旅游</a>
+								<a href="###">如家</a>
+							</div>
+						</div>
+						<!--我的-->
+						<div class="mine">
+							<a href="###">
+								<div class="my-yihe">我的易和<span></span></div>
+							</a>
+							<a href="###">
+								<div class="my-car">购物车
+									<span></span>								
+								</div>
+							</a>							
+							<div class="clear"></div>
+							<div class="tip">0
+								<img src="img/img-b/b-jiao.png"/>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>			
+				</div>
+				<!--头部下-->
+				<div class="nav">
+					<div class="trade">
+						<span>行业分类</span>
+						<span class="tr-arrow"></span>
+						<div class="menu">
+							<ul>
+								<li><a href="###"><span>服装市场</span><span></span></a></li>
+								<li><a href="###"><span>建材装修</span><span></span></a></li>
+								<li><a href="###"><span>休闲娱乐</span><span></span></a></li>
+								<li><a href="###"><span>生活服务</span><span></span></a></li>
+								<li><a href="###"><span>3C市场</span><span></span></a></li>
+								<li><a href="###"><span>丽人</span><span></span></a></li>
+								<li><a href="###"><span>本地生活</span><span></span></a></li>
+								<li><a href="###"><span>购物</span><span></span></a></li>
+								<li><a href="###"><span>电子数码</span><span></span></a></li>
+							</ul>
+							<div class="menu-det">
+								<div class="detail">
+									<a href="###">手机商家</a>
+									<a href="###">电脑及配件</a>
+									<a href="###">厨房电器件</a>
+									<a href="###">智能生活</a>
+									<a href="###">显示器</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="###">首页</a>
+					<a href="###">精选品牌</a>
+					<a href="###">今日特价</a>
+					<a href="###" class="select">积分商城</a>
+					<a href="###">加入易和</a>
+					<div class="kefu">
+						<span>在线客服</span>
+						<ul>
+							<li></li>
+							<li class="qq-serv"><a href="###">QQ客服1</a></li>
+							<li class="qq-serv"><a href="###">QQ客服2</a></li>
+							<li class="qq-serv"><a href="###">QQ客服3</a></li>
+							<li><img src="img/img-b/b-erweima.png"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="chuangkou">
+			<div class="content">
+				<img src="img/img-c/c-2/1.png" /><img src="img/img-c/c-2/2.png" /><img src="img/img-c/c-2/3.png" /><img src="img/img-c/c-2/4.png" /><img src="img/img-c/c-2/5.png" /><img src="img/img-c/c-2/6.png" /><img src="img/img-c/c-2/1.png" />
+			</div>
+			<div class="anniu">
+				<span class="dian">1</span>
+				<span class="meidian">2</span>
+				<span class="meidian">3</span>
+				<span class="meidian">4</span>
+				<span class="meidian">5</span>
+				<span class="meidian">6</span>
+			</div>
+		</div>
+		<div class="neirong">
+			<ul>
+				<li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li><li>
+					<img src="img/img-c/c-2/图层 105.png"/>
+					<span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人送朋友的不二选择自家礼包送亲人</span>
+					<span>积分：50</span><span>价值¥20.0</span>
+					<button>兑换</button>
+				</li>
+			</ul>
+		</div>
+		<div class="yeshu">
+							<button>首页</button>
+							<button>上一页</button>
+							<button>1</button>
+							<button>2</button>
+							<button>3</button>
+							<b>···</b>
+							<button>58</button>
+							<button>59</button>
+							<button>下一页</button>
+							<span>共59页，到第</span><input type="text" name="" id="" value="" /><span>页</span>
+							<button>确定</button>
+							<span>共215条</span>
+		</div>
+		<div class="san">
+				<div class="neirong1">
+					<div class="shouhuodizhi">收货地址</div>
+					<ul class="dizhixinxi">
+						<li><div><span style="color: #ec6a17;">*</span>收货人姓名：</div><input type="text" name="" id="" value="" /></li>
+						<li>
+							<div><span style="color: #ec6a17;">*</span>所在地区：</div><div class="shengfen"><div class="mrsf">北京市</div><div class="sf"><div>上海市</div><div>深圳市</div></div></div>
+							<div class="chengshi"><div class="mrcs">北京市</div><div class="cs"><div>上海市</div><div>深圳市</div></div></div>
+							<div class="diqu"><div class="mrdq">海淀区</div><div class="dq"><div>浦东新区</div><div>福田区</div></div></div>	
+						</li>
+						<li>
+							<div><span style="color: #ec6a17;">*</span>详细地址：</div><input type="text" name="" id="" value="" />
+						</li>
+						<li>
+							<div><span style="color: #ec6a17;">*</span>联系电话：</div><input type="text" name="" id="" value="" /><div>或固定电话：</div><input type="text" name="" id="" value="" /> - <input type="text" name="" id="" value="" />
+						</li>
+					</ul>
+					<div class="queren">
+						<button>返回</button><button>保存</button>
+					</div>
+				</div>
+			</div>
+			<!--底部-->
+			<div class="foot">
+				<div class="foot1">
+					<div class="f1-mid">
+						<span>正品保障</span>
+						<span>全程追踪</span>
+						<span>客户监督</span>
+						<span>售后无忧</span>
+						<span>准时送达</span>
+					</div>
+				</div>
+				<div class="foot2">
+					<div class="f2-mid">
+						<div class="logo2"></div>
+						<div class="weixin">
+							<div>
+								<img src="img/img-b/b-erweima.png" alt="" />
+							</div>
+							<span>官方微信</span>
+						</div>
+						<div class="app">
+							<div>
+								<img src="img/img-b/b-erweima.png" alt="" />
+							</div>
+							<span>APP下载</span>
+						</div>
+						<dl>
+							<dt>关于易和</dt>
+							<dd><a href="###">新用户注册</a></dd>
+							<dd><a href="###">在线下单</a></dd>
+							<dd><a href="###">支付方式</a></dd>
+						</dl>
+						<dl>
+							<dt>配送说明</dt>
+							<dd><a href="###">运费说明</a></dd>
+							<dd><a href="###">配送方式</a></dd>
+							<dd><a href="###">发票说明</a></dd>
+						</dl>
+						<dl>
+							<dt>售后服务</dt>
+							<dd><a href="###">退换货规则</a></dd>
+							<dd><a href="###">服务保障承诺</a></dd>
+							<dd><a href="###">验货与签收</a></dd>
+						</dl>
+						<dl>
+							<dt>加盟易和</dt>
+							<dd><a href="###">加盟条款</a></dd>
+							<dd><a href="###">公司简介</a></dd>
+							<dd><a href="###">服务协议</a></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="foot3">
+					<ul>
+						<li>版权所有 © 2016易和生活港  保留所有权利 | 沪ICP备12042163</li>
+						<li>易和生活  纵享品质</li>
+					</ul>
+				</div>
+			</div>
+	</body>
+	<script src="js/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/top.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+				//定义函数完成自动轮播
+		var currentIndex = 1;//用来记录当前滚动到的图片编号
+		var timer1,timer2;//用来存储两个时间计时器
+		startScrollAuto();
+		function startScrollAuto(){
+			//控制滚动的频率
+			clearInterval(timer1);
+			timer1 = setInterval(function(){
+				var b = -100*(currentIndex-1);
+				var c = -100;
+				var t = 0;
+				var d = 10;
+				clearInterval(timer2);
+				timer2 = setInterval(function(){
+					t++;
+					$(".content").css({
+						left:Tween.Linear(t,b,c,d)+"%",
+					});
+					if(t >= d){
+						clearInterval(timer2);
+						currentIndex++;
+						if(currentIndex>=7){
+							$(".content").css({
+								left:0,
+							});
+							currentIndex = 1;
+						}
+						changeBackground();
+					}
+				},100);
+			},2000);			
+		}
+		//定义函数完成手动轮播
+		var timer3;
+		$("span").on("mouseenter",function(){
+			clearInterval(timer1);
+			clearInterval(timer2);
+			//修改currentIndex值
+			currentIndex = $(this).index()+1;
+			//修改span标签的背景颜色
+			changeBackground();
+			var b = -100*(currentIndex-1);
+			var end = $(this).index()*(-100);		
+			var c = end - b;
+			var t = 0;
+			var d = 20;
+			clearInterval(timer3);
+			timer3 = setInterval(function(){
+				t++;
+				$(".content").css({
+					left:Tween.Linear(t,b,c,d)+"%",
+				});
+				if(t >= d){
+					clearInterval(timer3);					
+					//开启自动轮播
+					startScrollAuto();
+				}
+			},100);
+		});
+		
+		
+		//定义函数完成对应编号按钮的背景颜色切换
+		/*
+		 在JQ中通过选择器选择的标签最终以一个JQ对象返回，获取对象中指定下标的标签元素，通过eq（index）。注意系统在查询标签的过程中会自动为每一个查询到的标签添加index属性，获取对应的index使用方法index().
+		 * */
+		function changeBackground(){
+			var spans = $(".chuangkou .anniu span");
+			spans.attr("class","meidian");
+			spans.eq(currentIndex - 1).attr("class","dian");
+		}
+		
+		
+		
+		//点击页数
+		$(".yeshu button").on("click",function(){
+			$(".yeshu button").css({
+				"background": "#ffffff",
+				"color": "#666666",
+			});
+			$(this).css({
+				"background": "rgb(0,141,225)",
+				"color": "#ffffff",
+			})
+		})
+		
+		
+		//点击兑换
+		$(".neirong ul li button").on("click",function(){
+			$(".neirong ul li").css({
+				"border":"1px solid rgb(225,225,225)",
+			})
+			$(this).parent().css({
+				"border":"1px solid rgb(255,108,0)",
+			});
+			$(".san").show();	
+		});
+		
+		//收货地址操作
+		$(".neirong1 .queren button:nth-of-type(1)").on("click",function(){
+			$(".san").hide();
+		});
+		
+		
+		
+		//下拉菜单省份
+		var dian = false;
+		$(".shengfen .mrsf").on("click",function(){
+			if(dian==false){
+				$(".shengfen .sf").show();
+				dian=true;
+			}else if(dian==true){
+				$(".shengfen .sf").hide();
+				dian=false;	
+			};
+			$(document).on("click",".sf div",function(){
+					var xuanze = $(this).html();
+					$(".shengfen .mrsf").html(xuanze);
+					$(".shengfen .sf").hide();
+					dian=false;
+				});
+		});
+		
+		//下拉菜单城市
+		$(".chengshi .mrcs").on("click",function(){
+			if(dian==false){
+				$(".chengshi .cs").show();
+				dian=true;
+			}else if(dian==true){
+				$(".chengshi .cs").hide();
+				dian=false;	
+			};
+			$(document).on("click",".cs div",function(){
+					var xuanze = $(this).html();
+					$(".chengshi .mrcs").html(xuanze);
+					$(".chengshi .cs").hide();
+					dian=false;
+				});
+		});
+		
+		//下拉菜单地区
+		$(".diqu .mrdq").on("click",function(){
+			if(dian==false){
+				$(".diqu .dq").show();
+				dian=true;
+			}else if(dian==true){
+				$(".diqu .dq").hide();
+				dian=false;	
+			};
+			$(document).on("click",".dq div",function(){
+					var xuanze = $(this).html();
+					$(".diqu .mrdq").html(xuanze);
+					$(".diqu .dq").hide();
+					dian=false;
+				});
+		});
+		
+		
+	</script>
+</html>

@@ -1,0 +1,222 @@
+body {
+	background: #eeeeee;
+}
+/*轮播图*/
+			.b-win{
+				width: 100%;
+				height: 470px;
+				position: relative;
+				overflow: hidden;
+			}
+			.b-win .content{
+				width: 600%;
+				position: absolute;
+				top: 0;
+			}
+			.b-win .content a{
+				width: 16.66%;
+				display: block;
+				float: left;
+			}
+			.b-win .content img{
+				width: 100%;
+				height: 470px;
+				display: block;
+			}
+			.b-win .win-foot{
+				width: 100%;
+				padding-bottom: 24px;
+				text-align: center;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			.b-win .win-foot span{
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				border-radius: 8px;
+				cursor: pointer;
+				background: #323333;
+				margin: 0 3px;
+			}
+			.b-win .win-foot .sel-point{
+				background: #FF6C00;
+			}
+			.mid{
+				width: 1180px;
+				margin: 0 auto;				
+			}
+			.mid .poster{
+				overflow: hidden;
+			}
+			.mid .poster img{
+				display: block;
+				width: 287.5px;
+				float: left;
+				margin: 10px 5px;
+			}
+			.mid .poster img:first-child{
+				margin-left: 0;
+			}
+			.mid .poster img:last-child{
+				margin-right: 0;
+			}
+			/*精选品牌*/
+			.mid .brand h2{
+				font-size: 36px;
+				color: #FF6C00;
+				line-height: 90px;			
+			}
+			.mid .brand h2 strong{
+				color: #008DE1;
+			}
+			.mid .brand h2 span{
+				font-size: 18px;
+				color: black;
+				font-weight: bolder;
+				padding-left: 10px;
+			}
+			.mid .brand .br-con,.mid .car-der .car-con{
+				overflow: hidden;
+				padding: 11px 10px;
+				background: white;
+				border: 1px solid #d4d4d4;
+				border-top: 3px solid #008DE1;
+			}
+			.mid .brand .br-con .br-img,.mid .car-der .car-con .car-img{
+				margin-right: 10px;
+				float: left;
+			}
+			.mid .brand .br-con .br-img img,.mid .car-der .car-con img{
+				display: block;
+			}
+			.mid .brand .br-con table{
+				border: 1px solid #E4E4E4;
+				float: left;
+				border-collapse: collapse;
+			}
+			.mid .brand .br-con table td{
+				padding: 16px 30px;
+				background: white;
+				border: 1px solid #E4E4E4;
+			}
+			.mid .brand .br-con table td:hover{
+				border: 1px solid #FF6C00;
+				outline: 1px solid #FF6C00;
+				border: none;
+			}
+			/*汽车*/
+			.mid .car-der{
+				margin-top: 16px;
+			}
+			.mid .car-der .der-top strong{
+				width: 144px;
+				display: inline-block;
+				background: url(../img/img-b/b-car.png) no-repeat left;
+				padding-left: 40px;
+				line-height: 50px;
+				font-size: 24px;
+				color: #008DE1;
+			}
+			.mid .hotel .der-top strong{
+				background: url(../img/img-b/b-hotellogo.png) no-repeat left;
+			}
+			.mid .man .der-top strong{
+				background: url(../img/img-b/b-manlogo.png) no-repeat left;
+			}
+			.mid .build .der-top strong{
+				background: url(../img/img-b/b-buildlogo.png) no-repeat left;
+			}
+			.mid .car-der .der-top .car-class{
+				display: inline-block;
+				font-size: 18px;				
+				margin-left: 148px;
+				position: relative;
+			}
+			.mid .car-der .der-top .car-class .slip{
+				width: 106px;
+				height: 1px;
+				border: 1px solid #df701c;
+				background: #FF6C00;
+				position: absolute;
+				bottom: -19px;
+				left: 0;
+			}
+			.mid .car-der .der-top .car-class .slip span{
+				display: block;
+				margin: 0 auto;
+				margin-top: -3px;
+				width: 3px;
+				height: 3px;
+				background: #FF6C00;
+				border-left: 1px solid #DF701C;
+				border-top: 1px solid #DF701C;
+				-webkit-transform: rotateZ(45deg);
+				-moz-transform: rotateZ(45deg);
+				-ms-transform: rotateZ(45deg);
+				-o-transform: rotateZ(45deg);
+				transform: rotateZ(45deg);
+			}
+			.mid .car-der .der-top .car-class a{
+				display: inline-block;
+				color: #323333;
+				width: 108px;
+				text-align: center;
+				margin-right: 26px;
+				float: left;
+			}
+			.mid .car-der .car-con .cars{
+				float: left;
+			}
+			.mid .car-der .car-con .cars{
+				padding-bottom: 14px;				
+			}
+			.mid .car-der .car-con .cars:hover{
+				background: #f2f2f2;
+			}
+			.mid .car-der .car-con .cars span{
+				display: block;
+			}
+			.mid .car-der .car-con .cars .car{
+				position: relative;
+				margin-bottom: 7px;
+			}
+			.car-con .b-allcar .cars .car span{
+				width: 100%;
+				font-size: 18px;
+				color: white;
+				line-height: 30px;
+				background: rgba(0,0,0,0.5);
+				opacity: 0.8;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				text-align: center;
+			}
+			.car-con .b-allcar .cars:nth-child(3n+2){
+				margin: 0 9px;
+			}
+			.car-con .cars>span{
+				font-size: 14px;
+				color: #323333;
+				line-height: 28px;
+				margin-left: 10px;
+				padding-left: 24px;
+			}
+			.car-con .cars>span:nth-child(2){
+				background: url(../img/img-b/b-name.png) no-repeat left;
+			}
+			.car-con .cars>span:nth-child(3){
+				background: url(../img/img-b/b-tel.png) no-repeat 2px;
+			}
+			.car-con .cars>span:nth-child(4){
+				background: url(../img/img-b/b-gps.png) no-repeat 2px;
+			}
+			/*横幅*/
+			.mid .hengfu{
+				margin: 30px 0;
+			}
+			.mid .hengfu img{
+				display: block;
+			}

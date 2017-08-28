@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/headAndfoot.css"/>
+		<link rel="stylesheet" type="text/css" href="css/b-new-user.css"/>
+		<title>订单详情</title>
+		<style type="text/css">
+			.top .top2 .nav>a:nth-child(2){
+				color: black;
+			}
+			body{
+				background: #F2F2F2;
+			}
+			.mid{
+				width: 1180px;
+				margin: 0 auto;
+			}
+			.mid .b-place,.mid .b-place a{
+				line-height: 54px;
+				font-size: 16px;
+				color: #666666;
+			}
+			.mid .b-place strong{
+				font-weight: normal;
+				padding: 0 6px;
+			}
+			.mid .b-place span{
+				color: #FF6C00;
+			}
+			/*内容*/
+			.mid .content{
+				overflow: hidden;
+				margin-top: 20px;
+				margin-bottom: 40px;
+			}
+			.mid .content .content-list{
+				float: left;
+				background: white;
+				width: 172px;
+				border: 1px solid #D3D3D3;
+			}
+			.mid .content .content-list>a{
+				display: block;
+				background: url(../img/img-b/b-home-logo.png) no-repeat 17px center;
+				padding-left: 45px;
+				font-size: 18px;
+				color: #666666;
+				line-height: 56px;
+				font-family: "microsoft yahei";
+				border-bottom: 1px solid #D3D3D3;
+			}
+			.mid .content .content-list .con-detail{
+				padding: 10px 20px;
+			}
+			.mid .content .content-list .con-detail dl a{
+				display: block;				
+				line-height: 36px;
+				color: #666666;
+				font-family: simsun;
+			}
+			.mid .content .content-list .con-detail dl dd{
+				overflow: hidden;
+			}
+			/*选中*/
+			.mid .content .content-list .con-detail dl dd .sel-list,.mid .content .content-list .con-detail dl dd a:hover{
+				color: #FF6C00;
+				text-decoration: underline;
+			}
+			.mid .content .content-list .con-detail dl dt a{
+				font-weight: bolder;
+				font-size: 16px;
+			}
+			.mid .content .content-list .con-detail dl a span{
+				float: right;
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				border-right: 1px solid #666666;
+				border-bottom: 1px solid #666666;
+				margin-top: 13px;
+				-webkit-transform: rotateZ(-45deg);
+				-moz-transform: rotateZ(-45deg);
+				-ms-transform: rotateZ(-45deg);
+				-o-transform: rotateZ(-45deg);
+				transform: rotateZ(-45deg);
+				transition: 0.3s;
+			}
+			.mid .content .content-list .con-detail dl dd a{
+				font-size: 14px;
+			}
+			.mid .content .content-list>a {
+				background: url(img/img-b/b-person-center.png) no-repeat 17px center;
+			}
+			.mid .content .my-order{
+				width: 984px;
+				background: white;
+				border: 1px solid #D3D3D3;
+				float: left;
+				margin-left: 20px;
+			}
+			.mid .content .my-order a{
+				color: white;
+			}
+			.mid .content .my-order .order-top{
+				padding: 0 20px;
+				line-height: 58px;
+				border-bottom: 1px solid #D3D3D3;
+			}
+			.mid .content .my-order .order-top span{
+				color: #333333;
+				font-size: 18px;
+				display: inline-block;
+			}
+			.mid .content .my-order .order-top span:first-child{
+				width: 370px;
+			}
+			.mid .content .my-order .order-top span:nth-child(2){
+				width: 340px;
+			}
+			.mid .content .my-order .order-top span:nth-child(3){
+				margin-right: 40px;
+			}
+			.mid .content .my-order .order-top span strong{
+				font-weight: normal;
+				color: #FF6C00;
+			}
+			.mid .content .my-order .order-top span a{
+				font-size: 14px;
+				background: #FF6C00;
+				display: block;
+				width: 90px;
+				line-height: 30px;
+				border-radius: 5px;
+				text-align: center;
+			}
+			.mid .content .my-order .order-top span:last-child a{
+				background: #999999;
+			}
+			/*订单详情*/			
+			.mid .content .my-order .order-content{
+				padding: 20px;
+				color: #666666;
+			}
+			.mid .content .my-order .order-content dl{
+				
+			}
+			.mid .content .my-order .order-content dl dt{
+				font-size: 16px;
+				color: #FF6C00;
+				line-height: 52px;
+				padding-left: 20px;
+			}
+			.mid .content .my-order .order-content dl dd{
+				background: #f6f6f6;
+				border-left: 1px solid #ececec;
+				border-right: 1px solid #ececec;	
+				font-size: 14px;
+				line-height: 36px;
+				padding: 0 20px;
+			}
+			.mid .content .my-order .order-content dl dd:first-child{
+				border-top: 1px solid #ECECEC;
+			}
+			.mid .content .my-order .order-content dl dd:last-child{
+				border-bottom: 1px solid #ECECEC;
+			}
+			.mid .content .my-order .order-content dl dd span{
+				display: inline-block;
+				font-weight: bolder;
+				width: 145px;
+			}
+			.mid .content .my-order .order-content dl dd i{
+				font-style: normal;
+				font-weight: lighter;
+			}
+			/*商家*/
+			.mid .content .my-order .order-content .stores{
+				border: 1px solid #D3D3D3;
+				margin-top: 20px;
+			}
+			.mid .content .my-order .order-content .stores>div{
+				padding: 0 20px;
+			}
+			.mid .content .my-order .order-content .stores>div:first-child{
+				background: #F2F2F2;
+			}
+			.mid .content .my-order .order-content .stores>div:first-child span{
+				color: #333333;
+				display: inline-block;
+				font-size: 14px;
+				line-height: 34px;
+			}
+			.mid .content .my-order .order-content .stores>div span:first-child{
+				display: inline-block;
+				width: 366px;
+			}
+			.mid .content .my-order .order-content .stores>div>span:nth-child(n+2){
+				display: inline-block;
+				text-align: center;
+				width: 100px;
+				margin-right: 30px;
+			}
+			.mid .content .my-order .order-content .stores .store-present{
+				line-height: 80px;
+				font-size: 12px;
+				border-bottom: 1px solid #DEDEDE;
+			}
+			.mid .content .my-order .order-content .stores .store-present .store-img{
+				width: 60px;
+				display: inline-block;
+				margin-right: 12px;
+				vertical-align: middle;
+			}
+			.mid .content .my-order .order-content .stores .store-present .store-img img{
+				display: block;
+				width: 100%;
+			}
+			.mid .content .my-order .order-content .stores .store-present span strong{
+				color: #666666;
+				display: inline-block;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				vertical-align: middle;
+				max-width: 290px;
+			}
+			.mid .content .my-order .order-content .stores .store-present span b{
+				font-weight: normal;
+				display: block;
+				color: #999999;
+				text-align: left;
+				line-height: 24px;
+			}
+			.mid .content .my-order .order-content .stores .store-present>span:nth-child(2){
+				vertical-align: middle;
+			}
+			/*价格*/
+			.mid .content .my-order .order-content .stores .prize{
+				
+			}
+			.mid .content .my-order .order-content .stores .prize span:nth-child(n+3){
+				width: 130px;
+				margin-right: 0;
+				font-weight: bolder;
+			}
+			.mid .content .my-order .order-content .stores .prize span b,.mid .content .my-order .order-content .stores .prize span strong{
+				display: block;
+				line-height: 34px;
+			}
+			.mid .content .my-order .order-content .stores .prize span b{
+				color: #333333;
+				font-size: 16px;
+			}
+			.mid .content .my-order .order-content .stores .prize span strong{
+				color: #FF6C00;
+				font-size: 18px;
+			}
+			.mid .content .my-order .order-content .points{
+				text-align: right;
+				line-height: 98px;
+				border-bottom: 1px solid #D3D3D3;
+				font-weight: bolder;
+			}
+			.mid .content .my-order .order-content .points span{
+				display: inline-block;
+			}
+			.mid .content .my-order .order-content .points span:first-child{
+				font-size: 16px;
+				color: #333333;
+				margin-right: 50px;
+			}
+			.mid .content .my-order .order-content .points span:last-child{
+				font-size: 18px;
+				color: #FF6C00;
+				margin-right: 36px;
+			}
+			
+			/*实付*/
+			.mid .content .my-order .order-content .fact-pay{
+				text-align: right;
+				padding-right: 20px;
+			}
+			.mid .content .my-order .order-content .fact-pay .fact-money{
+				font-size: 24px;
+				line-height: 98px;
+			}
+			.mid .content .my-order .order-content .fact-pay .fact-money span:first-child{
+				color: #333333;
+			}
+			.mid .content .my-order .order-content .fact-pay .fact-money span:last-child{
+				color: #FF6C00;
+			}
+			.mid .content .my-order .order-content .fact-pay .btns{
+				margin-top: 30px;
+				margin-bottom: 20px;
+			}
+			.mid .content .my-order .order-content .fact-pay .btns a{
+				display: inline-block;
+				width: 90px;
+				line-height: 30px;
+				border-radius: 5px;
+				background: #999999;
+				text-align: center;
+				font-size: 14px;
+			}
+			.mid .content .my-order .order-content .fact-pay .btns a:first-child{
+				background: #FF6C00;
+				margin-right: 40px;
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="top">
+			<!--上部分-->
+			<div class="top1">
+				<div class="top1-mid">
+					<div class="mt-city">
+						<span>所在城市：</span>
+						<span id="citys">北京</span>
+					</div>
+					<div class="mt-infor">
+						<span>您好，<a href="###"  class="username">17701269859</a></span>
+						<span><a href="###">退出</a></span>
+						<span><a href="###">我的订单</a></span>
+						<span><a href="###">我的消息</a></span>
+						<span><a href="###">我是商家</a></span>
+						<span>
+							<a href="###">400-800-8888</a>							
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--下部分-->
+			<div class="top2">
+				<div class="top2-mid">
+					<!--头部中间-->
+					<div class="search">	
+						<!--logo-->
+						<h1>
+							<a href="###"><img src="img/img-b/b-logo1.png"/></a>				
+						</h1>
+						<!--搜索-->
+						<div class="goods">
+							<div class="fenlei">
+								<span class="select">商家</span>
+								<span>商品</span>
+							</div>
+							<div class="sousuo">
+								<input type="text" value="" placeholder="请输入关键字进行筛选"/>
+								<span></span>
+							</div>
+							<div class="hot">
+								<span><strong>热门:</strong></span>
+								<a href="###">酒店</a>
+								<a href="###">洗车</a>
+								<a href="###">餐饮</a>
+								<a href="###">进口</a>
+								<a href="###">旅游</a>
+								<a href="###">如家</a>
+							</div>
+						</div>
+						<!--我的-->
+						<div class="mine">
+							<a href="###">
+								<div class="my-yihe">我的易和<span></span></div>
+							</a>
+							<a href="###">
+								<div class="my-car">购物车
+									<span></span>								
+								</div>
+							</a>							
+							<div class="clear"></div>
+							<div class="tip">0
+								<img src="img/img-b/b-jiao.png"/>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>			
+				</div>
+				<!--头部下-->
+				<div class="nav">
+					<div class="trade">
+						<span>行业分类</span>
+						<span class="tr-arrow"></span>
+						<div class="menu">
+							<ul>
+								<li><a href="###"><span>服装市场</span><span></span></a></li>
+								<li><a href="###"><span>建材装修</span><span></span></a></li>
+								<li><a href="###"><span>休闲娱乐</span><span></span></a></li>
+								<li><a href="###"><span>生活服务</span><span></span></a></li>
+								<li><a href="###"><span>3C市场</span><span></span></a></li>
+								<li><a href="###"><span>丽人</span><span></span></a></li>
+								<li><a href="###"><span>本地生活</span><span></span></a></li>
+								<li><a href="###"><span>购物</span><span></span></a></li>
+								<li><a href="###"><span>电子数码</span><span></span></a></li>
+							</ul>
+							<div class="menu-det">
+								<div class="detail">
+									<a href="###">手机商家</a>
+									<a href="###">电脑及配件</a>
+									<a href="###">厨房电器件</a>
+									<a href="###">智能生活</a>
+									<a href="###">显示器</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="###" class="select">首页</a>
+					<a href="###">精选品牌</a>
+					<a href="###">今日特价</a>
+					<a href="###">积分商城</a>
+					<a href="###">加入易和</a>
+					<div class="kefu">
+						<span>在线客服</span>
+						<ul>
+							<li></li>
+							<li class="qq-serv"><a href="###">QQ客服1</a></li>
+							<li class="qq-serv"><a href="###">QQ客服2</a></li>
+							<li class="qq-serv"><a href="###">QQ客服3</a></li>
+							<li><img src="img/img-b/b-erweima.png"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!--中间内容-->
+		<div class="mid">
+			<!--内容-->
+			<div class="content">
+				<div class="content-list">
+					<a href="###">个人中心</a>
+					<div class="con-detail">
+						<dl>
+							<dt><a href="###">交易管理<span></span></a></dt>
+							<dd><a href="###">我的账户</a></dd>
+							<dd><a class="sel-list" href="###">我的订单</a></dd>
+							<dd><a href="###">我的积分</a></dd>
+							<dd><a href="###">我的易和券</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="###">会员资料<span></span></a></dt>
+							<dd><a href="###">个人资料</a></dd>
+							<dd><a href="###">地址管理</a></dd>
+							<dd><a href="###">我的收藏</a></dd>
+							<dd><a href="###">最近浏览</a></dd>
+							<dd><a href="###">修改密码</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="###">站内信<span></span></a></dt>
+							<dd><a href="###">我的消息</a></dd>
+						</dl>				
+					</div>					
+				</div>
+				<!--我的订单-->
+				<div class="my-order">
+					<div class="order-top">
+						<span>订单编号：15041305000006958388</span>
+						<span>订单状态：<strong>待付款</strong></span>
+						<span><a href="c-13.html">立即支付</a></span>
+						<span><a href="###">取消订单</a></span>
+					</div>
+					<div class="order-content">
+						<!--订单详情-->
+						<dl>
+							<dd>
+								<span>支付方式</span>
+								<i>支付宝</i>
+							</dd>
+							<dd>
+								<span>支付流水号</span>
+								<i>123456789987654321</i>
+							</dd>
+							<dd>
+								<span>下单时间</span>
+								<i>2016-04-01 18:00:00</i>
+							</dd>
+							<dd>
+								<span>支付时间</span>
+							</dd>
+							<dd>
+								<span>发货时间</span>
+							</dd>
+							<dd>
+								<span>收货时间</span>
+							</dd>
+							<dd>
+								<span>取消时间</span>
+							</dd>
+							<dd>
+								<span>申请退款时间</span>
+							</dd>
+							<dd>
+								<span>退款原因</span>
+							</dd>
+							<dd>
+								<span>退款时间</span>
+							</dd>
+							<dd>
+								<span>订单备注</span>
+								<i>希望包装得严实一些，不要有破损情况，谢谢</i>
+							</dd>						
+						</dl>
+						<!---->
+						<dl>
+							<dt>收货人信息</dt>
+							<dd>
+								<span>收货人姓名</span>
+								<i>王敏敏</i>
+							</dd>
+							<dd>
+								<span>地址</span>
+								<i>45665465546546544123</i>
+							</dd>
+							<dd>
+								<span>联系方式</span>
+								<i>手机：12345698797/固定电话：010-1111111</i>
+							</dd>
+						</dl>
+						<!---->
+						<dl>
+							<dt>发票信息</dt>
+							<dd>
+								<span>发票类型</span>
+								<i>电子发票</i>
+							</dd>
+							<dd>
+								<span>发票抬头</span>
+								<i>北京嘉禾影业有限公司</i>
+							</dd>
+							<dd>
+								<span>发票</span>
+								<i>内容明细</i>
+							</dd>
+						</dl>
+						<!---->
+						<dl>
+							<dt>卖家信息</dt>
+							<dd>
+								<span>店铺名称</span>
+								<i>海澜之家旗舰店</i>
+							</dd>
+							<dd>
+								<span>真实姓名</span>
+								<i>赵明志</i>
+							</dd>
+							<dd>
+								<span>联系电话</span>
+								<i>0101-12345678</i>
+							</dd>
+						</dl>
+						<!---->
+						<dl>
+							<dt>物流信息</dt>
+							<dd>
+								<span>联系人</span>
+								<i>张小哥</i>
+							</dd>
+							<dd>
+								<span>地址</span>
+								<i>45665465546546544123</i>
+							</dd>
+							<dd>
+								<span>联系方式</span>
+								<i>12345698797</i>
+							</dd>
+						</dl>
+						<!--店铺-->
+						<div class="stores">
+							<div>
+								<span>海澜之家旗舰店</span>
+								<span>规格</span>
+								<span>单价</span>
+								<span>数量</span>
+								<span>金额</span>
+							</div>
+							<div class="store-present">
+								<span>
+									<div class="store-img">
+										<img src="img/img-b/b-user-head.png" alt="" />
+									</div>									
+									<strong>《寻龙诀》北京保利龙旗广场</strong>
+								</span>
+								<span>
+									<b>版本：国航 32G</b>
+									<b>颜色：星钻黑</b>
+								</span>
+								<span>￥35.0</span>
+								<span>1</span>
+								<span>￥35.0</span>
+							</div>
+							<div class="store-present">
+								<span>
+									<div class="store-img">
+										<img src="img/img-b/b-user-head.png" alt="" />
+									</div>									
+									<strong>《寻龙诀》北京保利龙旗广场</strong>
+								</span>
+								<span>
+									<b>版本：国航 32G</b>
+									<b>颜色：星钻黑</b>
+								</span>
+								<span>￥35.0</span>
+								<span>1</span>
+								<span>￥35.0</span>
+							</div>
+							<div class="store-present">
+								<span>
+									<div class="store-img">
+										<img src="img/img-b/b-user-head.png" alt="" />
+									</div>									
+									<strong>《寻龙诀》北京保利龙旗广场</strong>
+								</span>
+								<span>
+									<b>版本：国航 32G</b>
+									<b>颜色：星钻黑</b>
+								</span>
+								<span>￥35.0</span>
+								<span>1</span>
+								<span>￥35.0</span>
+							</div>
+							<!--价格-->
+							<div class="prize">
+								<span></span>
+								<span></span>
+								<span>
+									<b>运费</b>
+									<strong>￥5.0</strong>
+								</span>
+								<span>
+									<b>商品金额</b>
+									<strong>￥108.0</strong>
+								</span>
+								<span>
+									<b>小计</b>
+									<strong>￥113.0</strong>
+								</span>
+							</div>
+						</div>
+						<!--积分-->
+						<div class="points">
+							<span>使用积分抵扣（50积分）</span>
+							<span>-￥5.0</span>
+						</div>
+						<!--实付-->
+						<div class="fact-pay">
+							<div class="fact-money">
+								<span>实付金额：</span>
+								<span>￥36.0</span>
+							</div>
+							<div class="btns">
+								<a href="c-13.html">立即支付</a>
+								<a href="###">取消订单</a>
+							</div>
+						</div>
+						
+						
+						
+						
+					</div>					
+				</div>
+				
+				
+				
+			</div>
+			
+		</div>
+		<!--底部-->
+		<div class="foot">
+			<div class="foot1">
+				<div class="f1-mid">
+					<span>正品保障</span>
+					<span>全程追踪</span>
+					<span>客户监督</span>
+					<span>售后无忧</span>
+					<span>准时送达</span>
+				</div>
+			</div>
+			<div class="foot2">
+				<div class="f2-mid">
+					<div class="logo2"></div>
+					<div class="weixin">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>官方微信</span>
+					</div>
+					<div class="app">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>APP下载</span>
+					</div>
+					<dl>
+						<dt>关于易和</dt>
+						<dd><a href="###">新用户注册</a></dd>
+						<dd><a href="###">在线下单</a></dd>
+						<dd><a href="###">支付方式</a></dd>
+					</dl>
+					<dl>
+						<dt>配送说明</dt>
+						<dd><a href="###">运费说明</a></dd>
+						<dd><a href="###">配送方式</a></dd>
+						<dd><a href="###">发票说明</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="###">退换货规则</a></dd>
+						<dd><a href="###">服务保障承诺</a></dd>
+						<dd><a href="###">验货与签收</a></dd>
+					</dl>
+					<dl>
+						<dt>加盟易和</dt>
+						<dd><a href="###">加盟条款</a></dd>
+						<dd><a href="###">公司简介</a></dd>
+						<dd><a href="###">服务协议</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot3">
+				<ul>
+					<li>版权所有 © 2016易和生活港  保留所有权利 | 沪ICP备12042163</li>
+					<li>易和生活  纵享品质</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/top.js"></script>
+	<script type="text/javascript" src="js/b-new-user.js"></script>
+	<script type="text/javascript" src="js/b-content-list.js"></script>
+	<script type="text/javascript">
+		
+		
+		
+		
+		
+	</script>
+</html>
