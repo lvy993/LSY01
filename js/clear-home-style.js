@@ -1,1 +1,0 @@
-$(".top .top2 .nav .select").attr("class","");
