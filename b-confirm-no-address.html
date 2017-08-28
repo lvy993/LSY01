@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>未写地址确认订单</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			a{
+				color: #666666;
+			}
+			.daohangtiao{
+				width: 100%;
+				background: rgb(238,238,238);
+			}
+			@media screen and (max-width:1180px) {
+				.daohangtiao{
+					width: 1180px;
+				}
+			}
+			.daohangtiao .daohangwenzi{
+				width: 1180px;
+				padding: 10px 0;
+				margin: 0 auto;
+				font-size: 12px;
+				color: #666666;
+				overflow: hidden;
+			}
+			.daohangtiao .daohangwenzi .zuo{
+				float: left;
+			}
+			.daohangtiao .daohangwenzi .zuo span{
+				width: 40px;
+				height: 12px;
+				background: url(img/img-c/c-6/_.png) no-repeat right center;
+				padding-right: 12px;
+			}
+			.daohangtiao .daohangwenzi .you{
+				float: right;
+			}
+			.daohangtiao .daohangwenzi .you a{
+				display: inline-block;
+				padding: 0 8px;
+			}
+			.daohangtiao .daohangwenzi .you a:nth-child(1){
+				color: #ff6c00;
+			}
+			.daohangtiao .daohangwenzi .you a:nth-child(2),.daohangtiao .daohangwenzi .you a:nth-child(3),.daohangtiao .daohangwenzi .you a:nth-child(4),.daohangtiao .daohangwenzi .you a:nth-child(5){
+				border-right: 1px solid rgb(153,153,153);
+			}
+			.daohangtiao .daohangwenzi .you a:nth-child(6){
+				background: url(img/img-c/c-6/1-5.png) no-repeat left center;
+				padding-left: 15px;
+				margin-left: 80px;
+			}
+			.neirong{
+				width: 1100px;
+				border: 1px solid rgb(211,211,211);
+				margin: 0 auto;
+				margin-top: 25px;
+				padding: 40px;
+				padding-bottom: 0;
+			}
+			.neirong .toubu{
+				width: 1100px;
+				height: 80px;
+				padding-bottom: 40px;
+				border-bottom: 1px solid rgb(211,211,211);
+			}
+			.neirong .toubu h1{
+				width: 140px;
+				height: 80px;
+				background: url(img/img-b/b-logo1.png);
+				display: inline-block;
+			}
+			.neirong .toubu div{	
+				height: 42px;
+				display: inline-block;
+				line-height: 42px;
+				text-align: center;
+				position: relative;
+				bottom: 15px;
+				font-size: 18px;
+			}
+			.neirong .toubu div:nth-of-type(1){
+				width: 236px;
+				background: url(img/img-b/b-confirm-bg1.png) no-repeat;
+				margin-left: 235px;
+			}
+			.neirong .toubu div:nth-of-type(2){
+				width: 247px;
+				background: url(img/img-b/b-confirm-bg2.png) no-repeat;
+				color: white;
+				margin-left: -10px;
+			}
+			.neirong .toubu div:nth-of-type(3){
+				width: 248px;
+				background: url(img/img-b/b-confirm-bg3.png) no-repeat;
+				margin-left: -10px;
+			}
+			
+			/*商品信息*/
+			.neirong .goods-infor .goods-top{
+				font-size: 18px;
+				line-height: 58px;
+				color: #666666;
+				border-bottom: 1px solid #E9E9E9;
+			}
+			
+			
+			
+			/*发票信息*/
+			
+			.neirong .goods-infor .bill-infor .bill-choose>span{
+				line-height: 56px;
+				margin-right: 40px;
+				color: #666666;
+			}			
+			.neirong .goods-infor .bill-infor .bill-choose>span>span{
+				display: inline-block;
+				cursor: pointer;
+				width: 16px;
+				height: 16px;
+				background: white;
+				border: 1px solid #D3D3D3;
+				border-radius: 10px;
+				margin-bottom: -3px;
+				margin-right: 10px;
+			}
+			.neirong .goods-infor .bill-infor .bill-choose>span>span b{
+				display: block;
+				width: 12px;
+				height: 12px;
+				border-radius: 10px;
+				margin: 2px auto;
+			}
+			.neirong .goods-infor .bill-infor .bill-choose .select-bill{
+				border-color: #008DE1;
+			}
+			.neirong .goods-infor .bill-infor .bill-choose .select-bill b{
+				background: #008DE1;
+			}
+			/*输入框*/
+			.neirong .goods-infor .bill-infor .bill-input{
+				color: #666666;
+			}
+			.neirong .goods-infor .bill-infor .bill-input input{
+				width: 368px;
+				height: 34px;
+				border: 1px solid #D3D3D3;
+			}
+			.neirong .goods-infor .bill-infor .bill-input span:last-child::before{
+				content: "*";
+				display: table-cell;
+				padding: 0 10px;
+				vertical-align: middle;
+				line-height: 4px;
+				color: #FF6C00;
+			}
+			.neirong .goods-infor .goods-txt{
+				padding: 20px 0 40px 0;
+			}
+			.neirong .goods-infor .goods-txt input{
+				color: #999999;
+				padding: 11px;
+				font-size: 12px;
+				width: 582px;
+				height: 12px;
+				border: 1px solid #D3D3D3;
+			}
+			/*中间底部*/
+			.neirong .goods-point{
+				text-align: right;
+				font-size: 16px;
+				color: #333333;
+				padding-top: 44px;
+				padding-bottom: 58px;
+				border-bottom: 1px solid #D3D3D3;
+			}
+			.neirong .goods-point:last-child{
+				border-bottom: 0;
+			}
+			.neirong .goods-point>div{
+				line-height: 46px;
+			}
+			.neirong .goods-point strong{
+				font-weight: normal;
+				font-size: 24px;
+				color: #FF6C00;
+			}
+			.neirong .goods-point input{
+				width: 88px;
+				height: 34px;
+				border: 1px solid #D3D3D3;
+				text-align: center;
+				color: #333333;
+			}
+			.neirong .goods-point .b-points span:last-child{
+				color: #FF6C00;
+			}
+			.neirong .goods-point .sub{
+				margin-top: 45px;
+			}
+			.neirong .goods-point .sub a{
+				display: inline-block;
+				width: 170px;
+				font-size: 18px;
+				text-align: center;
+				color: white;
+				line-height: 44px;
+				background: #FF6C00;
+				border-radius: 5px;
+			}
+			/*新地址*/
+			/*蒙版*/
+			.b-order-mask{
+				width: 1098px;
+				margin: 0 auto;
+			}
+			.b-order-mask .b-address>div:first-child{
+				padding-top: 20px;
+				font-size: 18px;
+				color: #666666;
+				line-height: 58px;
+				border-bottom: 1px solid #E9E9E9;
+			}
+			.b-order-mask .b-address .add-infor .add-list{
+				font-size: 18px;
+				line-height: 56px;
+				color: #333333;
+			}
+			.b-order-mask .b-address .add-infor .add-list>span,.b-order-mask .b-address .add-infor .add-list>div{
+				display: inline-block;
+			}
+			.b-order-mask .b-address .add-infor .add-list>span{
+				width: 122px;
+				text-align: right;
+			}
+			.b-order-mask .b-address .add-infor .add-list>span::before{
+				content: "*";
+				color: #FF6C00;
+				letter-spacing: 5px;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div{
+				width: 460px;
+				text-align: left;
+				vertical-align: middle;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div input{
+				width: 330px;
+				height: 34px;
+				border: 1px solid #D3D3D3;
+			}
+			/*地址*/
+			.b-order-mask .b-address .add-infor .add-list>div .b-area{
+				width: 118px;
+				padding: 0 10px;
+				border: 1px solid #D3D3D3;
+				float: left;
+				font-size: 16px;
+				color: #333333;
+				position: relative;
+				line-height: 34px;
+				margin-right: 20px;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div .b-area:last-child{
+				margin-right: 0;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div .b-area span{
+				font-size: 16px;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div .b-area:last-child::after{
+				display: table;
+				width: 0;
+				content: "";
+				clear: both;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div .b-area ul{
+				width: 100%;
+				position: absolute;
+				top: 35px;
+				left: -1px;
+				border-left: 1px solid #D3D3D3;
+				border-right: 1px solid #D3D3D3;
+				background: white;
+				display: none;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div .b-area ul li{
+				padding: 0 10px;
+				line-height: 34px;
+				border-bottom: 1px solid #D3D3D3;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div .b-area ul li:hover{
+				background: #D2D2D2;
+			}
+			.b-order-mask .b-address .add-infor .add-list>div .b-area b{
+				display: block;
+				width: 0;
+				border-top: 10px solid #999999;
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;
+				position: absolute;
+				top: 12px;
+				right: 10px;
+			}
+			/*详细地址*/			
+			.b-order-mask .b-address .add-infor .add-list:nth-child(3)>div input{
+				width: 458px;
+			}
+			/*适配火狐*/
+			input[type="number"]{
+				-moz-appearance: textfield;
+			}
+			input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+			.b-order-mask .b-address .add-infor .add-list:nth-child(4)>div strong{
+				font-weight: normal;
+			}
+			.b-order-mask .b-address .add-infor .add-list:nth-child(4)>div input{
+				width: 150px;
+			}
+			.b-order-mask .b-address .add-infor .add-list:nth-child(4)>div input:nth-child(3){
+				width: 48px;
+			}
+			.b-order-mask .b-address .add-infor .add-list:nth-child(4)>div input:last-child{
+				width: 124px;
+			}
+			/*确认地址*/
+			.b-order-mask .b-address .add-infor .btns{
+				margin-top: 30px;
+				padding-left: 127px;
+			}
+			.b-order-mask .b-address .add-infor .btns a{
+				display: inline-block;
+				width: 170px;
+				line-height: 30px;
+				text-align: center;
+				font-size: 14px;
+				color: white;
+				border-radius: 5px;
+				background: #FF6C00;
+			}
+			
+			
+			/*详情*/
+			.neirong .xiangqing {
+				width: 1096px;
+				height: 366px;
+				border: 1px solid rgb(211, 211, 211);
+				margin-top: 20px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.neirong .xiangqing .guige {
+				width: 1096px;
+				height: 16px;
+				background: rgb(242, 242, 242);
+				padding: 9px 0 9px 0;
+				position: relative;
+			}
+			
+			.neirong .xiangqing .guige input {
+				margin: 0 20px;
+			}
+			
+			.neirong .xiangqing .guige .dian,
+			.neirong .xiangqing .guige .dian2 {
+				width: 12px;
+				height: 12px;
+				border: 1px solid rgb(211, 211, 211);
+				border-radius: 2px;
+				position: absolute;
+				top: 11px;
+				left: 20px;
+				background: #FFFFFF;
+			}
+			
+			.neirong .xiangqing .guige .dian1 {
+				width: 12px;
+				height: 12px;
+				border: 1px solid rgb(211, 211, 211);
+				border-radius: 2px;
+				position: absolute;
+				top: 11px;
+				left: 20px;
+				background: #FFFFFF;
+			}
+			
+			.neirong .xiangqing .guige span {
+				width: 105px;
+				height: 14px;
+				font-size: 14px;
+				color: #333333;
+				display: inline-block;
+				text-align: center;
+			}
+			
+			.neirong .xiangqing .guige span:nth-of-type(1) {
+				margin-right: 370px;
+			}
+			
+			.neirong .xiangqing .yitiao {
+				width: 1096px;
+				height: 60px;
+				padding: 10px 0;
+				border-bottom: 1px solid rgb(222, 222, 222);
+				position: relative;
+				line-height: 60px;
+				overflow: hidden;
+			}
+			
+			.neirong .xiangqing .yitiao input:nth-child(1) {
+				display: inline-block;
+				margin: 0 20px;
+				position: relative;
+				top: 24px;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao .dian,
+			.neirong .xiangqing .yitiao .dian2 {
+				width: 12px;
+				height: 12px;
+				border: 1px solid rgb(211, 211, 211);
+				border-radius: 2px;
+				position: absolute;
+				top: 34px;
+				left: 20px;
+				background: #FFFFFF;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao img {
+				display: inline-block;
+				width: 60px;
+				height: 60px;
+				margin-left: 5px;
+				font-size: 0;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao span:nth-child(4) {
+				display: inline-block;
+				height: 60px;
+				line-height: 60px;
+				font-size: 12px;
+				color: #666666;
+				margin-left: 20px;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao .banbenyanse {
+				width: 95px;
+				height: 60px;
+				float: left;
+				margin-left: 245px;
+				padding-left: 10px;
+			}
+			
+			.neirong .xiangqing .yitiao .banbenyanse p {
+				height: 30px;
+				text-align: left;
+				font-size: 12px;
+				color: #999999;
+				line-height: 30px;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(2) {
+				width: 105px;
+				height: 60px;
+				float: left;
+				text-align: center;
+				line-height: 60px;
+				font-size: 12px;
+				color: #999999;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) {
+				width: 105px;
+				height: 28px;
+				float: left;
+				padding: 16px 0;
+				overflow: hidden;
+				margin-left: 8px;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) .jian {
+				width: 26px;
+				height: 26px;
+				border: 1px solid rgb(211, 211, 211);
+				background: url(img/img-c/c-6/图层86.png) no-repeat center center rgb(242, 242, 242);
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) input {
+				width: 46px;
+				height: 26px;
+				border: none;
+				border-top: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) .jia {
+				width: 26px;
+				height: 26px;
+				border: 1px solid rgb(211, 211, 211);
+				background: url(img/img-c/c-6/图层拷贝2.png) no-repeat center center rgb(242, 242, 242);
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(4) {
+				width: 105px;
+				height: 60px;
+				float: left;
+				text-align: center;
+				line-height: 60px;
+				font-size: 12px;
+				color: #999999;
+			}
+			
+			.neirong .xiangqing .yitiao .shanchu {
+				display: inline-block;
+				width: 105px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				margin-left: 5px;
+				color: rgb(0, 141, 225);
+			}
+			
+			.neirong .xiangqing .zongjine {
+				width: 220px;
+				height: 49px;
+				float: right;
+				padding: 20px 0;
+				text-align: left;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			
+			.neirong .xiangqing .zongjine p:nth-child(1) {
+				font-size: 16px;
+				color: #333333;
+				margin-bottom: 15px;
+			}
+			
+			.neirong .xiangqing .zongjine p:nth-child(2) {
+				font-size: 18px;
+				color: #ff6c00;
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			/*底部*/
+			.dibu{
+				width: 100%;
+				height: 44px;
+				border-top: 1px solid rgb(211,211,211);
+				margin-top: 40px;
+				padding: 40px 0;
+			}
+			.dibu .nr{
+				width: 412px;
+				height: 44px;
+				margin: 0 auto;
+			}
+			.dibu .nr p:nth-child(1){
+				font-size: 14px;
+				color: #999999;
+				text-align: center;
+				margin-bottom: 16px;
+			}
+			.dibu .nr p:nth-child(2){
+				font-size: 14px;
+				color: #008de1;
+				text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+	<body>
+		<div class="daohangtiao">
+			<div class="daohangwenzi">
+				<div class="zuo">
+					所在城市：<span><a href="###">北京</a></span>
+				</div>
+				<div class="you">
+					您好，<a href="###">17701269859</a><a href="###">退出</a><a href="###">我的订单</a><a href="###">我的消息</a><a href="###">我是商家</a><a href="###">400-800-8820</a>
+				</div>
+			</div>
+		</div>
+		<!--内容-->
+		<div class="neirong">
+			<div class="toubu">
+				<h1></h1>
+				<div>我的购物车</div>
+				<div>确认订单信息</div>
+				<div>订单提交成功</div>
+			</div>
+			<!--新地址-->
+			<div class="b-order-mask">
+				<div class="b-address">
+					<div>添加地址</div>
+					<div class="add-infor">
+						<!--每一行-->
+						<div class="add-list">
+							<span>收货人姓名：</span>
+							<div>
+								<input type="text" />
+							</div>
+						</div>
+						<!--每一行-->
+						<div class="add-list">
+							<span>所在地区：</span>
+							<div>
+								<div class="b-area">
+									<span>北京市</span>
+									<ul>
+										<li>河南省</li>
+										<li>河北省</li>
+										<li>广东省</li>
+									</ul>
+									<b></b>
+								</div>
+								<div class="b-area">
+									<span>北京市</span>
+									<ul>
+										<li>郑州市</li>
+										<li>深圳市</li>
+										<li>开封市</li>
+									</ul>
+									<b></b>
+								</div>
+								<div class="b-area">
+									<span>朝阳区</span>
+									<ul>
+										<li>中原区</li>
+										<li>金水区</li>
+										<li>金明区</li>
+									</ul>
+									<b></b>
+								</div>
+							</div>
+						</div>
+						<!--每一行-->
+						<div class="add-list">
+							<span>详细地址：</span>
+							<div>
+								<input type="text" />
+							</div>
+						</div>
+						<!--每一行-->
+						<div class="add-list">
+							<span>联系电话：</span>
+							<div>
+								<input type="number" />
+								<strong>或固定电话：</strong>
+								<input type="number" />							
+								<strong>-</strong>
+								<input type="number" />
+							</div>
+						</div>
+						<!--确认按钮-->
+						<div class="btns">
+							<a href="###">确认并设为默认地址</a>
+						</div>
+					</div>	
+				</div>
+			</div>
+			
+			
+			
+			<!--商品信息-->
+			<div class="goods-infor">
+				<div class="goods-top">商品信息</div>
+				<!--商品-->
+				<div class="xiangqing">
+					<div class="guige">
+						<input type="checkbox" name="" id="fuxuan" value="" class="" />
+						<label for="fuxuan" class="dian"></label>
+						<span>海澜之家旗舰店</span>
+						<span>规格</span>
+						<span>单价</span>
+						<span>数量</span>
+						<span>金额</span>
+						<span>操作</span>
+					</div>
+					<div class="yitiao">
+						<input type="checkbox" name="" id="fuxuan1" value="" class="xz" />
+						<label for="fuxuan1" class="dian2"></label>
+						<img src="img/img-c/c-6/图层 88.png" />
+						<span>《寻龙诀》北京保利龙旗广场</span>
+						<div class="banbenyanse">
+							<p>版本：<span>国行32G</span></p>
+							<p>颜色：<span>星钻黑</span></p>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<div>
+							<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+							<div class="jia"></div>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<a href="###" class="shanchu">删除</a>
+					</div>
+					<div class="yitiao">
+						<input type="checkbox" name="" id="fuxuan2" value="" class="" />
+						<label for="fuxuan2" class="dian2"></label>
+						<img src="img/img-c/c-6/图层 88.png" />
+						<span>《寻龙诀》北京保利龙旗广场</span>
+						<div class="banbenyanse">
+							<p>版本：<span>国行32G</span></p>
+							<p>颜色：<span>星钻黑</span></p>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<div>
+							<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+							<div class="jia"></div>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<a href="###" class="shanchu">删除</a>
+					</div>
+					<div class="yitiao">
+						<input type="checkbox" name="" id="fuxuan3" value="" class="" />
+						<label for="fuxuan3" class="dian2"></label>
+						<img src="img/img-c/c-6/图层 88.png" />
+						<span>《寻龙诀》北京保利龙旗广场</span>
+						<div class="banbenyanse">
+							<p>版本：<span>国行32G</span></p>
+							<p>颜色：<span>星钻黑</span></p>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<div>
+							<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+							<div class="jia"></div>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<a href="###" class="shanchu">删除</a>
+					</div>
+					<div class="zongjine">
+						<p>商品金额</p>
+						<p>￥<span>105.0</span></p>
+					</div>
+				</div>
+				
+				<!--发票-->
+				<div class="goods-top">开票信息</div>
+				<div class="bill-infor">
+					<div class="bill-choose">						
+						<span><span class="select-bill"><b></b></span>不需要</span>
+						<span><span><b></b></span>个人</span>
+						<span><span><b></b></span>单位</span>
+					</div>
+					<div class="bill-input">
+						<span>发票抬头：</span>
+						<input type="text" />
+						<span>请填写后认真核对发票信息</span>
+					</div>
+				</div>
+				<!--订单备注-->
+				<div class="goods-top">添加订单备注</div>
+				<div class="goods-txt">
+					<input type="text" placeholder="限45个字，请填写有关商品、支付、发票等信息" maxlength="45"/>
+				</div>				
+			</div>
+			<!--商品信息-->
+			<div class="goods-infor">
+				<div class="goods-top">商品信息</div>
+				<!--商品-->
+				<div class="xiangqing">
+					<div class="guige">
+						<input type="checkbox" name="" id="fuxuan4" value="" class="" />
+						<label for="fuxuan4" class="dian1"></label>
+						<span>海澜之家旗舰店</span>
+						<span>规格</span>
+						<span>单价</span>
+						<span>数量</span>
+						<span>金额</span>
+						<span>操作</span>
+					</div>
+					<div class="yitiao">
+						<input type="checkbox" name="" id="fuxuan5" value="" class="" />
+						<label for="fuxuan5" class="dian2"></label>
+						<img src="img/img-c/c-6/图层 88.png" />
+						<span>《寻龙诀》北京保利龙旗广场</span>
+						<div class="banbenyanse">
+							<p>版本：<span>国行32G</span></p>
+							<p>颜色：<span>星钻黑</span></p>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<div>
+							<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+							<div class="jia"></div>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<a href="###" class="shanchu">删除</a>
+					</div>
+					<div class="yitiao">
+						<input type="checkbox" name="" id="fuxuan6" value="" class="" />
+						<label for="fuxuan6" class="dian2"></label>
+						<img src="img/img-c/c-6/图层 88.png" />
+						<span>《寻龙诀》北京保利龙旗广场</span>
+						<div class="banbenyanse">
+							<p>版本：<span>国行32G</span></p>
+							<p>颜色：<span>星钻黑</span></p>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<div>
+							<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+							<div class="jia"></div>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<a href="###" class="shanchu">删除</a>
+					</div>
+					<div class="yitiao">
+						<input type="checkbox" name="" id="fuxuan7" value="" class="" />
+						<label for="fuxuan7" class="dian2"></label>
+						<img src="img/img-c/c-6/图层 88.png" />
+						<span>《寻龙诀》北京保利龙旗广场</span>
+						<div class="banbenyanse">
+							<p>版本：<span>国行32G</span></p>
+							<p>颜色：<span>星钻黑</span></p>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<div>
+							<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+							<div class="jia"></div>
+						</div>
+						<div>￥<span>35.0</span></div>
+						<a href="###" class="shanchu">删除</a>
+					</div>
+					<div class="zongjine">
+						<p>商品金额</p>
+						<p>￥<span>105.0</span></p>
+					</div>
+				</div>
+				
+				<!--发票-->
+				<div class="goods-top">开票信息</div>
+				<div class="bill-infor">
+					<div class="bill-choose">						
+						<span><span class="select-bill"><b></b></span>不需要</span>
+						<span><span><b></b></span>个人</span>
+						<span><span><b></b></span>单位</span>
+					</div>
+					<div class="bill-input">
+						<span>发票抬头：</span>
+						<input type="text" />
+						<span>请填写后认真核对发票信息</span>
+					</div>
+				</div>
+				<!--订单备注-->
+				<div class="goods-top">添加订单备注</div>
+				<div class="goods-txt">
+					<input type="text" placeholder="限45个字，请填写有关商品、支付、发票等信息" maxlength="45"/>
+				</div>				
+			</div>
+			<!--积分-->
+			<div class="goods-point">
+				<div class="tot-money">
+					<span>总计</span>
+					<strong>￥108.0</strong>
+				</div>
+				<div class="b-points">
+					<span>使用积分抵扣（您有1254积分）</span>
+					<input type="text" value="1000" />
+					<span> -￥10.00</span>
+				</div>
+			</div>
+			<!--应付金额-->
+			<div class="goods-point">
+				<div class="tot-money">
+					<span>应付金额</span>
+					<strong>￥108.0</strong>
+				</div>
+				<div class="b-points">
+					<span>订单完成后可获得积分：</span>
+					<span> 30.9</span>
+				</div>
+				<div class="sub">
+					<a href="c-8.html">提交订单</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--底部-->
+		<div class="dibu">
+			<div class="nr">
+				<p>版权所有 © 2016易和生活港  保留所有权利 | 沪ICP备12042163</p>
+				<p>易和生活  纵享品质</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/tou.js"></script>
+	<script type="text/javascript">
+		var meidian = false;
+		$(".dian").on("click", function() {
+			if(meidian == false) {
+				meidian = true;
+				$(this).css({
+					"border": "1px solid rgb(255,108,0)",
+					"background": "url(img/img-c/c-6/a1.png) no-repeat center center #ffffff",
+				});
+			} else if(meidian == true) {
+				meidian = false;
+				$(this).css({
+					"border": "1px solid rgb(211,211,211)",
+					"background": "#ffffff",
+				});
+			}
+		})
+
+		var meidian1 = false;
+		$(".dian1").on("click", function() {
+			if(meidian1 == false) {
+				meidian1 = true;
+				$(this).css({
+					"border": "1px solid rgb(255,108,0)",
+					"background": "url(img/img-c/c-6/a1.png) no-repeat center center #ffffff",
+				});
+			} else if(meidian1 == true) {
+				meidian1 = false;
+				$(this).css({
+					"border": "1px solid rgb(211,211,211)",
+					"background": "#ffffff",
+				});
+			}
+		})
+
+		$(".dian2").on("click", function() {
+				if($(this).attr("color")) {
+					$(this).attr("color", "");
+					$(this).css({
+						"border": "1px solid rgb(211,211,211)",
+						"background": "#ffffff",
+					});
+				} else {
+					$(this).attr("color", "aa");
+					$(this).css({
+						"border": "1px solid rgb(255,108,0)",
+						"background": "url(img/img-c/c-6/a1.png) no-repeat center center #ffffff",
+					});
+				}
+			})
+			//判断复选框
+		$(".guige input").on("click", function() {
+			if($(this).is(":checked")) {
+				var a = $(this).parent(".guige").nextAll(".yitiao").find("input:nth-child(1)");
+				a.prop("checked", true);
+				a.next().css({
+					"border": "1px solid rgb(255,108,0)",
+					"background": "url(img/img-c/c-6/a1.png) no-repeat center center #ffffff",
+				})
+			} else {
+				var b = $(this).parent(".guige").nextAll(".yitiao").find("input:nth-child(1)");
+				b.prop("checked", false);
+				b.next().css({
+					"border": "1px solid rgb(211,211,211)",
+					"background": "#ffffff",
+				})
+				$(this).parents(".xiangqing").find(".zongjine p:nth-of-type(2) span").html("0");
+			}
+		})
+
+		//点击全选
+		$(".piliangcaozuo a:nth-child(1)").on("click", function() {
+			var c = $(this).parent(".piliangcaozuo").prevAll(".xiangqing").find("input:nth-child(1)");
+
+			if(c.is(":checked")) {
+				c.prop("checked", false);
+				c.next().css({
+					"border": "1px solid rgb(211,211,211)",
+					"background": "#ffffff",
+				})
+			} else {
+				c.prop("checked", true);
+				c.next().css({
+					"border": "1px solid rgb(255,108,0)",
+					"background": "url(img/img-c/c-6/a1.png) no-repeat center center #ffffff",
+				})
+			}
+		})
+
+		//商品数量加减和价格加减
+		$(".jian").on("click", function() {
+			var shuliang = $(this).next(".shuliang").val();
+			if(shuliang >= 1) {
+				shuliang--;
+				if(shuliang <= 1) {
+					shuliang = 1;
+				}
+				var e = $(this).parent().prev().find("span").html();
+				var f = (shuliang * e).toFixed(1);
+				$(this).next(".shuliang").val(shuliang);
+				$(this).parent().next().find("span").html(f);
+				//商品金额
+				var g = $(this).parents(".yitiao").siblings(".yitiao").find("div:nth-of-type(4) span");
+				var h = 0;
+				for(var i = 0; i < g.length; i++) {
+					h += parseFloat($(g[i]).html());
+				}
+				var r = h * 1 + f * 1;
+				$(this).parents(".xiangqing").find(".zongjine p:nth-of-type(2) span").html(r.toFixed(1));
+				//总金额
+				var j = $(this).parents(".xiangqing").find(".zongjine p:nth-of-type(2) span").html();
+				var k = $(this).parents(".xiangqing").siblings(".xiangqing").find(".zongjine p:nth-of-type(2) span").html();
+				var l = j * 1 + k * 1;
+				$(".piliangcaozuo").find("span:nth-of-type(2) b").html(l.toFixed(1));
+			};
+		});
+
+		$(".jia").on("click", function() {
+			var shuliang = $(this).prev(".shuliang").val();
+			if(shuliang != 0) {
+				shuliang++;
+				var e = $(this).parent().prev().find("span").html();
+				var f = (shuliang * e).toFixed(1);
+				$(this).prev(".shuliang").val(shuliang);
+				$(this).parent().next().find("span").html(f);
+				//商品金额
+				var g = $(this).parents(".yitiao").siblings(".yitiao").find("div:nth-of-type(4) span");
+				var h = 0;
+				for(var i = 0; i < g.length; i++) {
+					h += parseFloat($(g[i]).html());
+				}
+				var r = h * 1 + f * 1;
+				$(this).parents(".xiangqing").find(".zongjine p:nth-of-type(2) span").html(r.toFixed(1));
+				//总金额
+				var j = $(this).parents(".xiangqing").find(".zongjine p:nth-of-type(2) span").html();
+				var k = $(this).parents(".xiangqing").siblings(".xiangqing").find(".zongjine p:nth-of-type(2) span").html();
+				var l = j * 1 + k * 1;
+				$(".piliangcaozuo").find("span:nth-of-type(2) b").html(l.toFixed(1));
+			};
+		});
+
+		//商品删除
+		$(".shanchu").on("click", function() {
+			$(this).parent(".yitiao").remove();
+		})
+
+		//批量删除
+		$(".piliangcaozuo a:nth-child(2)").on("click", function() {
+			var d = $(this).parent(".piliangcaozuo").prevAll(".xiangqing").find(".yitiao input:nth-child(1)");
+			meidian = false;
+			meidian1 = false;
+			for(var i = 0; i < d.length; i++) {
+				if($(d[i]).is(":checked")) {
+					$(d[i]).parent(".yitiao").remove();
+
+				}
+			}
+		});
+		//选择地区
+		$(".b-order-mask .b-address .add-infor .add-list>div .b-area").on("click",function(){
+			if ($(this).attr("orClick")) {
+				$(this).attr("orClick","");
+				$(this).find("ul").hide();
+			} else{
+				$(this).attr("orClick","yes");
+				$(this).find("ul").show();
+			}			
+		});
+		$(".b-order-mask .b-address .add-infor .add-list>div .b-area ul li").on("click",function(){
+			var city = $(this).text();
+			$(this).parents(".b-area").children("span").text(city);
+		});
+		//确认
+		$(".b-order-mask .b-address .add-infor .btns a").on("click",function(){
+			alert("已设置为默认地址");
+		});
+		
+		//圆点
+		$(".neirong .goods-infor .bill-infor .bill-choose>span>span").on("click",function(){
+			$(".neirong .goods-infor .bill-infor .bill-choose>span>span").attr("class","");
+			$(this).attr("class","select-bill");
+		});
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

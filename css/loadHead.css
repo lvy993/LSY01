@@ -1,0 +1,61 @@
+.a_head{
+				width: 100%;
+				min-width: 1180px;
+				height: 35px;
+				font-size: 12px;
+				background: #eeeeee;
+			}
+			.a_head .a_headIn{
+				width: 1180px;
+				line-height: 35px;
+				margin: 0 auto;
+			}
+			.a_head .a_headIn span{
+				float: left;
+				color: #999999;
+				line-height: 35px;
+			}
+			.a_head .a_headIn a{
+				text-align: right;
+				float: right;
+				color: #999999;
+				width: 120px;
+			}
+			.a_head .a_headIn a:nth-child(2){
+				background: url(../img/img-a/phone.png) no-repeat 28px 9px;
+			}
+			
+			.a_roof .a_roofIn{
+				width: 1180px;
+				height: 130px;
+				line-height: 130px;
+				background: #ffffff;
+				border-bottom: 1px solid #ffffff;
+				margin: 0 auto;
+			}
+			.a_roof .a_roofIn input{
+				border: 0;
+			}
+			.a_roof .a_roofIn h1{
+				float: left;
+			}
+			.a_roof .a_roofIn h1 .logo{
+				width: 140px;
+				height: 80px;
+				margin-top: 25px;
+			}
+			.a_roof .a_roofIn>a{
+				display: block;
+				width: 62px;
+				font-size: 18px;
+				color: #666666;
+				float: right;
+				height: 24px;
+				margin-top: 50px;
+				line-height: 20px;
+				border-right: 2px solid #666666;
+			}
+			.a_roof .a_roofIn>a:nth-child(2){
+				text-align: right;
+				border-right:0;
+			}

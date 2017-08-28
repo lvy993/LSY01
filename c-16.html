@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/headAndfoot.css"/>
+		<link rel="stylesheet" type="text/css" href="css/b-new-user.css"/>
+		<title>最近浏览</title>
+		<style type="text/css">
+			.mid .content .content-list>a {
+			    display: block;
+			    background: url(img/img-c/c-11/icon.png) no-repeat 17px center;
+			    padding-left: 45px;
+			    font-size: 18px;
+			    color: #666666;
+			    line-height: 56px;
+			    font-family: "microsoft yahei";
+			    border-bottom: 1px solid #D3D3D3;
+			}
+			.mid .content{
+				margin-top: 20px;
+			}
+			.mid .you{
+				width: 984px;
+    				float: right;
+    				border: 1px solid #D3D3D3;
+    				background: white;
+    				margin-bottom: 40px;
+			}
+			.mid .you ul{
+				padding: 22px;
+				overflow: hidden;
+				padding-top: 0;
+			}
+			.mid .you ul li{
+				width: 218px;
+				height: 333px;
+				border: 1px solid rgb(225,225,225);
+				background: #FFFFFF;
+				float: left;
+				margin-right: 20px;
+				position: relative;
+				margin-top: 20px;
+			}
+			.mid .you ul li:nth-child(1){
+				border: 1px solid rgb(255,108,0);
+			}
+			.mid .you ul li:nth-child(4n){
+				margin-right: 0;
+			}
+			.mid .you ul li img{
+				display: block;
+			}
+			.mid .you ul div{
+				height: 77px;
+				border-top: 1px solid rgb(225,225,225);
+				padding: 18px;
+			}
+			.mid .you ul li div span:nth-child(1){
+				font-size: 14px;
+				color: #666666;
+				height: 40px;
+				display: block;
+				line-height: 20px;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				margin-bottom: 17px;
+			}
+			.mid .you ul li div span:nth-child(2){
+				font-size: 18px;
+				color: #EA0000;
+			}
+			.mid .you ul li div span:nth-child(3){
+				font-size: 14px;
+				color: #333333;
+				text-decoration: line-through;
+				margin-left: 5px;
+			}
+			.mid .you ul li div button{
+				width: 71px;
+				height: 22px;
+				border: 1px solid rgb(236,106,23);
+				background: #FFFFFF;
+				border-radius: 10px;
+				color: rgb(236,106,23);
+				font-size: 12px;
+				margin-left: 10px;
+				position: relative;
+				bottom: 4px;
+			}
+			.mid .you ul li:nth-child(4) div button{
+				border: 1px solid rgb(211,211,211);
+				color: rgb(211,211,211);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			.mid .you .duihuanjilu{
+				padding: 19px;
+				border-bottom: 1px solid rgb(211,211,211);
+				overflow: hidden;
+				padding-right: 205px;
+			}
+			.mid .you .duihuanjilu .shang{
+				font-size: 18px;
+				color: #008de1;
+				float: left;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="top">
+			<!--上部分-->
+			<div class="top1">
+				<div class="top1-mid">
+					<div class="mt-city">
+						<span>所在城市：</span>
+						<span id="citys">北京</span>
+					</div>
+					<div class="mt-infor">
+						<span>您好，<a href="###"  class="username">17701269859</a></span>
+						<span><a href="###">退出</a></span>
+						<span><a href="###">我的订单</a></span>
+						<span><a href="###">我的消息</a></span>
+						<span><a href="###">我是商家</a></span>
+						<span>
+							<a href="###">400-800-8888</a>							
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--下部分-->
+			<div class="top2">
+				<div class="top2-mid">
+					<!--头部中间-->
+					<div class="search">	
+						<!--logo-->
+						<h1>
+							<a href="###"><img src="img/img-b/b-logo1.png"/></a>				
+						</h1>
+						<!--搜索-->
+						<div class="goods">
+							<div class="fenlei">
+								<span class="select">商家</span>
+								<span>商品</span>
+							</div>
+							<div class="sousuo">
+								<input type="text" value="" placeholder="请输入关键字进行筛选"/>
+								<span></span>
+							</div>
+							<div class="hot">
+								<span><strong>热门:</strong></span>
+								<a href="###">酒店</a>
+								<a href="###">洗车</a>
+								<a href="###">餐饮</a>
+								<a href="###">进口</a>
+								<a href="###">旅游</a>
+								<a href="###">如家</a>
+							</div>
+						</div>
+						<!--我的-->
+						<div class="mine">
+							<a href="###">
+								<div class="my-yihe">我的易和<span></span></div>
+							</a>
+							<a href="###">
+								<div class="my-car">购物车
+									<span></span>								
+								</div>
+							</a>							
+							<div class="clear"></div>
+							<div class="tip">0
+								<img src="img/img-b/b-jiao.png"/>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>			
+				</div>
+				<!--头部下-->
+				<div class="nav">
+					<div class="trade">
+						<span>行业分类</span>
+						<span class="tr-arrow"></span>
+						<div class="menu">
+							<ul>
+								<li><a href="###"><span>服装市场</span><span></span></a></li>
+								<li><a href="###"><span>建材装修</span><span></span></a></li>
+								<li><a href="###"><span>休闲娱乐</span><span></span></a></li>
+								<li><a href="###"><span>生活服务</span><span></span></a></li>
+								<li><a href="###"><span>3C市场</span><span></span></a></li>
+								<li><a href="###"><span>丽人</span><span></span></a></li>
+								<li><a href="###"><span>本地生活</span><span></span></a></li>
+								<li><a href="###"><span>购物</span><span></span></a></li>
+								<li><a href="###"><span>电子数码</span><span></span></a></li>
+							</ul>
+							<div class="menu-det">
+								<div class="detail">
+									<a href="###">手机商家</a>
+									<a href="###">电脑及配件</a>
+									<a href="###">厨房电器件</a>
+									<a href="###">智能生活</a>
+									<a href="###">显示器</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="###" class="select">首页</a>
+					<a href="###">精选品牌</a>
+					<a href="###">今日特价</a>
+					<a href="###">积分商城</a>
+					<a href="###">加入易和</a>
+					<div class="kefu">
+						<span>在线客服</span>
+						<ul>
+							<li></li>
+							<li class="qq-serv"><a href="###">QQ客服1</a></li>
+							<li class="qq-serv"><a href="###">QQ客服2</a></li>
+							<li class="qq-serv"><a href="###">QQ客服3</a></li>
+							<li><img src="img/img-b/b-erweima.png"/></li>
+						</ul>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!--中间内容-->
+		<div class="mid">
+			<!--内容-->
+			<div class="content">
+				<div class="content-list">
+					<a href="###">个人中心</a>
+					<div class="con-detail">
+						<dl>
+							<dt><a href="###">交易管理<span></span></a></dt>
+							<dd><a href="###">我的账户</a></dd>
+							<dd><a href="###">我的订单</a></dd>
+							<dd><a href="###">我的积分</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="###">会员资料<span></span></a></dt>
+							<dd><a href="###">个人资料</a></dd>
+							<dd><a href="###">地址管理</a></dd>
+							<dd><a href="###">我的收藏</a></dd>
+							<dd><a class="sel-list" href="###">最近浏览</a></dd>
+							<dd><a href="###">修改密码</a></dd>
+						</dl>
+						<dl>
+							<dt><a href="###">站内信<span></span></a></dt>
+							<dd><a href="###">我的消息</a></dd>
+						</dl>				
+					</div>					
+				</div>
+				<div class="you">
+					<div class="duihuanjilu">
+						<div class="shang">最近浏览</div>
+					</div>
+					<ul>
+						<li>
+							<img src="img/img-c/c-16/图层105.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span><button>取消收藏</button></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-16/图层101.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span><button>取消收藏</button></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-16/图层102.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span><button>取消收藏</button></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-16/图层103.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span><button>已失效</button></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-16/图层105.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-16/图层101.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-16/图层102.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-16/图层103.png"/><div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+			</ul>
+				</div>
+			</div>
+			
+		</div>
+		<!--底部-->
+		<div class="foot">
+			<div class="foot1">
+				<div class="f1-mid">
+					<span>正品保障</span>
+					<span>全程追踪</span>
+					<span>客户监督</span>
+					<span>售后无忧</span>
+					<span>准时送达</span>
+				</div>
+			</div>
+			<div class="foot2">
+				<div class="f2-mid">
+					<div class="logo2"></div>
+					<div class="weixin">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>官方微信</span>
+					</div>
+					<div class="app">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>APP下载</span>
+					</div>
+					<dl>
+						<dt>关于易和</dt>
+						<dd><a href="###">新用户注册</a></dd>
+						<dd><a href="###">在线下单</a></dd>
+						<dd><a href="###">支付方式</a></dd>
+					</dl>
+					<dl>
+						<dt>配送说明</dt>
+						<dd><a href="###">运费说明</a></dd>
+						<dd><a href="###">配送方式</a></dd>
+						<dd><a href="###">发票说明</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="###">退换货规则</a></dd>
+						<dd><a href="###">服务保障承诺</a></dd>
+						<dd><a href="###">验货与签收</a></dd>
+					</dl>
+					<dl>
+						<dt>加盟易和</dt>
+						<dd><a href="###">加盟条款</a></dd>
+						<dd><a href="###">公司简介</a></dd>
+						<dd><a href="###">服务协议</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot3">
+				<ul>
+					<li>版权所有 © 2016易和生活港  保留所有权利 | 沪ICP备12042163</li>
+					<li>易和生活  纵享品质</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/top.js"></script>
+	<script type="text/javascript" src="js/b-new-user.js"></script>
+	<script src="js/b-content-list.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	//点击最近浏览
+		$(".mid .you ul li").on("click",function(){
+			$(".mid .you ul li").css({
+				"border":"1px solid rgb(225,225,225)",
+			});
+			$(this).css({
+				"border":"1px solid rgb(255,108,0)",
+			});
+		});
+	</script>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的账户充值支付</title>
+		<style type="text/css">
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			a{
+				color: #666666;
+			}
+			.daohangtiao{
+				width: 100%;
+				background: rgb(238,238,238);
+			}
+			@media screen and (max-width:1180px) {
+				.daohangtiao{
+					width: 1180px;
+				}
+			}
+			.daohangtiao .daohangwenzi{
+				width: 1180px;
+				padding: 10px 0;
+				margin: 0 auto;
+				font-size: 12px;
+				color: #666666;
+				overflow: hidden;
+			}
+			.daohangtiao .daohangwenzi .zuo{
+				float: left;
+			}
+			.daohangtiao .daohangwenzi .zuo span{
+				width: 40px;
+				height: 12px;
+				background: url(img/img-c/c-6/_.png) no-repeat right center;
+				padding-right: 12px;
+			}
+			.daohangtiao .daohangwenzi .you{
+				float: right;
+			}
+			.daohangtiao .daohangwenzi .you a{
+				display: inline-block;
+				padding: 0 8px;
+			}
+			.daohangtiao .daohangwenzi .you a:nth-child(1){
+				color: #ff6c00;
+			}
+			.daohangtiao .daohangwenzi .you a:nth-child(2),.daohangtiao .daohangwenzi .you a:nth-child(3),.daohangtiao .daohangwenzi .you a:nth-child(4),.daohangtiao .daohangwenzi .you a:nth-child(5){
+				border-right: 1px solid rgb(153,153,153);
+			}
+			.daohangtiao .daohangwenzi .you a:nth-child(6){
+				background: url(img/img-c/c-6/1-5.png) no-repeat left center;
+				padding-left: 15px;
+				margin-left: 80px;
+			}
+			.neirong{
+				width: 1098px;
+				border: 1px solid rgb(211,211,211);
+				margin: 0 auto;
+				margin-top: 25px;
+				padding: 40px;
+			}
+			.neirong .toubu{
+				width: 1098px;
+				height: 80px;
+				padding-bottom: 40px;
+				border-bottom: 1px solid rgb(211,211,211);
+				overflow: hidden;
+			}
+			.neirong .toubu h1{
+				width: 140px;
+				height: 80px;
+				background: url(img/img-c/c-6/矢量智能对象.png);
+				float: left;
+			}
+			.neirong .toubu div{
+				width: 140px;
+				height: 80px;
+				float: right;
+				line-height: 80px;
+				text-align: right;
+				font-size: 18px;
+				color: #666666;
+			}
+			
+			.neirong .dingdanyitijiao{
+				width: 1098px;
+				border-bottom: 1px solid rgb(233,233,233);
+
+			}
+			
+			.neirong .dingdanyitijiao .yingfujine{
+				width: 1098px;
+				height: 25px;
+				overflow: hidden;
+				line-height: 25px;
+				margin-top: 30px;
+				margin-bottom: 40px;
+			}
+			.neirong .dingdanyitijiao .yingfujine .zuo{
+				width: 500px;
+				height: 25px;
+				float: left;
+				font-size: 18px;
+				color: #666666;
+				text-align: left;
+			}
+			.neirong .dingdanyitijiao .yingfujine .zuo span{
+				font-size: 24px;
+				color: #ec6a17;
+			}
+			.neirong .dingdanyitijiao .yingfujine .you{
+				width: 325px;
+				height: 25px;
+				float: right;
+				text-align: left;
+			}
+			.neirong .dingdanyitijiao div:nth-of-type(2){
+				font-size: 18px;
+				color: #666666;
+				margin-bottom: 20px;
+			}
+			.neirong .zhifupingtai{
+				width: 1098px;
+				height: 40px;
+				padding: 40px 0;
+				overflow: hidden;
+			}
+			.neirong .zhifupingtai .zhifubao,.neirong .zhifupingtai .weixin,.neirong .zhifupingtai .yinlian,.neirong .zhifupingtai .yue{
+				width: 135px;
+				height: 40px;
+				margin-right: 40px;
+				float: left;
+				background: url(img/img-c/c-8/椭圆2.png) no-repeat left center; 
+				padding-left: 25px;
+			}
+			.neirong .zhifupingtai .zhifubao div,.neirong .zhifupingtai .weixin div,.neirong .zhifupingtai .yinlian div,.neirong .zhifupingtai .yue div{
+				width: 133px;
+				height: 38px;
+				border: 1px solid rgb(218,218,218);
+			}
+			.neirong .zhifupingtai .zhifubao div{
+				background: url(img/img-c/c-8/图层57.png) no-repeat center center;
+			}
+			.neirong .zhifupingtai .weixin div{
+				background: url(img/img-c/c-8/图层58.png) no-repeat center center;
+			}
+			.neirong .zhifupingtai .yinlian div{
+				background: url(img/img-c/c-8/银联支付.png) no-repeat center center;
+			}
+			.neirong .zhifupingtai .yue div{
+				background: url(img/img-c/c-8/余额支付.png) no-repeat center center;
+			}
+			
+			
+			.neirong .zhifupingtai .zhifubao{
+				background: url(img/img-c/c-8/椭圆3.png) no-repeat left center;
+			}
+			.neirong .zfbzf{
+				width: 696px;
+				height: 278px;
+				border: 1px solid rgb(232,232,232);
+				padding: 60px 200px;
+				overflow: hidden;
+			}
+			.neirong .zfbzf .zuo{
+				width: 170px;
+				height: 278px;
+				float: left;
+			}
+			.neirong .zfbzf .zuo p{
+				font-size: 18px;
+				color: #595959;
+				margin-bottom: 40px;
+			}
+			.neirong .zfbzf .zuo div{
+				width: 165px;
+				height: 134px;
+				background: url(img/img-c/c-8/FRONT.png) no-repeat;
+			}
+			.neirong .zfbzf .zuo button{
+				width: 170px;
+				height: 45px;
+				border: none;
+				border-radius: 5px;
+				background: rgb(236,106,23);
+				margin-top: 40px;
+				font-size: 18px;
+				color: #FFFFFF;
+			}
+			.neirong .zfbzf .zhong{
+				width: 305px;
+				height: 278px;
+				float: left;
+				font-size: 18px;
+				color: #595959;
+				text-align: center;
+				line-height: 278px;
+			}
+			.neirong .zfbzf .you{
+				width: 217px;
+				height: 278px;
+				float: left;
+			}
+			.neirong .zfbzf .you p{
+				font-size: 18px;
+				color: #595959;
+				margin-bottom: 40px;
+			}
+			.neirong .zfbzf .you div{
+				width: 216px;
+				height: 217px;
+				background: url(img/img-c/c-8/图层84.png) no-repeat;
+			}
+			.wxzf{
+				width: 738px;
+				height: 275px;
+				border: 1px solid rgb(232,232,232);
+				margin: 0 auto;
+				margin-top: 60px;
+				padding: 60px 200px 60px 158px;
+				overflow: hidden;
+			}
+			.wxzf .zuo{
+				width: 360px;
+				height: 275px;
+				float: left;
+				background: url(img/img-c/c-8/图层86.png) no-repeat left;
+				border-right: 1px solid rgb(238,238,238);
+			}
+			.wxzf .you{
+				width: 217px;
+				height: 278px;
+				float: left;
+				margin-left: 155px;
+			}
+			.wxzf .you p{
+				font-size: 18px;
+				color: #595959;
+				margin-bottom: 40px;
+			}
+			.wxzf .you div{
+				width: 216px;
+				height: 217px;
+				background: url(img/img-c/c-8/图层84.png) no-repeat;
+			}
+			
+			.dibu{
+				width: 100%;
+				height: 44px;
+				border-top: 1px solid rgb(211,211,211);
+				margin-top: 40px;
+				padding: 40px 0;
+			}
+			.dibu .nr{
+				width: 412px;
+				height: 44px;
+				margin: 0 auto;
+			}
+			.dibu .nr p:nth-child(1){
+				font-size: 14px;
+				color: #999999;
+				text-align: center;
+				margin-bottom: 16px;
+			}
+			.dibu .nr p:nth-child(2){
+				font-size: 14px;
+				color: #008de1;
+				text-align: center;
+			}
+			
+			
+			/*使用平台支付*/
+			.san{
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.5);
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.san .neirong1{
+				width: 566px;
+				height: 220px;
+				border: 5px solid rgb(226,226,226);
+				position: fixed;
+				left: 614px;
+				top: 150px;
+				background: #FFFFFF;
+				padding: 100px 40px 80px 40px;
+				overflow: hidden;
+			}
+			.san .neirong1 p:nth-child(1){
+				font-size: 30px;
+				color: #ec6a17;
+				text-align: center;
+				margin-bottom: 64px;
+			}
+			.san .neirong1 p:nth-child(2){
+				font-size: 18px;
+				color: #666666;
+				text-align: center;
+				margin-bottom: 70px;
+			}
+			.san .neirong1 button{
+				width: 170px;
+				height: 72px;
+				border: none;
+				border-radius: 5px;
+				font-size: 18px;
+				color: #FFFFFF;
+			}
+			.san .neirong1 button span{
+				display: block;
+				font-size: 14px;
+				margin-top: 10px;
+			}
+			.san .neirong1 button:nth-of-type(1){
+				background: rgb(236,106,23);
+				margin-left: 85px;
+				float: left;
+			}
+			.san .neirong1 button:nth-of-type(2){
+				background: rgb(153,153,153);
+				float: right;
+				margin-right: 85px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+	<body>
+		<div class="daohangtiao">
+			<div class="daohangwenzi">
+				<div class="zuo">
+					所在城市：<span><a href="###">北京</a></span>
+				</div>
+				<div class="you">
+					您好，<a href="###">17701269859</a><a href="###">退出</a><a href="###">我的订单</a><a href="###">我的消息</a><a href="###">我是商家</a><a href="###">400-800-8820</a>
+				</div>
+			</div>
+		</div>
+		<div class="neirong">
+			<div class="toubu">
+				<h1></h1>
+				<div><a href="###">充值支付</a></div>
+			</div>
+			<div class="dingdanyitijiao">
+				<div class="yingfujine">
+					<div class="zuo">
+						应付金额：<span>165.90</span>（在线支付）
+					</div>
+					<div class="you">
+						订单编号：<span>425954156947</span>
+					</div>
+				</div>
+				<div>支付平台</div>
+			</div>
+			<div class="zhifupingtai">
+				<div class="zhifubao"><div></div></div>
+				<div class="weixin"><div></div></div>
+				<div class="yinlian"><div></div></div>
+				<div class="yue"><div></div></div>
+			</div>
+			<div class="zfbzf">
+				<div class="zuo">
+					<p>使用电脑支付</p>
+					<div></div>
+					<button>立即支付</button>
+				</div>
+				<div class="zhong">
+					或
+				</div>
+				<div class="you">
+					<p>使用支付宝钱包扫一扫付款</p>
+					<div></div>
+				</div>
+			</div>
+		</div>	
+		<div class="wxzf">
+			<div class="zuo"></div>
+			<div class="you">
+				<p>使用微信钱包扫一扫付款</p>
+				<div></div>
+			</div>
+		</div>
+		<div class="dibu">
+			<div class="nr">
+				<p>版权所有 © 2016易和生活港  保留所有权利 | 沪ICP备12042163</p>
+				<p>易和生活  纵享品质</p>
+			</div>
+		</div>
+		<div class="san">
+				<div class="neirong1">
+					<p>使用平台支付</p>
+					<p>请您在新打开的网上银行页面进行支付，支付完成前请不要关闭该窗口</p>
+					<button>已经完成支付<br /><span>查看订单详情</span></button><button>支付失败<br /><span>更换支付方式</span></button>
+				</div>
+			</div>
+	</body>
+<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tou.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+	//点击立即支付
+	$(".zfbzf .zuo button").on("click",function(){
+		$(".san").show();
+	})
+	$(".san .neirong1 button:nth-of-type(2)").on("click",function(){
+		$(".san").hide();
+	})
+	//选择支付方式
+	$(document).on("click",".zhifupingtai > div",function(){
+		$(".zhifupingtai > div").css({
+			"background": "url(img/img-c/c-8/椭圆2.png) no-repeat left center",
+		})
+		$(".zhifupingtai > div").find("div").css({
+			"border":"1px solid rgb(218,218,218)",
+		})
+		$(this).css({
+			"background": "url(img/img-c/c-8/椭圆3.png) no-repeat left center",
+		})
+		$(this).find("div").css({
+			"border":"1px solid rgb(255,108,0)",
+		})
+	})
+	
+	//点击已完成支付
+	$(".neirong1 button:nth-of-type(1)").on("click",function(){
+		window.open("c-9.html");
+	})
+</script>
+
+</html>

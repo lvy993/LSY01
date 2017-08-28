@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>显示更多分类后样式</title>
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 242, 242);
+			}
+			
+			.dangqianweizhi {
+				width: 1180px;
+				margin: 0 auto;
+				padding: 20px 0;
+				font-size: 14px;
+			}
+			
+			.dangqianweizhi a {
+				color: #666666;
+			}
+			
+			.dangqianweizhi span:nth-child(2) a {
+				color: #ec6a17;
+			}
+			/*放大镜*/
+			
+			.out {
+				position: relative;
+				width: 360px;
+				float: left;
+			}
+			
+			.out .window .scroll img {
+				width: 72px;
+				height: 40px;
+				margin-right: 5px;
+			}
+			
+			#dyh {
+				color: rgb(102, 102, 102);
+				width: 20px;
+				height: 58px;
+				background: rgb(242, 242, 242);
+				line-height: 58px;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			#xyh {
+				color: rgb(102, 102, 102);
+				width: 20px;
+				height: 58px;
+				background: rgb(242, 242, 242);
+				line-height: 58px;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 340px;
+			}
+			/*
+			 设置轮播图外观
+			 * */
+			
+			.out .window {
+				width: 360px;
+				height: 40px;
+				padding: 9px 0;
+				overflow: hidden;
+				position: relative;
+				background: rgb(242, 242, 242);
+			}
+			
+			.out .window .scroll {
+				width: 462px;
+				position: absolute;
+			}
+			/*设置大图的尺寸*/
+			
+			.out .big img {
+				width: 720px;
+				height: 400px;
+				position: absolute;
+			}
+			
+			.out .big {
+				width: 360px;
+				height: 200px;
+				overflow: hidden;
+				position: absolute;
+				left: 370px;
+				top: 0;
+				display: none;
+				z-index: 1;
+			}
+			/*设置蒙板的外观*/
+			
+			#mask {
+				width: 180px;
+				height: 100px;
+				background: rgba(0, 0, 0, 0.3);
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			
+			.window .small {
+				position: relative;
+			}
+			
+			.dianmianxiangqing {
+				width: 1138px;
+				height: 258px;
+				border: 1px solid rgb(211, 211, 211);
+				margin: 0 auto;
+				padding: 20px;
+				overflow: hidden;
+				background: #FFFFFF;
+			}
+			
+			.dianmianxiangqing .you {
+				width: 758px;
+				height: 260px;
+				float: left;
+				margin-left: 20px;
+			}
+			
+			.dianmianxiangqing .you .z {
+				width: 465px;
+				height: 260px;
+				float: left;
+			}
+			
+			.dianmianxiangqing .you .z .spmc {
+				width: 465px;
+				height: 90px;
+				border-bottom: 1px solid rgb(227, 227, 227);
+			}
+			
+			.dianmianxiangqing .you .z .spmc h2 {
+				font-size: 24px;
+				color: #008de1;
+				margin-bottom: 18px;
+			}
+			
+			.dianmianxiangqing .you .z .spmc span {
+				font-size: 12px;
+				color: #666666;
+				line-height: 20px;
+			}
+			
+			.dianmianxiangqing .you .z .dz {
+				width: 465px;
+				height: 76px;
+				border-bottom: 1px solid rgb(227, 227, 227);
+				padding: 10px 0;
+			}
+			
+			.dianmianxiangqing .you .z .dz ul li {
+				font-size: 14px;
+				color: #666666;
+				line-height: 25px;
+				padding-left: 25px;
+			}
+			
+			.dianmianxiangqing .you .z .dz ul li:nth-child(1) {
+				background: url(img/img-c/c-5/icon.png) no-repeat left;
+			}
+			
+			.dianmianxiangqing .you .z .dz ul li:nth-child(2) {
+				background: url(img/img-c/c-5/iPhonepotrait.png) no-repeat left;
+			}
+			
+			.dianmianxiangqing .you .z .dz ul li:nth-child(3) {
+				background: url(img/img-c/c-5/location.png) no-repeat left;
+			}
+			
+			.dianmianxiangqing .you .z .shangjiagonggao h2 {
+				font-size: 16px;
+				color: #008de1;
+				padding: 10px 0;
+			}
+			
+			.dianmianxiangqing .you .z .shangjiagonggao span {
+				font-size: 12px;
+				color: #666666;
+				line-height: 20px;
+			}
+			
+			.dianmianxiangqing .you .y {
+				width: 273px;
+				height: 280px;
+				padding-top: 20px;
+				padding-left: 20px;
+				float: right;
+				position: relative;
+				left: 20px;
+				bottom: 20px;
+				background: rgb(240,249,255);
+			}
+			
+			.dianmianxiangqing .you .y p {
+				font-size: 14px;
+				color: #666666;
+			}
+			
+			.dianmianxiangqing .you .y p:nth-child(2) {
+				margin-top: 20px;
+			}
+			
+			.dianmianxiangqing .you .y p:nth-child(2) span {
+				display: inline-block;
+				width: 50px;
+				height: 14px;
+				padding-left: 100px;
+				background: url(img/img-c/c-4/商家_03.png) no-repeat left center;
+			}
+			
+			.dianmianxiangqing .you .y .pingfen {
+				width: 253px;
+				height: 52px;
+				margin: 38px 0;
+				overflow: hidden;
+			}
+			
+			.dianmianxiangqing .you .y .pingfen div {
+				width: 39px;
+				height: 52px;
+				float: left;
+				padding: 0 21px;
+				text-align: center;
+			}
+			
+			.dianmianxiangqing .you .y .pingfen div p:nth-child(1) {
+				font-size: 14px;
+			}
+			
+			.dianmianxiangqing .you .y .pingfen div p:nth-child(2) {
+				font-size: 16px;
+				color: #ff6c00;
+			}
+			
+			.dianmianxiangqing .you .y .pingfen .shangpin {
+				border-left: 1px dashed rgb(211, 211, 211);
+				border-right: 1px dashed rgb(211, 211, 211);
+			}
+			
+			.dianmianxiangqing .you .y .kefu {
+				width: 253px;
+				height: 84px;
+			}
+			
+			.dianmianxiangqing .you .y .kefu ul li {
+				height: 31px;
+				font-size: 14px;
+				color: #666666;
+				line-height: 31px;
+			}
+			.dianmianxiangqing .you .y .kefu ul li:nth-child(1){
+				margin-bottom: 20px;
+			}
+			.dianmianxiangqing .you .y .kefu ul li button {
+				width: 117px;
+				height: 30px;
+				border: none;
+				border-radius: 5px;
+				background: url(img/img-c/c-5/矢量智能对象.png) no-repeat left 15px center rgb(236, 106, 23);
+				padding-left: 30px;
+				margin-left: 25px;
+			}
+			
+			.dianmianxiangqing .hzsj {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+			}
+			/*导航条*/
+			
+			.xiangqing {
+				width: 1178px;
+				height: 1182px;
+				border: 1px solid rgb(211, 211, 211);
+				margin-top: 20px;
+				margin-bottom: 20px;
+				margin: 20px auto;
+			}
+			
+			.xiangqing .daohangtiao {
+				width: 1178px;
+				height: 96px;
+				overflow: hidden;
+				background: rgb(248, 248, 248);
+			}
+			
+			.xiangqing .daohangtiao div {
+				float: left;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(1),.xiangqing .daohangtiao div:nth-child(12) {
+				width: 105px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(1) a,.xiangqing .daohangtiao div:nth-child(12) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(2),.xiangqing .daohangtiao div:nth-child(13) {
+				width: 106px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(2) a,.xiangqing .daohangtiao div:nth-child(13) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(3),.xiangqing .daohangtiao div:nth-child(14) {
+				width: 87px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(3) a,.xiangqing .daohangtiao div:nth-child(14) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(4),.xiangqing .daohangtiao div:nth-child(15) {
+				width: 87px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(4) a,.xiangqing .daohangtiao div:nth-child(15) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(5),.xiangqing .daohangtiao div:nth-child(16) {
+				width: 106px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(5) a,.xiangqing .daohangtiao div:nth-child(16) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(6) {
+				width: 142px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(6) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(7) {
+				width: 86px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(7) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(8) {
+				width: 88px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(8) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(9) {
+				width: 105px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(9) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(10) {
+				width: 135px;
+				height: 47px;
+				border-right: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				line-height: 48px;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(10) a {
+				font-size: 18px;
+				color: #323333;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(11) {
+				width: 121px;
+				height: 47px;
+				border-top: 1px solid rgb(0, 141, 225);
+				text-align: center;
+				line-height: 48px;
+				background: #FFFFFF;
+			}
+			
+			.xiangqing .daohangtiao div:nth-child(11) a {
+				font-size: 18px;
+				color: #008de1;
+			}
+			
+			.xiangqing .quanbushangpin {
+				width: 1138px;
+				height: 1045px;
+				background: #FFFFFF;
+				padding: 20px;
+			}
+			
+			/*全部商品*/
+			.quanbushangpin ul{
+				width: 1178px;
+				overflow: hidden;
+			}
+			.quanbushangpin ul li{
+				width: 218px;
+				height: 333px;
+				border: 1px solid rgb(225,225,225);
+				background: #FFFFFF;
+				float: left;
+				margin-right: 10px;
+				margin-bottom: 20px;
+			}
+			.quanbushangpin ul li:nth-child(5n){
+				margin-right: 0;
+			}
+			.quanbushangpin ul li img{
+				display: block;
+			}
+			.quanbushangpin ul li div{
+				width: 182px;
+				height: 77px;
+				border-top: 1px solid rgb(225,225,225);
+				padding: 18px;
+			}
+			.quanbushangpin ul li div span:nth-child(1){
+				font-size: 14px;
+				color: #666666;
+				width: 182px;
+				height: 40px;
+				display: block;
+				line-height: 20px;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				margin-bottom: 17px;
+			}
+			.quanbushangpin ul li div span:nth-child(2){
+				font-size: 18px;
+				color: #EA0000;
+			}
+			.quanbushangpin ul li div span:nth-child(3){
+				font-size: 14px;
+				color: #333333;
+				text-decoration: line-through;
+				margin-left: 5px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/headAndfoot.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="top">
+			<!--上部分-->
+			<div class="top1">
+				<div class="top1-mid">
+					<div class="mt-city">
+						<span>所在城市：</span>
+						<span id="citys">北京</span>
+					</div>
+					<div class="mt-infor">
+						<span>您好，<a href="###"  class="username">17701269859</a></span>
+						<span><a href="###">退出</a></span>
+						<span><a href="###">我的订单</a></span>
+						<span><a href="###">我的消息</a></span>
+						<span><a href="###">我是商家</a></span>
+						<span>
+							<a href="###">400-800-8888</a>							
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--下部分-->
+			<div class="top2">
+				<div class="top2-mid">
+					<!--头部中间-->
+					<div class="search">
+						<!--logo-->
+						<h1>
+							<a href="###"><img src="img/img-b/b-logo1.png"/></a>				
+						</h1>
+						<!--搜索-->
+						<div class="goods">
+							<div class="fenlei">
+								<span class="select">商家</span>
+								<span>商品</span>
+							</div>
+							<div class="sousuo">
+								<input type="text" value="" placeholder="请输入关键字进行筛选" />
+								<span></span>
+							</div>
+							<div class="hot">
+								<span><strong>热门:</strong></span>
+								<a href="###">酒店</a>
+								<a href="###">洗车</a>
+								<a href="###">餐饮</a>
+								<a href="###">进口</a>
+								<a href="###">旅游</a>
+								<a href="###">如家</a>
+							</div>
+						</div>
+						<!--我的-->
+						<div class="mine">
+							<a href="###">
+								<div class="my-yihe">我的易和<span></span></div>
+							</a>
+							<a href="###">
+								<div class="my-car">购物车
+									<span></span>
+								</div>
+							</a>
+							<div class="clear"></div>
+							<div class="tip">0
+								<img src="img/img-b/b-jiao.png" />
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!--头部下-->
+				<div class="nav">
+					<div class="trade">
+						<span>行业分类</span>
+						<span class="tr-arrow"></span>
+						<div class="menu">
+							<ul>
+								<li>
+									<a href="###"><span>服装市场</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>建材装修</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>休闲娱乐</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>生活服务</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>3C市场</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>丽人</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>本地生活</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>购物</span><span></span></a>
+								</li>
+								<li>
+									<a href="###"><span>电子数码</span><span></span></a>
+								</li>
+							</ul>
+							<div class="menu-det">
+								<div class="detail">
+									<a href="###">手机商家</a>
+									<a href="###">电脑及配件</a>
+									<a href="###">厨房电器件</a>
+									<a href="###">智能生活</a>
+									<a href="###">显示器</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="###">首页</a>
+					<a href="###">精选品牌</a>
+					<a href="###">今日特价</a>
+					<a href="###">积分商城</a>
+					<a href="###">加入易和</a>
+					<div class="kefu">
+						<span>在线客服</span>
+						<ul>
+							<li></li>
+							<li class="qq-serv">
+								<a href="###">QQ客服1</a>
+							</li>
+							<li class="qq-serv">
+								<a href="###">QQ客服2</a>
+							</li>
+							<li class="qq-serv">
+								<a href="###">QQ客服3</a>
+							</li>
+							<li><img src="img/img-b/b-erweima.png" /></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dangqianweizhi">
+			您当前的位置：<span><a href="###">首页</a></span> > <span><a href="###">海澜之家旗舰店</a></span>
+		</div>
+		<div class="dianmianxiangqing">
+			<div class="out">
+				<div class="" id="content">
+					<div class="small">
+						<img src="img/img-c/c-5/1.jpg" id="small" />
+						<div id="mask"></div>
+					</div>
+					<div class="window">
+						<div class="scroll">
+							<img src="img/img-c/c-5/1.jpg" /><img src="img/img-c/c-5/2.jpg" /><img src="img/img-c/c-5/3.jpg" /><img src="img/img-c/c-5/4.jpg" /><img src="img/img-c/c-5/5.jpg" /><img src="img/img-c/c-5/6.jpg" />
+						</div>
+						<div id="dyh">
+							<</div>
+								<div id="xyh">></div>
+						</div>
+						<div class="big">
+							<img src="img/img-c/c-5/1.jpg" id="big" />
+						</div>
+					</div>
+				</div>
+				<div class="you">
+					<div class="z">
+						<div class="spmc">
+							<h2>海澜之家旗舰店</h2>
+							<span>海澜之家旗舰店海澜之家旗舰店海澜之家旗舰店海澜之家旗舰店店海澜之店海澜之家旗舰店海澜之家旗舰店海澜之家旗舰店</span>
+						</div>
+						<div class="dz">
+							<ul>
+								<li>李杰</li>
+								<li>18699563265</li>
+								<li>浙江省台州市温岭市人民西路281号</li>
+							</ul>
+						</div>
+						<div class="shangjiagonggao">
+							<h2>商家公告</h2>
+							<span>海澜之家旗舰店海澜之家旗舰店海澜之家旗舰店海澜之家旗舰店店海澜之店海澜之家旗舰店海澜之家旗舰店海澜之家旗舰店</span>
+						</div>
+					</div>
+					<div class="y">
+						<p><b>所属品牌：</b><span>海澜之家</span></p>
+						<p><b>综合评分：</b><span>4.5分</span></p>
+						<div class="pingfen">
+							<div class="miaoshu">
+								<p>描述</p>
+								<p>4.5分</p>
+							</div>
+							<div class="shangpin">
+								<p>商品</p>
+								<p>4.5分</p>
+							</div>
+							<div class="fuwu">
+								<p>服务</p>
+								<p>4.5分</p>
+							</div>
+						</div>
+						<div class="kefu">
+							<ul>
+								<li><span>客服一：</span><button>QQ客服1</button></li>
+								<li><span>客服二：</span><button>QQ客服2</button></li>
+							</ul>
+						</div>
+						<img src="img/img-c/c-5/合作商家.png" alt="" class="hzsj" />
+					</div>
+				</div>
+
+			</div>
+
+			<div class="xiangqing">
+				<div class="daohangtiao">
+					<div id="nsy">
+						<a href="###">男上衣</a>
+					</div>
+					<div id="nsy">
+						<a href="###">女上衣</a>
+					</div>
+					<div id="nk">
+						<a href="###">男裤</a>
+					</div>
+					<div id="nk">
+						<a href="###">女裤</a>
+					</div>
+					<div id="ncs">
+						<a href="###">男衬衫</a>
+					</div>
+					<div id="dddsp">
+						<a href="###">到店的商品</a>
+					</div>
+					<div id="nk">
+						<a href="###">男裤</a>
+					</div>
+					<div id="nk">
+						<a href="###">女裤</a>
+					</div>
+					<div id="ncs">
+						<a href="###">男衬衫</a>
+					</div>
+					<div id="dddsp">
+						<a href="###">到店的商品</a>
+					</div>
+					<div id="qbsp">
+						<a href="###">全部商品</a>
+					</div>
+					<div id="nsy">
+						<a href="###">男上衣</a>
+					</div>
+					<div id="nsy">
+						<a href="###">女上衣</a>
+					</div>
+					<div id="nk">
+						<a href="###">男裤</a>
+					</div>
+					<div id="nk">
+						<a href="###">女裤</a>
+					</div>
+					<div id="ncs">
+						<a href="###">男衬衫</a>
+					</div>
+				</div>
+				<div class="quanbushangpin">
+					<ul>
+						<li>
+							<img src="img/img-c/c-2/图层 105.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 101.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 102.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 103.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 104.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-2/图层 105.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 101.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 102.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 103.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 104.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-2/图层 105.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 101.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 102.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 103.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+						<li>
+							<img src="img/img-c/c-3/图层 104.png" />
+							<div><span>自家礼包送亲人，送朋友的不二选择自家礼包送亲人自家礼包送亲人，送朋友的不二选择</span><span>¥11.8</span><span>¥20.0</span></div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!--底部-->
+		<div class="foot">
+			<div class="foot1">
+				<div class="f1-mid">
+					<span>正品保障</span>
+					<span>全程追踪</span>
+					<span>客户监督</span>
+					<span>售后无忧</span>
+					<span>准时送达</span>
+				</div>
+			</div>
+			<div class="foot2">
+				<div class="f2-mid">
+					<div class="logo2"></div>
+					<div class="weixin">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>官方微信</span>
+					</div>
+					<div class="app">
+						<div>
+							<img src="img/img-b/b-erweima.png" alt="" />
+						</div>
+						<span>APP下载</span>
+					</div>
+					<dl>
+						<dt>关于易和</dt>
+						<dd><a href="###">新用户注册</a></dd>
+						<dd><a href="###">在线下单</a></dd>
+						<dd><a href="###">支付方式</a></dd>
+					</dl>
+					<dl>
+						<dt>配送说明</dt>
+						<dd><a href="###">运费说明</a></dd>
+						<dd><a href="###">配送方式</a></dd>
+						<dd><a href="###">发票说明</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="###">退换货规则</a></dd>
+						<dd><a href="###">服务保障承诺</a></dd>
+						<dd><a href="###">验货与签收</a></dd>
+					</dl>
+					<dl>
+						<dt>加盟易和</dt>
+						<dd><a href="###">加盟条款</a></dd>
+						<dd><a href="###">公司简介</a></dd>
+						<dd><a href="###">服务协议</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="foot3">
+				<ul>
+					<li>版权所有 © 2016易和生活港  保留所有权利 | 沪ICP备12042163</li>
+					<li>易和生活  纵享品质</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/top.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//放大镜
+		//获取存放小图的div标签
+		var small = document.getElementsByClassName("small")[0];
+		//获取黄色的蒙板标签和winddow标签
+		var maskM = document.getElementById("mask");
+		var big = document.getElementsByClassName("big")[0];
+		//获取big中的大图片
+		var bigImg = document.getElementById("big");
+		//获取out标签
+		var out = document.getElementsByClassName("out")[0];
+		small.onmouseenter = function() {
+			maskM.style.display = "block";
+			big.style.display = "block";
+			document.onmousemove = function(e) {
+				//获取鼠标移动事件的对象
+				var even = e || window.event;
+				//获取鼠标点击位置距离窗口左侧和上端的距离
+				var x = even.clientX;
+				var y = even.clientY;
+				//获取small标签左侧和上端的距离
+				var leftX = out.offsetLeft;
+				var topY = out.offsetTop;
+				//获取黄色蒙板的宽度和高度
+				var width = maskM.clientWidth;
+				var height = maskM.clientHeight;
+
+				var offsetX = x - leftX - width / 2;
+				var offsetY = y - topY - height / 2;
+				if(offsetX <= 0) {
+					offsetX = 0;
+				} else if(offsetX >= small.clientWidth - width) {
+					offsetX = small.clientWidth - width;
+				}
+
+				if(offsetY <= 0) {
+					offsetY = 0;
+				} else if(offsetY >= small.clientHeight - height) {
+					offsetY = small.clientHeight - height;
+				}
+				//移动黄色蒙板
+				maskM.style.left = offsetX + "px";
+				maskM.style.top = offsetY + "px";
+				//计算比例系数
+				var scaleX = (bigImg.clientWidth - big.clientWidth) / (small.clientWidth - width);
+				var scaleY = (bigImg.clientHeight - big.clientHeight) / (small.clientHeight - height);
+				//修改大图的left和top
+				bigImg.style.left = -scaleX * offsetX + "px";
+				bigImg.style.top = -scaleY * offsetY + "px";
+			}
+		}
+		small.onmouseleave = function() {
+			maskM.style.display = "none";
+			big.style.display = "none";
+		}
+
+		/*
+		 轮播图部分设置
+		 * */
+		var back = document.getElementById("dyh");
+		var next = document.getElementById("xyh");
+		//获取轮播图中包裹图片的内容层标签
+		var scroll = document.getElementsByClassName("scroll")[0];
+		back.onclick = function() {
+			//右移
+			scroll.style.left = (scroll.offsetLeft + 35) + "px";
+			if(scroll.offsetLeft >= 0) {
+				scroll.style.left = 0;
+			}
+		}
+		next.onclick = function() {
+			//左移
+			scroll.style.left = (scroll.offsetLeft - 35) + "px";
+			if(scroll.offsetLeft <= -95) {
+				scroll.style.left = "-95px";
+			}
+		}
+
+		//获取所有的scroll中的img标签
+		var imgs = document.querySelectorAll(".scroll img");
+		var smallImg = document.getElementById("small");
+		for(var i = 0; i < imgs.length; i++) {
+			imgs[i].index = i;
+			imgs[i].onmouseenter = function() {
+				smallImg.src = "img/img-c/c-5/" + (this.index + 1) + ".jpg"
+				bigImg.src = "img/img-c/c-5/" + (this.index + 1) + ".jpg"
+			}
+		}
+		
+		
+		
+		//全部商品
+		$(".quanbushangpin ul li").on("click",function(){
+			$(".quanbushangpin ul li").css({
+				"border":"1px solid rgb(225,225,225)",
+			});
+			$(this).css({
+				"border":"1px solid rgb(255,108,0)",
+			});
+		});
+	</script>
+
+</html>

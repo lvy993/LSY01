@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<style type="text/css">
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			
+			a {
+				color: #666666;
+			}
+			
+			.daohangtiao {
+				width: 100%;
+				background: rgb(238, 238, 238);
+			}
+			@media screen and (max-width:1180px) {
+				.daohangtiao{
+					width: 1180px;
+				}
+			}
+			.daohangtiao .daohangwenzi {
+				width: 1180px;
+				padding: 10px 0;
+				margin: 0 auto;
+				font-size: 12px;
+				color: #666666;
+				overflow: hidden;
+			}
+			
+			.daohangtiao .daohangwenzi .zuo {
+				float: left;
+			}
+			
+			.daohangtiao .daohangwenzi .zuo span {
+				width: 40px;
+				height: 12px;
+				background: url(img/img-c/c-6/_.png) no-repeat right center;
+				padding-right: 12px;
+			}
+			
+			.daohangtiao .daohangwenzi .you {
+				float: right;
+			}
+			
+			.daohangtiao .daohangwenzi .you a {
+				display: inline-block;
+				padding: 0 8px;
+			}
+			
+			.daohangtiao .daohangwenzi .you a:nth-child(1) {
+				color: #ff6c00;
+			}
+			
+			.daohangtiao .daohangwenzi .you a:nth-child(2),
+			.daohangtiao .daohangwenzi .you a:nth-child(3),
+			.daohangtiao .daohangwenzi .you a:nth-child(4),
+			.daohangtiao .daohangwenzi .you a:nth-child(5) {
+				border-right: 1px solid rgb(153, 153, 153);
+			}
+			
+			.daohangtiao .daohangwenzi .you a:nth-child(6) {
+				background: url(img/img-c/c-6/1-5.png) no-repeat left center;
+				padding-left: 15px;
+				margin-left: 80px;
+			}
+			
+			.neirong {
+				width: 1098px;
+				border: 1px solid rgb(211, 211, 211);
+				margin: 0 auto;
+				margin-top: 25px;
+				padding: 40px;
+			}
+			
+			.neirong .toubu {
+				width: 1098px;
+				height: 80px;
+				padding-bottom: 40px;
+				border-bottom: 1px solid rgb(211, 211, 211);
+			}
+			
+			.neirong .toubu h1 {
+				width: 140px;
+				height: 80px;
+				background: url(img/img-c/c-6/矢量智能对象.png);
+				display: inline-block;
+			}
+			
+			.neirong .toubu div {
+				height: 42px;
+				display: inline-block;
+				line-height: 42px;
+				text-align: center;
+				position: relative;
+				bottom: 15px;
+			}
+			
+			.neirong .toubu div:nth-of-type(1) {
+				width: 236px;
+				background: url(img/img-c/c-6/矩形1.png);
+				margin-left: 235px;
+				color: #FFFFFF;
+			}
+			
+			.neirong .toubu div:nth-of-type(2) {
+				width: 247px;
+				background: url(img/img-c/c-6/矩形1拷贝.png);
+				margin-left: -10px;
+			}
+			
+			.neirong .toubu div:nth-of-type(3) {
+				width: 248px;
+				background: url(img/img-c/c-6/矩形1拷贝2.png);
+				margin-left: -10px;
+			}
+			
+			.neirong .logo {
+				width: 1098px;
+				padding: 40px 0 20px 0;
+				border-bottom: 1px solid rgb(211, 211, 211);
+			}
+			
+			.neirong .logo div {
+				width: 126px;
+				height: 30px;
+				font-size: 24px;
+				color: #666666;
+				line-height: 30px;
+				background: url(img/img-c/c-6/2-5.png) no-repeat left center;
+				padding-left: 50px;
+			}
+			
+			.neirong .xiangqing {
+				width: 1096px;
+				border: 1px solid rgb(211, 211, 211);
+				margin-top: 20px;
+				overflow: hidden;
+				position: relative;
+				padding-bottom: 90px;
+			}
+			
+			.neirong .xiangqing .guige {
+				width: 1096px;
+				height: 16px;
+				background: rgb(242, 242, 242);
+				padding: 9px 0 9px 0;
+				position: relative;
+			}
+			
+			.neirong .xiangqing .guige input {
+				margin: 0 20px;
+			}
+			
+			.neirong .xiangqing .guige .dian,
+			.neirong .xiangqing .guige .dian2 {
+				width: 12px;
+				height: 12px;
+				border: 1px solid rgb(211, 211, 211);
+				border-radius: 2px;
+				position: absolute;
+				top: 11px;
+				left: 20px;
+				background: #FFFFFF;
+			}
+			
+			.neirong .xiangqing .guige .dian1 {
+				width: 12px;
+				height: 12px;
+				border: 1px solid rgb(211, 211, 211);
+				border-radius: 2px;
+				position: absolute;
+				top: 11px;
+				left: 20px;
+				background: #FFFFFF;
+			}
+			
+			.neirong .xiangqing .guige span {
+				width: 105px;
+				height: 14px;
+				font-size: 14px;
+				color: #333333;
+				display: inline-block;
+				text-align: center;
+			}
+			
+			.neirong .xiangqing .guige span:nth-of-type(1) {
+				margin-right: 370px;
+			}
+			
+			.neirong .xiangqing .yitiao {
+				width: 1096px;
+				height: 60px;
+				padding: 10px 0;
+				border-bottom: 1px solid rgb(222, 222, 222);
+				position: relative;
+				line-height: 60px;
+				overflow: hidden;
+			}
+			
+			.neirong .xiangqing .yitiao input:nth-child(1) {
+				display: inline-block;
+				margin: 0 20px;
+				position: relative;
+				top: 24px;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao .dian,
+			.neirong .xiangqing .yitiao .dian2 {
+				width: 12px;
+				height: 12px;
+				border: 1px solid rgb(211, 211, 211);
+				border-radius: 2px;
+				position: absolute;
+				top: 34px;
+				left: 20px;
+				background: #FFFFFF;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao img {
+				display: inline-block;
+				width: 60px;
+				height: 60px;
+				margin-left: 5px;
+				font-size: 0;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao span:nth-child(4) {
+				display: inline-block;
+				width: 156px;
+				height: 60px;
+				line-height: 60px;
+				font-size: 12px;
+				color: #666666;
+				margin-left: 20px;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao .banbenyanse {
+				width: 95px;
+				height: 60px;
+				float: left;
+				margin-left: 245px;
+				padding-left: 10px;
+			}
+			
+			.neirong .xiangqing .yitiao .banbenyanse p {
+				height: 30px;
+				text-align: left;
+				font-size: 12px;
+				color: #999999;
+				line-height: 30px;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(2) {
+				width: 105px;
+				height: 60px;
+				float: left;
+				text-align: center;
+				line-height: 60px;
+				font-size: 12px;
+				color: #999999;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) {
+				width: 105px;
+				height: 28px;
+				float: left;
+				padding: 16px 0;
+				overflow: hidden;
+				margin-left: 8px;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) .jian {
+				width: 26px;
+				height: 26px;
+				border: 1px solid rgb(211, 211, 211);
+				background: url(img/img-c/c-6/图层86.png) no-repeat center center rgb(242, 242, 242);
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) input {
+				width: 46px;
+				height: 26px;
+				border: none;
+				border-top: 1px solid rgb(211, 211, 211);
+				border-bottom: 1px solid rgb(211, 211, 211);
+				text-align: center;
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(3) .jia {
+				width: 26px;
+				height: 26px;
+				border: 1px solid rgb(211, 211, 211);
+				background: url(img/img-c/c-6/图层拷贝2.png) no-repeat center center rgb(242, 242, 242);
+				float: left;
+			}
+			
+			.neirong .xiangqing .yitiao div:nth-of-type(4) {
+				width: 105px;
+				height: 60px;
+				float: left;
+				text-align: center;
+				line-height: 60px;
+				font-size: 12px;
+				color: #999999;
+			}
+			
+			.neirong .xiangqing .yitiao .shanchu {
+				display: inline-block;
+				width: 105px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				margin-left: 5px;
+				color: rgb(0, 141, 225);
+			}
+			
+			.neirong .xiangqing .zongjine {
+				width: 220px;
+				height: 49px;
+				float: right;
+				padding: 20px 0;
+				text-align: left;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+			
+			.neirong .xiangqing .zongjine p:nth-child(1) {
+				font-size: 16px;
+				color: #333333;
+				margin-bottom: 15px;
+			}
+			
+			.neirong .xiangqing .zongjine p:nth-child(2) {
+				font-size: 18px;
+				color: #ff6c00;
+			}
+			
+			.neirong .piliangcaozuo {
+				width: 1096px;
+				height: 45px;
+				padding-top: 40px;
+				position: relative;
+			}
+			
+			.neirong .piliangcaozuo a {
+				font-size: 14px;
+				color: #2684c7;
+				margin-right: 48px;
+			}
+			
+			.neirong .piliangcaozuo span:nth-of-type(1) {
+				font-size: 16px;
+				color: #333333;
+				margin-left: 500px;
+			}
+			
+			.neirong .piliangcaozuo span:nth-of-type(2) {
+				font-size: 24px;
+				color: #ff6c00;
+				position: relative;
+				top: 5px;
+			}
+			
+			.neirong .piliangcaozuo button {
+				width: 170px;
+				height: 45px;
+				border: none;
+				background: rgb(236, 106, 23);
+				border-radius: 5px;
+				position: absolute;
+				right: 0;
+				top: 40px;
+				font-size: 18px;
+				color: #FFFFFF;
+			}
+			
+			.dibu {
+				width: 100%;
+				height: 44px;
+				border-top: 1px solid rgb(211, 211, 211);
+				margin-top: 40px;
+				padding: 40px 0;
+			}
+			
+			.dibu .nr {
+				width: 412px;
+				height: 44px;
+				margin: 0 auto;
+			}
+			
+			.dibu .nr p:nth-child(1) {
+				font-size: 14px;
+				color: #999999;
+				text-align: center;
+				margin-bottom: 16px;
+			}
+			
+			.dibu .nr p:nth-child(2) {
+				font-size: 14px;
+				color: #008de1;
+				text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+	</head>
+
+	<body>
+		<div class="daohangtiao">
+			<div class="daohangwenzi">
+				<div class="zuo">
+					所在城市：<span><a href="###">北京</a></span>
+				</div>
+				<div class="you">
+					您好，
+					<a href="###">17701269859</a>
+					<a href="###">退出</a>
+					<a href="###">我的订单</a>
+					<a href="###">我的消息</a>
+					<a href="###">我是商家</a>
+					<a href="###">400-800-8820</a>
+				</div>
+			</div>
+		</div>
+		<div class="neirong">
+			<div class="toubu">
+				<h1></h1>
+				<div>我的购物车</div>
+				<div>确认订单信息</div>
+				<div>订单提交成功</div>
+			</div>
+			<div class="logo">
+				<div>购物车</div>
+			</div>
+			<div class="xiangqing">
+				<div class="guige">
+					<input type="checkbox" name="" id="fuxuan" value="" class="" />
+					<label for="fuxuan" class="dian"></label>
+					<span>海澜之家旗舰店</span>
+					<span>规格</span>
+					<span>单价</span>
+					<span>数量</span>
+					<span>金额</span>
+					<span>操作</span>
+				</div>
+				<div class="zongjine">
+					<p>商品金额</p>
+					<p>￥<span>0</span></p>
+				</div>
+			</div>
+			<!--<div class="xiangqing" style="display: none;">
+				<div class="guige">
+					<input type="checkbox" name="" id="fuxuan4" value="" class="" />
+					<label for="fuxuan4" class="dian1"></label>
+					<span>海澜之家旗舰店</span>
+					<span>规格</span>
+					<span>单价</span>
+					<span>数量</span>
+					<span>金额</span>
+					<span>操作</span>
+				</div>
+				<div class="yitiao">
+					<input type="checkbox" name="" id="fuxuan5" value="" class="" />
+					<label for="fuxuan5" class="dian2"></label>
+					<img src="img/img-c/c-6/图层 88.png" />
+					<span>《寻龙诀》北京保利龙旗广场</span>
+					<div class="banbenyanse">
+						<p>版本：<span>国行32G</span></p>
+						<p>颜色：<span>星钻黑</span></p>
+					</div>
+					<div>￥<span>0</span></div>
+					<div>
+						<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+						<div class="jia"></div>
+					</div>
+					<div>￥<span>0</span></div>
+					<a href="###" class="shanchu">删除</a>
+				</div>
+				<div class="yitiao">
+					<input type="checkbox" name="" id="fuxuan6" value="" class="" />
+					<label for="fuxuan6" class="dian2"></label>
+					<img src="img/img-c/c-6/图层 88.png" />
+					<span>《寻龙诀》北京保利龙旗广场</span>
+					<div class="banbenyanse">
+						<p>版本：<span>国行32G</span></p>
+						<p>颜色：<span>星钻黑</span></p>
+					</div>
+					<div>￥<span>0</span></div>
+					<div>
+						<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+						<div class="jia"></div>
+					</div>
+					<div>￥<span>0</span></div>
+					<a href="###" class="shanchu">删除</a>
+				</div>
+				<div class="yitiao">
+					<input type="checkbox" name="" id="fuxuan7" value="" class="" />
+					<label for="fuxuan7" class="dian2"></label>
+					<img src="img/img-c/c-6/图层 88.png" />
+					<span>《寻龙诀》北京保利龙旗广场</span>
+					<div class="banbenyanse">
+						<p>版本：<span>国行32G</span></p>
+						<p>颜色：<span>星钻黑</span></p>
+					</div>
+					<div>￥<span>0</span></div>
+					<div>
+						<div class="jian"></div><input type="text" name="" id="" value="1" class="shuliang" />
+						<div class="jia"></div>
+					</div>
+					<div>￥<span>0</span></div>
+					<a href="###" class="shanchu">删除</a>
+				</div>
+				<div class="zongjine">
+					<p>商品金额</p>
+					<p>￥<span>0</span></p>
+				</div>
+			</div>-->
+			<div class="piliangcaozuo">
+				<a href="###">全选</a>
+				<a href="###">批量删除</a>
+				<span>商品总计：</span><span>￥<b>0</b></span>
+				<button>去结算</button>
+			</div>
+		</div>
+		<div class="dibu">
+			<div class="nr">
+				<p>版权所有 © 2016易和生活港 保留所有权利 | 沪ICP备12042163</p>
+				<p>易和生活 纵享品质</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tou.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		//localStorage
+		var astr = localStorage.getItem("a1");
+		var a1 = JSON.parse(astr);
+		console.log(a1);
+		for (var i = 0; i<a1.length;i++) {
+			var yt = $('<div class="yitiao">'+
+						'<input type="checkbox" name="" id="fuxuan1" value="" class="xz" />'+
+						'<label for="fuxuan1" class="dian2"></label>'+
+						'<img src='+a1[i].tp+' />'+
+						'<span>'+a1[i].bt+'</span>'+
+						'<div class="banbenyanse">'+
+							'<p>'+a1[i].cm1+'：<span>'+a1[i].cm+'</span></p>'+
+							'<p>'+a1[i].ys1+'：<span>'+a1[i].ys+'</span></p>'+
+						'</div>'+
+						'<div>￥<span>'+a1[i].xj+'</span></div>'+
+						'<div>'+
+							'<div class="jian"></div><input type="text" name="" id="" value="'+a1[i].sl+'" class="shuliang" />'+
+							'<div class="jia"></div>'+
+						'</div>'+
+						'<div>￥<span>'+(a1[i].xj*a1[i].sl).toFixed(1)+'</span></div>'+
+						'<a href="###" class="shanchu">删除</a>'+
+					'</div>');
+			yt.attr("ytId",a1[i].id);
+			$(".xiangqing .zongjine").before(yt);
+		}
+		
+		$(".toubu h1").on("click",function(){
+			window.open("b-Home.html","_self");
+		})
+	</script>
+	<script src="js/shopping-car.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
