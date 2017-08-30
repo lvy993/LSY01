@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.3"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syhead.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<style type="text/css">
+		.shouye{
+			min-width: 1200px;
+		}
+		
+			/*.shouye .right{
+				float: right;
+				height: 100%;
+				background-color: black;
+				opacity: 0.8;
+			}
+			.shouye .right ul{
+			    height: 100%;
+			}*/
+			
+			.biaot{
+				/*margin: auto;*/
+				width: 1200px;
+				margin-top: 5px;
+				position: relative;
+			}
+			.biaot .bleft{
+				width: 276px;
+				background-color: rgb(43,43,43);
+				height: 542px;
+				margin-left: 70px;
+				color: white;
+				display: inline-block;
+				line-height: 38px;
+				margin-top: 5px;
+			}
+			
+			.biaot .bleft a{
+				color: white;
+				font-size: 15px;
+				display: block;
+				margin-left: 30px;
+			}
+			.biaot .bleft span a{
+				display: inline-block;
+			}
+			.bleft span{
+				font-size: 20px;
+				display: block;
+			}
+			.bleft b{
+				font-size: 22px;
+				display: inline-block;
+				margin-top: 20px;
+				margin-left: 10px;
+			}
+			.bleft p{
+				font-size: 20px;
+				display: inline-block;
+			}
+			
+			.swiper-container{
+				width: 910px;
+				height: 540px;
+				/*margin-left: 5px;*/
+				margin-top: 5px;
+				display: inline-block;
+				position: absolute;
+				left: 360px;
+			}
+			.lovef{
+				width: 1200px;
+				margin-left: 70px;
+				margin-top: 30px;
+				position: relative;
+			}
+			.lovef h3{
+				font-size: 30px;
+				display: inline-block;
+				line-height: 50px;
+			}
+			.lovef .xin{
+				font-size: 20px;
+				font-weight: 100;
+				display: inline-block;
+				margin-left: 20px;
+				line-height: 50px;
+			}
+			.lovef .lright{
+				 position: absolute;
+				 top: 53px;
+				 left: 296px;
+			}
+			.lright span{
+				display: inline-block;
+				line-height: 50px;
+				font-weight: 300;
+				font-size: 15px;
+				text-align: center;
+				margin-left: 6px;
+				color: gray;
+				position: relative;
+			}
+			.lright .lrimg{
+				display: block;
+				width: 280px;
+				height: 288px;
+				overflow: hidden;
+			}
+			.lright .lrimg:hover{
+				animation-name:pulse;
+                animation-duration: 1s;
+                
+			}
+			
+			.lright .line{
+				border-bottom: dashed 1px lightgray;
+			}
+			.lright p{
+				color: red;
+				font-size: 18px;
+				line-height: 40px;
+			}
+			.lright .mengb{
+				position: absolute;
+				display: none;
+				top: 100px;
+				left: 110px;
+				z-index: 2;
+			}
+		.lright span:hover  .mengb{
+				display: block;
+				animation-name:flip;
+				animation-duration: 1s;
+				/*border: 1px solid red;*/
+			}
+			
+			.newflo{
+				width: 100%;
+				background: url(img/AD0I46D4BBACGAAgjamfvgUo49mZ9QMwgA84_AU.jpg) center center no-repeat;
+				height: 733px;
+				position: relative;
+			}
+			.newflo .nleft{
+				width: 294px;
+				height: 570px;
+				margin-top: 60px;
+				text-align: center;
+				margin-left: 100px;
+			}
+			.newflo .nleft h3{
+				font-size: 36px;
+				color: white;
+				line-height: 60px;
+				padding-top: 60px;
+				margin-left: 10px;
+				text-align: left;
+			}
+			.newflo .nleft ul li{
+				width: 224px;
+				height: 36px;
+				background-color: #9D9D9D;
+				border-radius: 5px;
+				margin-top: 40px;
+				display: block;
+				
+			}
+			.newflo .nleft ul li a{
+				color: white;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 36px;
+			}
+			.newflo .nleft ul li:hover{
+				background-color: #5BC0DE;
+				
+			}
+			.newflo .nleft ul li a:hover{
+				color: crimson;
+			}
+			.newflo .nbig{
+				display: inline-block;
+				width: 280px;
+				height: 570px;
+				text-align: center;
+				position: relative;
+				top: -495px;
+				left: 375px;
+			}
+			.newflo .nbig span{
+				width: 255px;
+				height: 390px;
+				padding: 15px;
+				opacity: 0.8;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				color: white;
+				font-size: 14px;
+				padding-top: 170px;
+				background-color: gray;
+				display: none;
+			}
+			.newflo .nbig:hover span{
+				display: block;
+				animation:nbig 1s ease-in-out;
+                /*animation-duration: 1s;*/
+			}
+			@keyframes nbig{
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 0.8;
+				}
+			}
+			.newflo .nimg4{
+				width: 592px;
+				height: 578px;
+				position: absolute;
+				top: 74px;
+				left: 680px;
+				display: inline-block;
+			}
+			
+				.newflo .nimg4 a{
+					display: inline-block;
+					position: relative;
+				}
+			.newflo .nimg4 a:hover .menban{
+				display: block;
+				animation-name:bounceIn;
+				animation-duration: 1s;
+			}
+			.newflo .nimg4 .menban{
+				display: none;
+				position: absolute;
+				top: 100px;
+				left: 110px;
+			}
+			
+			.hotpro{
+				width: 1185px;
+				margin-left: 70px;
+				height: 900px;
+				text-align: center;
+				margin-top: 30px;
+			}
+			.hotpro h3{
+				font-size: 36px;
+				color: darkred;
+				font-weight: 800;
+			}
+			.hotpro p{
+				font-size: 16px;
+				color: gray;
+				line-height: 30px;
+			}
+			.hotpro .hflo{
+				border-top: 1px solid lightgray;
+			}
+			.hflo span{
+				display: inline-block;
+				line-height: 50px;
+				font-weight: 300;
+				font-size: 15px;
+				text-align: center;
+				margin-left: 6px;
+				color: gray;
+				position: relative;
+				margin-top: 50px;
+			}
+			.hflo .lrimg{
+				display: block;
+				width: 280px;
+				height: 288px;
+				overflow: hidden;
+			}
+			.hflo .lrimg:hover{
+				animation-name:pulse;
+                animation-duration: 1s;
+                
+			}
+			
+			.hflo .line{
+				border-bottom: dashed 1px lightgray;
+			}
+			.hflo p{
+				color: red;
+				font-size: 18px;
+				line-height: 40px;
+			}
+			.hflo .mengb{
+				position: absolute;
+				display: none;
+				top: 100px;
+				left: 110px;
+				z-index: 2;
+			}
+		.hflo span:hover  .mengb{
+				display: block;
+				animation-name:flip;
+				animation-duration: 1s;
+				/*border: 1px solid red;*/
+			}
+			.heart{
+				text-align: center;
+				width: 1185px;
+				margin-left: 70px;
+				margin-top: 120px;
+			}
+			.heart h3{
+				font-size: 36px;
+				color: darkred;
+				font-weight: 800;
+			}
+			.heart p{
+				font-size: 16px;
+				color: gray;
+				line-height: 30px;
+			}
+			.heart .hflo{
+				border-top: 1px solid lightgray;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<!--页面右侧固定-->
+        <div class="sright animated bounceInRight">
+        	<a class="fa fa-user-o"></a>
+        	<a class="fa fa-pencil-square-o" href="###"></a>
+        	<a class="fa fa-vcard-o" href="###"></a>
+        	<a class="fa fa-chevron-circle-up" href="#"></a>
+        </div>
+		<div class="shouye">
+        <!--<div class="navbar navbar-default right"> 
+            <ul class="nav navbar-invers"> 
+                <li class="active"><a href="#">Home</a></li> 
+                <li><a href="#">Tutorials</a></li> 
+                <li><a href="#">Practice Editor </a></li> 
+                <li><a href="#">Gallery</a></li> 
+                <li><a href="#">Contact</a></li> 
+            </ul> 
+        </div> -->
+    
+ <!--页面头部分-->
+			<div class="shead animated bounceIn">
+				<h1>思源   <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+				<input type="text" name="" id="" value=""  placeholder="  请输入鲜花的名称"/>
+				<a href=""><img class="soso" src="img/soso.jpg"/></a>
+			</div>
+			
+
+<!--导航目录 -->
+        <div class="daoh">
+        	<ul> 
+                <li class="active"><a href="#">网站首页</a></li> 
+                <li><a href="#">全部鲜花</a></li> 
+                <li><a href="#">爱情鲜花</a></li> 
+                <li><a href="#">开业鲜花</a></li> 
+                <li><a href="#">话语大全</a></li> 
+                <li ><a href="###" class="advice">提出意见</a> </li>
+                <li><a href="###" class="Login">登录</a></li>
+                <li><a href="###" class="Register">注册</a></li>
+            </ul>  
+        </div>
+<!--主要内容部分-->
+<div class="biaot">
+	<!--主要标题左边-->
+	<div class="bleft">
+		<b class="fa fa-pagelines"></b><p>按用途送花</p>
+		<td><a href="###">爱情鲜花</a></td>
+		<span><td><a href="###">玫瑰</a></td>
+			<td><a href="###">百合</a></td>
+			<td><a href="###">郁金香</a></td>
+		</span>
+			<td><a href="###">友情鲜花</a></td>
+		<span><td><a href="###">向日葵</a></td>
+			<td><a href="###">小雏菊</a></td>
+			<td><a href="###">满天星</a></td>
+		</span>
+			<td><a href="###">开业鲜花</a></td>
+		<span><td><a href="###">开业花篮</a></td>
+			<td><a href="###">礼花盒</a></td>
+		</span>
+			<td><a href="###">商务永华</a></td>
+		<span><td><a href="###">会议台花</a></td>
+			<td><a href="###">花束</a></td>
+		</span>
+		<b class="fa fa-pagelines"></b><p>按对象送花</p>
+		<td><a href="###">问候长辈</a></td>
+		<span><td><a href="###">康奶昔</a></td
+			<td><a href="###">太阳花</a></td>
+			<td><a href="###">马蒂莲</a></td>
+		</span>
+		<td><a href="###">答谢恩师</a></td>
+	</div>
+	<!--轮播图右边-->
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/AD0I46D4BBACGAAggqmfvgUolPn19gEwjgc4nAQ.jpg"/></div>
+        <div class="swiper-slide"><img src="img/AD0I46D4BBACGAAgmamfvgUoyZTaqgIwjgc4nAQ.jpg"/></div>
+        <!--<div class="swiper-slide">Slide 3</div>-->
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+	
+</div>
+<!--主体部分二-->
+  <div class="lovef">
+  	<h3>爱情鲜花</h3> <div class="xin">送让你心动的人</div><br />
+  	<a href="###"><img src="img/AD0I46D4BBAEGAAgkamfvgUo46bUuwUwmAI4lQM.png"/></a>
+  	<div class="lright">
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAgl6mfvgUovu7L-AMwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  			<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAgkamfvgUorIux8QMwmAI4oAI.jpg"/></a>
+  			<b>最美的旋律————苏醒粉玫瑰16枝</b> <div class="line"></div> <p>¥212.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  			</span>
+  			<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAgkamfvgUorKu8iwMwmAI4oAI.jpg"/></a>
+  			<b>陪你幸福----9支玫瑰花束表白</b> <div class="line"></div> <p>¥220.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  			</span>
+  	</div>
+  	
+  </div>
+  
+  <div class="lovef">
+  	<h3>感恩鲜花</h3> <div class="xin">送父母/老师/领导</div><br />
+  	<a href="###"><img src="img/AD0I46D4BBAEGAAggqmfvgUo2sXwywcwmAI4lAM.png"/></a>
+  	<div class="lright">
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  			<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAgmamfvgUowYKQmwUwmAI4oAI.jpg"/></a>
+  			<b>最美的旋律————苏醒粉玫瑰16枝</b> <div class="line"></div> <p>¥212.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  			</span>
+  			<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAgj6mfvgUo2L6BhAMwmAI4oAI.jpg"/></a>
+  			<b>陪你幸福----9支玫瑰花束表白</b> <div class="line"></div> <p>¥220.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  			</span>
+  	</div>
+  </div>
+  
+  <!--2017新品-->
+  <div class="newflo">
+  	<div class="nleft">
+  	<h3>2017新品</h3>
+  	<ul>
+  		<li><a href="###">玫瑰花系列</a></li>
+  		<li><a href="###">百合花系列</a></li>
+  		<li><a href="###">康乃馨系列</a></li>
+  		<li><a href="###">向日葵系列</a></li>
+  		<li><a href="###">太阳花系列</a></li>
+  		<li><a href="###">马蒂莲系列</a></li>
+  	</ul>
+  	</div>
+  	<div class="nright">
+  		<a class="nbig" href="###"><img src="img/AD0I46D4BBAEGAAgiamfvgUo976QnwEwnQI4ugQ.png"/>
+  			<span>所有女孩对花的热爱仿佛是与生俱来的，希望在属于自己的后花园和姐妹淘晒太阳，或者仅仅打理植物便充满乐趣。抑或在家的附近开起一家园艺精品屋，沉浸在绿植，花海和琳琅</span></a>
+  			<div class="nimg4">
+  				<a href="###"> <img src="img/AD0I46D4BBAEGAAgg6mfvgUo3uzPqwYwnQI4mAI.png"/><div class="menban"><img src="img/imageEffetc_magnifier.png"/></div></a>
+  				<a href="###"> <img src="img/AD0I46D4BBAEGAAgkamfvgUoyMquogYwnQI4mAI.png"/><div class="menban"><img src="img/imageEffetc_magnifier.png"/></div></a>
+  				<a href="###"> <img src="img/AD0I46D4BBAEGAAggKmfvgUo8fD57QIwnQI4mAI.png"/><div class="menban"><img src="img/imageEffetc_magnifier.png"/></div></a>
+  				<a href="###"> <img src="img/AD0I46D4BBAEGAAghqmfvgUozPLnxAEwnQI4mAI.png"/><div class="menban"><img src="img/imageEffetc_magnifier.png"/></div></a>
+  			</div>
+  	</div>
+  </div>
+  
+  <!--热销新品-->
+  <div class="hotpro">
+  <h3>热销新品</h3>
+  <p>用心传递爱</p>
+  <div class="hflo">
+      <span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  		 <span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  		<span><a href="###" class="lrimg"><img src="img/AD0I46D4BBACGAAghKmfvgUogPnR9gIwmAI4oAI.jpg"/></a>
+  			<b>你的温柔————19多红玫瑰</b> <div class="line"></div> <p>¥210.00</p>
+  			<div class="mengb"><img src="img/imageEffetc_magnifier.png"/></div>
+  		</span>
+  </div>
+  </div>
+  
+ <!--心动瞬间-->
+ <div class="heart">
+ 	<h3>心动瞬间</h3>
+  <p>用心传递爱</p>
+  <div class="has">
+  	<span><img src="img/AD0I46D4BBAEGAAgmKmfvgUovLzH-gMwgQM4kAM.png"/></span>
+  </div>
+ </div>
+  	</div>
+	<!--公共底部-->
+	<div class="footer">
+		<ul class="fsas">
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUop-fH9wMwHjgt.png"/>
+				<div><p>鲜花电商龙头</p><span>销量领先，权威认证龙头企业</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgkKmfvgUo3ozdiwEwJzgt.png"/>
+				<div><p>多年品牌，真实口碑</p><span>销量领先，好评率高达90%</span> </div></li>
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUo34PFmwcwMDgn.png"/>
+				<div><p>客户实拍鲜花展示</p><span>敢秀敢拍敢展示的鲜花网</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgg6mfvgUoyIeOgAEwODgn.png"/>
+				<div><p>24小时鲜花配送</p><span>全国连锁，同城极速送花</span></div> </li>
+		</ul>
+		<div class="bottom">
+			<h1>思源   <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+			<ul class="bsas">
+				<li>常用服务</li>
+				<li>付款条例</li>
+				<li>配送方式</li>
+				<li>问题查询</li>
+				<li>在线付款</li>
+				<li>易速快递</li>
+				<li>订单查询</li>
+				<li>货到付款</li>
+				<li>上门自提</li>
+			</ul>
+			<img src="img/QQ图片20170504220944.jpg"/>
+		</div>
+	</div>
+	<!--提出意见部分-->
+		<!--蒙版效果 当点击 提供意见的时候   显示出来-->
+		<div class="Hide" style="z-index: 10;display: none;" >
+			<div class="Hide1">
+				<div class="hide1" style="width: 439px;height: 290px;background:#FF6767;">
+				<p  style="text-align: center;color: black;font-size: 20px;margin-top:4px;margin-bottom:4px;">请在下方留下您的宝贵意见</p>
+				<div style="position: relative;cursor: pointer;">
+				 <textarea name="textarea" id="TextArea1" cols="70" rows="10" onkeyup="words_deal();" style="width: 439px;" ></textarea>
+                  <span id="textCount">0/400</span><br /> 
+                  <p style="color: #666666;position: absolute;top:2px;left: 2px;" class="tishi">输入您的意见...</p>
+				</div>
+				<button class="btn btn-info btn2" style="margin-left: 179px;width: 82px;margin-top: 4px;">提交</button>
+			</div>
+			</div>
+		</div>
+	</body>
+	<!--<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js">
+    	
+    </script>
+    <script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js">
+    	
+    </script>
+	<script type="text/javascript">
+		$(window).scroll(function(){
+			if($(document).scrollTop()>=150){
+				$(".daoh").css({
+					"position":"fixed",
+					"margin-top":-135
+				});
+			}
+			else{$(".daoh").css({
+					"position":"static",
+					"margin-top":0
+				});}
+		})
+		
+		
+   var mySwiper = new Swiper('.swiper-container', {
+//  direction: 'vertical',
+    loop: true,
+    effect : 'fade',
+    fade: {
+    crossFade: false,
+    },
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+    
+    // 如果需要前进后退按钮
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    
+    // 如果需要滚动条
+    scrollbar: '.swiper-scrollbar',
+    autoplay: 2800
+  })   
+ 
+
+	</script>
+</html>

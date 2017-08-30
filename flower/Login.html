@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.3"/>
+		<title>鲜花网站</title>
+		<style type="text/css">
+	
+		.Content{
+			width: 100%;
+			min-width: 1200px;
+			height: 400px;
+			background: rgba(0,0,0,0.1);
+			position: relative;
+			/*position: absolute;
+			top: 0;
+			left: 0;*/
+			overflow: hidden;
+		}
+			.content{
+				width: 240px;
+				height: 0;
+				/*border: 1px solid red;*/
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.content1{
+				width: 264px;
+				height: 0;
+				/*border: 1px solid red;*/
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.code{
+				position: absolute;
+				bottom: 75px;
+				left: 180px;
+			}
+			.code1{
+				position: absolute;
+				bottom: 67px;
+				right: 0;
+			}
+			.login,.register{
+				width: 140px;
+				height: 42px;
+				border-radius:3px;
+				background:white;
+				font-size: 18px;
+				color: black;
+				margin-top: 24px;
+				border: 1px solid white;
+				border-radius: 5px;
+			}
+			.register{
+				margin-left: 65px;
+			}
+			.login{
+		        margin-left: 49px;
+			}
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syhead.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	</head>
+	<body>
+		<!--页面头部分-->
+			<div class="shead">
+				<h1>思源   <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+				<input type="text" name="" id="" value=""  placeholder="  请输入鲜花的名称"/>
+				<a href=""><img class="soso" src="img/soso.jpg"/></a>
+			</div>
+			
+
+<!--导航目录 -->
+        <div class="daoh"> 
+            <ul > 
+                <li class="active"><a href="#">网站首页</a></li> 
+                <li><a href="#">全部鲜花</a></li> 
+                <li><a href="#">爱情鲜花</a></li> 
+                <li><a href="#">开业鲜花</a></li> 
+                <li><a href="#">话语大全</a></li> 
+                <li ><a href="###" class="advice">提出意见</a> </li>
+                <li><a href="###" class="Login1">登录</a></li>
+                <li><a href="###" class="Register1">注册</a></li>
+            </ul>  
+        </div>
+		<div class="Content">
+			<div class="content"style="display: none;">
+	<form class="bs-example bs-example-form" role="form">
+		<div class="input-group">
+			<span class="input-group-addon" ><i class="fa fa-user-circle" style="padding-right: 8px;font-size: 22px;vertical-align: middle;"></i>账号</span>
+			<input type="text" class="form-control" placeholder="请输入账号" style="width: 154px;height: 36px;" maxlength="11">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-key" style="padding-right: 5px;font-size: 22px;vertical-align: middle;padding-left: 3px;"></i>密码</span>
+			<input type="password" class="form-control" placeholder="请输入密码" style="width: 154px;height: 36px;" maxlength="9">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon">&nbsp;&nbsp;验证码&nbsp;&nbsp;</span>
+			<input type="text" class="form-control" style="width:97px;height: 36px;border-radius: 0;" maxlength="4">
+			
+		</div>
+		<!--cursor:pointer 使鼠标箭头转换成手的样式   border-radius:标签的弧度（四个值 从左上角开始  顺时针）-->
+		<span class="code" style="display: inline-block;width: 56px;height: 34px;background:white;cursor: pointer;border-radius: 0 3px 3px 0;text-align: center;"></span>
+	    <button class="login" type="button">登录</button>
+	</form>
+</div>
+<!--注册-->
+		
+			<div class="content1" style="display: none;">
+	<form class="bs-example bs-example-form" role="form">
+		<div class="input-group">
+			<span class="input-group-addon" ><i class="fa fa-user-plus" style="padding-right: 8px;font-size: 22px;vertical-align: middle;"></i>&nbsp;&nbsp;帐&nbsp;&nbsp;号&nbsp;&nbsp;</span>
+			<input type="text" class="form-control" placeholder="请输入注册的账号" style="width: 154px;height: 36px;" maxlength="11">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon" ><i class="fa fa-address-book-o" style="padding-right:13px;font-size: 22px;vertical-align: middle;"></i>&nbsp;&nbsp;昵&nbsp;&nbsp;称&nbsp;&nbsp;</span>
+			<input type="text" class="form-control" placeholder="请输入昵称" style="width: 154px;height: 36px;" maxlength="8">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-lock" style="padding-right: 16px;font-size: 22px;vertical-align: middle;padding-left: 3px;"></i>&nbsp;&nbsp;密&nbsp;&nbsp;码&nbsp;&nbsp;</span>
+			<input type="password" class="form-control" placeholder="请输入密码" style="width: 154px;height: 36px;" maxlength="9">
+		</div>
+		<br>
+			<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-lock" style="padding-right: 12px;font-size: 22px;vertical-align: middle;padding-left: 3px;"></i>确认密码</span>
+			<input type="password" class="form-control" placeholder="请确认密码" style="width: 154px;height: 36px;" maxlength="9">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;验证码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<input type="text" class="form-control" style="width:97px;height: 36px;border-radius: 0;" maxlength="4">
+			
+		</div>
+		<span class="code1" style="display: inline-block;width: 56px;height: 34px;background:white;cursor: pointer;border-radius: 0 3px 3px 0;text-align: center;"></span>
+	    <button class="register" type="button">注册</button>
+	</form>
+</div>
+		</div>
+		
+	<!--公共底部-->
+	<div class="footer" >
+		<ul class="fsas">
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUop-fH9wMwHjgt.png"/>
+				<div><p>鲜花电商龙头</p><span>销量领先，权威认证龙头企业</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgkKmfvgUo3ozdiwEwJzgt.png"/>
+				<div><p>多年品牌，真实口碑</p><span>销量领先，好评率高达90%</span> </div></li>
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUo34PFmwcwMDgn.png"/>
+				<div><p>客户实拍鲜花展示</p><span>敢秀敢拍敢展示的鲜花网</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgg6mfvgUoyIeOgAEwODgn.png"/>
+				<div><p>24小时鲜花配送</p><span>全国连锁，同城极速送花</span></div> </li>
+		</ul>
+		<div class="bottom">
+			<h1>思源   <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+			<ul class="bsas">
+				<li>常用服务</li>
+				<li>付款条例</li>
+				<li>配送方式</li>
+				<li>问题查询</li>
+				<li>在线付款</li>
+				<li>易速快递</li>
+				<li>订单查询</li>
+				<li>货到付款</li>
+				<li>上门自提</li>
+			</ul>
+			<img src="img/QQ图片20170504220944.jpg"/>
+		</div>
+	</div>	
+	<!---->
+		<!--蒙版效果 当点击 提供意见的时候   显示出来-->
+		<div class="Hide" style="display: none;">
+			<div class="hide1" style="width: 439px;height: 290px;background:#FF6767;">
+				<p  class="text-center">请在下方留下您的宝贵意见</p>
+				<div style="position: relative;cursor: pointer;">
+				 <textarea name="textarea" id="TextArea1" cols="70" rows="10" onkeyup="words_deal();" style="width: 439px;" ></textarea>
+                  <span id="textCount">0/400</span><br /> 
+                  <p style="color: #666666;position: absolute;top:2px;left: 2px;" class="tishi">输入您的意见...</p>
+				</div>
+				<button class="btn btn-info btn2" style="margin-left: 179px;width: 82px;margin-top: 4px;">提交</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js">
+    	
+    </script>
+    
+	<script type="text/javascript">
+	  var judge=true;
+		var shuzu=["ABCDRFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz","0123456789"];
+		//生成一个随机数来确定生成的是大写字母还是小写字母 还是数字
+		function num(){
+			return Math.round(Math.random()*2);
+		}
+		//
+		function create(){
+			for(var i=0;i<=3;i++){
+				var num1=num();//num1值为0 1 2
+//			console.log(num1);
+            var length=Math.floor(Math.random()*(shuzu[num1].length));
+			Txt = shuzu[num1].substr(length, 1);
+			var txt=$("<span></span>");
+			txt.css({
+				"display":"inline-block",
+				"line-height":"36px",
+				"height":"36px",
+				"padding-right":"1px",
+				"font-size":"17px",
+			});
+			txt.append(Txt);
+			if(judge==true){
+				  $(".code").append(txt);	
+			}else if(judge==false){
+				$(".code1").append(txt);
+			}	
+			}
+			
+		}
+		create();
+		$(".code").mousedown(function(){
+		$(".code span").remove();
+		create();	
+		});
+//		function Height(){
+//			if($(window).height()<=222){
+//				$(".Content").css({
+//				"height":"222px",
+//			   });
+//			}else{
+//				$(".Content").css({
+//				"height":$(window).height()+"px",
+//			   });
+//			}
+//		}
+//		Height();
+//		$(window).resize(function () {
+//				Height();
+//		});
+		$(".form-control").eq(0).focus();
+		//账号的输入规则是11位数字的手机号  所以此输入框能输入的最大长度是11 正则
+		 $(".form-control").eq(1).click(function(){
+//      	var pass=/^1[34578]\d{9}$/;	//判断手机号是否符合规则
+        	if($(".form-control").eq(0).val()==""){
+        		alert("请先输入账号");
+        		$(".form-control").eq(0).focus();
+        	}
+//      	else if(!pass.test($(".form-control").eq(0).val())){
+//      		alert("账号格式不正确");
+//      		$(".form-control").eq(0).val("");
+//      	     $(".form-control").eq(0).focus(); 
+//      	}
+        });
+        //密码的规则是6到9位的大写字母 小写字母  数字组成
+       $(".form-control").eq(2).click(function(){
+       	   if($(".form-control").eq(0).val()==""){
+        		alert("请先输入账号");
+        		$(".form-control").eq(0).focus();
+        	}else if($(".form-control").eq(1).val()==""){
+        		alert("请先输入密码");
+        		$(".form-control").eq(1).focus();
+        	}
+        	var pass=/^[a-zA-Z0-9]{6,9}$/g;
+        	if(!pass.test($(".form-control").eq(1).val())&&$(".form-control").eq(1).val().length!=0){
+        		alert("密码不符合规则");
+        		$(".form-control").eq(1).val("");
+        		$(".form-control").eq(1).focus();
+        	}
+        });
+        //点击登录按钮时  确保账号  密码  验证码都不为空  并且账号和密码需要与数据库中的数据进行对比   如果账号或密码有一项有错误  此时提示账号或密码错误  清空所有input框
+        //并且刷新验证码 
+        $(".login").click(function(){
+        	if($(".form-control").eq(0).val()!=""&&$(".form-control").eq(1).val()!=""&&$(".form-control").eq(2).val()!=""){
+        		//判断验证码是否填写正确  如果填写错误  清空验证码框   并刷新验证码 
+//      		console.log($(".form-control").eq(2).val());
+//      		console.log($(".code").text());
+        		if(($(".form-control").eq(2).val())==($(".code").text())){
+//      			alert("yes");
+        			var judge=false;
+//        			此时判断账号和密码是否正确，此时用Ajax通过PHP获取后台的账号  密码数据  进行对比  如果存在  账号密码正确   否则  错误
+        			 $.ajax({
+					type:"get",
+					url:"http://localhost/flower/user.php",
+					dataType:"json",
+					data:{
+						"act":"get",
+					},
+					success:function(data){
+					   	if(data.msg!="获取用户数据失败"){//获取后台数据成功  
+					   		console.log(data);//数据库所存储的所有的账号、相应的密码、昵称
+					   		for(var i=0;i<data.msg.length;i++){
+					   			//用户在登陆的时候 填写的账号很有可能是手机号  或者是昵称  所以此时做两种判断
+					   			if((($(".form-control").eq(0).val()==data.msg[i][0])||($(".form-control").eq(0).val()==data.msg[i][2]))&&($(".form-control").eq(1).val()==data.msg[i][1])){
+					   				console.log("用户所填写的账号和密码全部正确   可以登录进首页");
+					   				judge=true;
+					   				
+					   			}
+					   		}
+					   		if(judge==false){
+                                  alert("账号或密码错误");
+                                  $(".form-control").eq(1).val("");
+                                  $(".form-control").eq(2).val("");
+                                   $(".code span").remove();
+                                  create();
+					   		}
+					   	}else{
+					   		console.log(data.msg);
+					   	}
+					}
+					});
+        		}else{
+        			alert("验证码输入错误");
+        			$(".form-control").eq(2).val("");
+        			$(".code span").remove();
+        	     	create();
+        	
+        		}
+        	}else{
+        		alert("请先填写上述内容");
+        		$(".code span").remove();
+        		create();
+        	}
+        });
+        //
+       
+       
+        //注册
+        //注册的时候账号的输入规则是11位数字的手机号  所以此输入框能输入的最大长度是11 正则
+       //注册号码填写完成后  在填写昵称的时候 需要判断注册的手机号是否已经被注册过 如果被注册过 提示用户此账号已经被注册过   并清空号码 焦点回到手机框
+        var txt=[];//此数组存储的是数据库所有的昵称
+		 $(".form-control").eq(4).click(function(){
+		 	var pass=/^1[34578]\d{9}$/;	//判断手机号是否符合规则
+        	if($(".form-control").eq(3).val()==""){
+        		alert("请先输入注册的手机号码");
+        		$(".form-control").eq(3).focus();
+        	}else if(!pass.test($(".form-control").eq(3).val())){
+        		alert("输入的手机号码格式不对");
+        		$(".form-control").eq(3).val("");
+        	     $(".form-control").eq(3).focus(); 
+        	}else{
+        		var judge=false;
+        		txt=[];
+		 	$.ajax({
+					type:"get",
+					url:"http://localhost/flower/user.php",
+					dataType:"json",
+					data:{
+						"act":"get",
+					},
+					success:function(data){
+					   	if(data.msg!="获取用户数据失败"){//获取后台数据成功  
+					   		console.log(data);//数据库所存储的所有的账号、相应的密码、昵称
+					   		for(var i=0;i<data.msg.length;i++){
+					   			txt.push(data.msg[i][2]);
+					   			//用户在注册的时候  手机号很有可能被注册过  所以需要判断
+					   			if($(".form-control").eq(3).val()==data.msg[i][0]){//此手机号已经被注册
+					   				alert("此手机号已经被注册  ");
+					   				judge=true;
+					   				
+					   			}
+					   		}
+					   		if(judge==true){
+                               
+                                  $(".form-control").eq(3).val("");
+                                  $(".form-control").eq(3).focus();
+                                  $(".code1 span").remove();
+                                  create();
+					   		}
+					   	}else{
+					   		console.log(data.msg);
+					   	
+					}
+					   	}
+					});
+        	}	
+        });
+        //昵称的长度为8位，
+        $(".form-control").eq(5).click(function(){
+        	
+        	if($(".form-control").eq(3).val()==""){
+        		alert("请先填写需要注册的手机号");
+        	    $(".form-control").eq(3).focus();
+        	}else if($(".form-control").eq(4).val()==""){
+        		alert("请先填写昵称");
+        	    $(".form-control").eq(4).focus();
+        	}else{
+        		console.log(txt);//此时数组txt存储的是数据库所有的昵称
+        	     for(var i=0;i<txt.length;i++){
+        	     	if(txt[i]==$(".form-control").eq(4).val()){
+        	     		alert("此昵称已经被抢注  请换个昵称");
+        	     	    $(".form-control").eq(4).val("");
+        	     	     $(".form-control").eq(4).focus();
+        	         }
+        	     }
+        	}
+        });
+        //密码的规则是6到9位的大写字母 小写字母  数字组成
+       $(".form-control").eq(6).click(function(){
+        	var pass=/^[a-zA-Z0-9]{6,9}$/g;
+        	if($(".form-control").eq(3).val()==""){
+        		alert("请先填写需要注册的手机号");
+        	    $(".form-control").eq(3).focus();
+        	}else if($(".form-control").eq(4).val()==""){
+        		alert("请先填写昵称");
+        	    $(".form-control").eq(4).focus();
+        	}
+            if(!pass.test($(".form-control").eq(5).val())&&$(".form-control").eq(5).val().length!=0){
+        		alert("设置的密码不符合规则");
+        		$(".form-control").eq(5).val("");
+        		$(".form-control").eq(5).focus();
+        	}
+        });
+        //确认密码需要和密码保持一致  否则密码和确认密码框全部清除 焦点回到密码框
+         $(".form-control").eq(7).click(function(){
+         	if($(".form-control").eq(3).val()==""){
+        		alert("请先填写需要注册的手机号");
+        	    $(".form-control").eq(3).focus();
+        	}else if($(".form-control").eq(4).val()==""){
+        		alert("请先填写昵称");
+        	    $(".form-control").eq(4).focus();
+        	}else if($(".form-control").eq(5).val()==""){
+        		alert("请先填写密码");
+        	    $(".form-control").eq(5).focus();
+        	}else if($(".form-control").eq(6).val()==""){
+        		alert("请先填写确认密码");
+        	    $(".form-control").eq(6).focus();
+        	}else if($(".form-control").eq(5).val()!=$(".form-control").eq(6).val()){
+        		alert("两次密码不一致");
+        	    $(".form-control").eq(5).focus();
+        	     $(".form-control").eq(5).val("");
+        	      $(".form-control").eq(6).val("");
+        	}
+        });
+       //点击注册按钮
+       $(".register").click(function(){
+        	if($(".form-control").eq(3).val()!=""&&$(".form-control").eq(4).val()!=""&&$(".form-control").eq(5).val()!=""&&$(".form-control").eq(6).val()!=""&&$(".form-control").eq(7).val()!=""){
+        		 var user=$(".form-control").eq(3).val();//注册手机号
+        		 var pass=$(".form-control").eq(5).val();//注册密码
+        		 var name=$(".form-control").eq(4).val()//注册昵称
+        		 $.ajax({
+					type:"get",
+					url:"http://localhost/flower/user.php",
+					dataType:"json",
+					data:{
+						act:"post",
+						user:user,
+						pass:pass,
+						name:name,
+					},
+					success:function(data){
+						console.log(data);
+					}
+					});
+        	}else{
+        		alert("请先完成上述内容");
+        	}
+       });
+       //点击导航栏的时候 点击注册  登录时
+         $(".Login1").click(function(){
+        	$(" .form-control").eq(1).val("");
+        	$(" .form-control").eq(2).val("");
+        	judge=true;
+        	$(".code span").remove();
+        	create();
+        	$(".content1").animate({
+        		"height":"0",
+        	},function(){
+        		$(".content1").css({
+        		"display":"none",
+        	   });
+        	});
+        	$(".content").css({
+        		"display":"block",
+        	   });
+        	$(".content").animate({
+        		"height":"222px",
+        	});
+        	$(".Content").animate({
+        		"height":"400px",
+        	});
+        });
+         $(".Register1").click(function(){
+         	$(".content1 .form-control").val("");
+         	judge=false;
+         	$(".code1 span").remove();
+         	create();
+        	$(".content").animate({
+        		"height":"0",
+        	},function(){
+        		$(".content").css({
+        		"display":"none",
+        	});
+        	});
+        	$(".content1").css({
+        		"display":"block",
+        	});
+        	$(".content1").animate({
+        		"height":"326px",
+        	});
+        	$(".Content").animate({
+        		"height":"512px",
+        	});
+        });
+        console.log(window.location.href);
+        $(".daoh li").eq(6).find("a").attr("href","###");
+        $(".daoh li").eq(7).find("a").attr("href","###");
+        //判断login.html显示登录界面还是注册界面
+        var judge=localStorage.getItem("judge");
+        if(judge=="true"){//此时用户通过点击导航栏的注册来进入login.html  此时应该让此页面显示注册界面
+        	$(".content1").show();
+        	$(".content").hide();
+        	localStorage.removeItem("judge");
+        	$(".content1 .form-control").val("");
+         	judge=false;
+         	$(".code1 span").remove();
+         	create();
+        	$(".content").animate({
+        		"height":"0",
+        	},function(){
+        		$(".content").css({
+        		"display":"none",
+        	});
+        	});
+        	$(".content1").css({
+        		"display":"block",
+        	});
+        	$(".content1").animate({
+        		"height":"326px",
+        	});
+        	$(".Content").animate({
+        		"height":"512px",
+        	});
+        }else{
+        	$(" .form-control").eq(1).val("");
+        	$(" .form-control").eq(2).val("");
+        	judge=true;
+        	$(".code span").remove();
+        	create();
+        	$(".content1").animate({
+        		"height":"0",
+        	},function(){
+        		$(".content1").css({
+        		"display":"none",
+        	   });
+        	});
+        	$(".content").css({
+        		"display":"block",
+        	   });
+        	$(".content").animate({
+        		"height":"222px",
+        	});
+        	$(".Content").animate({
+        		"height":"400px",
+        	});
+        }
+        
+	</script>
+</html>

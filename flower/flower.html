@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.3"/>
+		<title>鲜花网站</title>
+		<style type="text/css">
+	     .line{
+	     	display: block;
+            position: absolute;
+            left: 0;
+            top: 73px;
+            height: 0;
+            width: 100%;
+            border-bottom: 1px solid #737373;
+	     }
+		.line1{
+			   display: block;
+               width: 8px;
+               height: 8px;
+               margin: 18px auto 0 auto;
+                background: #737373;
+                transform: rotate(45deg);
+		}
+		.lead{
+			margin-top: 6px;
+			margin-left: 6px;
+			color: #666666;
+		}
+		.lead:hover{
+			color: #ff6767;
+			cursor: pointer;
+		}
+		.text{
+			margin-top: -12px;
+			margin-left:8px;
+			color: gray;
+		}
+		.circle1{
+			position: relative;
+    display: inline-block;
+    margin: 5px 15px 0;
+    width: 18px;
+    height: 18px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    vertical-align: top;
+    z-index: 1;
+		}
+		.circle2{
+			position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #bababa;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    z-index: 2;
+		}
+		.Line{
+			border-left: 2px solid #bababa;
+			height: 50px;
+			margin-left: 23px;
+			margin-top: -12px;
+			margin-bottom: -12px;
+		}
+		.picture1 table p{
+			color: gray;
+		}
+		
+		.picture1 table p:hover{
+			color: #FF6767;
+		}
+		
+		img:hover{
+			animation: width 0.5s   linear backwards;
+		}
+	
+			@keyframes width {
+				form {
+					
+					transform:  rotateY(0deg);
+				}
+				to {
+					
+					transform:rotateY(360deg);
+				}
+				
+			}
+			.img-rounded{
+				background: url(img/flower_one.jpg) no-repeat center center;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syhead.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		
+	</head>
+	<body>
+		<!--页面头部分-->
+			<div class="shead">
+				<h1>思源 <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+				<input type="text" name="" id="" value=""  placeholder="  请输入鲜花的名称"/>
+				<a href=""><img class="soso" src="img/soso.jpg"/></a>
+			</div>
+			
+
+<!--导航目录 -->
+        <div class="daoh"> 
+            <ul> 
+                <li class="active"><a href="#">网站首页</a></li> 
+                <li><a href="#">全部鲜花</a></li> 
+                <li><a href="#">爱情鲜花</a></li> 
+                <li><a href="#">开业鲜花</a></li> 
+                <li><a href="#">话语大全</a></li> 
+                <li ><a href="###" class="advice">提出意见</a> </li>
+                <li><a href="###" class="Login">登录</a></li>
+                <li><a href="###" class="Register">注册</a></li>
+            </ul> 
+        </div>
+		<!--<div  class="img-rounded" style="width: 100%;height: 400px; min-width:1200px;"/></div>-->
+		<div  style="width: 100%;min-width:1200px;margin-top: 20px;">
+			<div class="picture" style="margin: 0 auto;width: 1194px;position: relative;cursor: pointer;">
+				<p class="text-center" style="color: #c40000;font-size: 30px;">花艺技巧</p>
+			    <p class="text-center" style="color: #737373;line-height:0;">用心传递爱</p>
+			    <!--<p class="line"></p>-->
+			    <p class="line1"></p>
+			    <table class="table" style="margin-top:-4px;">
+			    	<tr >
+			    		<td >
+			    			<img src="img/flower_two.png" style="width: 382px;"/>
+			    			<p class="lead">13条插花时能用到的小技巧</p>
+			    			<p class="text">1.在花茎杆的底部约1寸的位置以45°斜角剪掉。这会立即增加水对茎杆表面的摄入量，鲜花的花朵和叶子会因此吸收更多的...</p>
+			    		</td>
+			    		<td>
+			    			<img src="img/flower_three.png" style="width: 382px;"/>
+			    			<p class="lead">插花的花材如何挑选到最好的</p>
+			    			 <p class="text">插花的花材如何挑选到最好的?鲜花美是因为“新鲜”，选购新鲜的花材是制作插花的第一步。通常鲜花出口大国，尤其是荷兰的...</p>			
+			    		</td>
+			    		<td>
+			    	        <img src="img/flower_four.png" style="width: 382px;"/>		
+			    	        <p class="lead">客厅鲜花布置，花艺是重点</p>
+			   			    <p class="text">客厅是居家生活的中心，是一个房子最为核心的部分。以花卉种类的丰富与其美好姿态成为活跃空间气氛的最好布置。客厅鲜花布...</p> 	        
+			    		</td>
+			    	</tr>
+			    	
+			    </table>
+			    
+			</div>
+			<div class="picture1" style="margin: 0 auto;width: 1194px;position: relative;cursor: pointer;">
+				<p class="text-center" style="color: #c40000;font-size: 30px;">花艺大全</p>
+			    <p class="text-center" style="color: #737373;line-height:0;">用心传递爱</p>
+			    <!--<p class="line"></p>-->
+			    <p class="line1"></p>
+			    <table class="table Table" style="margin-top:-4px;overflow: hidden;">
+			    	<tr>
+			    		<td style="overflow: hidden;width: 586px;">
+			    			<img src="img/flower_five.png" alt="" style="float: left"/>
+			    		<div style="float:left;">
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">生日送花一般一束多少枝，更合适？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">给男票送什么花？男票过生日送什么好？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">哪里定制生日鲜花？速度快的是哪家？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">男生过生日送花好么？送什么花呢？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">女朋友生日送几朵花合适？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">女生生日送花需注意什么？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">生日鲜花一般去哪儿买最方便最快捷？</p>
+			    			</div>
+			    		</td>
+			    		
+			    		<td style="overflow: hidden;width: 586px;">
+			    			<img src="img/flower_six.png" alt="" style="float: left"/>
+			    		<div style="float:left;">
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">凌霄花和炮仗花有什么区别？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">荷花和睡莲的区别是什么？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">葱兰和韭兰有什么区别？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">婚礼十大必备花卉</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">2016，为12星座开运的12种花</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">苜蓿草和红花酢浆草你能分得清吗？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">洋紫荆和紫荆有什么区别呢？</p>
+			    			</div>
+			    		</td>
+			    		
+			    	</tr>
+			    	<tr>
+			    		<td style="overflow: hidden;width: 586px;">
+			    			<img src="img/flower_nine.png" alt="" style="float: left"/>
+			    		<div style="float:left;">
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">这些有创意的花盆，一款都少不了！</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">想去看花毛莨花海去哪比较好？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">想去看郁金香花海去哪比较好？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">最能代表女神的花，你是哪一种？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">雾霾天，清除污染的最佳十大室内植物</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">想去看虞美人花海去哪比较好？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">一种最简单的插花方法！</p>
+			    			</div>
+			    		</td>
+			    		
+			    		<td style="overflow: hidden;width: 586px;">
+			    			<img src="img/flower_ten.png" alt="" style="float: left"/>
+			    		<div style="float:left;">
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">绿色的花有哪些你知道几种？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">薰衣草花语是什么？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">蓝色妖姬花语和寓意是什么？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">白玫瑰花语，送白玫瑰代表什么？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">百合花语，百合花怎么养？</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">客厅鲜花布置，花艺是重点</p>
+			    				<div class="Line"></div>
+			    				<div class="circle1" >
+			    				  <div class="circle2">
+			    					
+			    				</div>	
+			    				</div>
+			    				<p style="margin-left: 42px;margin-top: -18px;">插花的花材如何挑选到最好的？</p>
+			    			</div>
+			    		</td>
+			    		
+			    	</tr>
+			    	
+			     </table>
+			    
+			</div>
+			
+		</div>
+		<!--公共底部-->
+	<div class="footer" >
+		<ul class="fsas">
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUop-fH9wMwHjgt.png"/>
+				<div><p>鲜花电商龙头</p><span>销量领先，权威认证龙头企业</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgkKmfvgUo3ozdiwEwJzgt.png"/>
+				<div><p>多年品牌，真实口碑</p><span>销量领先，好评率高达90%</span> </div></li>
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUo34PFmwcwMDgn.png"/>
+				<div><p>客户实拍鲜花展示</p><span>敢秀敢拍敢展示的鲜花网</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgg6mfvgUoyIeOgAEwODgn.png"/>
+				<div><p>24小时鲜花配送</p><span>全国连锁，同城极速送花</span></div> </li>
+		</ul>
+		<div class="bottom">
+			<h1>思源   <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+			<ul class="bsas">
+				<li>常用服务</li>
+				<li>付款条例</li>
+				<li>配送方式</li>
+				<li>问题查询</li>
+				<li>在线付款</li>
+				<li>易速快递</li>
+				<li>订单查询</li>
+				<li>货到付款</li>
+				<li>上门自提</li>
+			</ul>
+			<img src="img/QQ图片20170504220944.jpg"/>
+		</div>
+	</div>	
+		<!--提出意见部分-->
+		<!--蒙版效果 当点击 提供意见的时候   显示出来-->
+		<div class="Hide" style="z-index: 10;display: none;" >
+			<div class="Hide1">
+				<div class="hide1" style="width: 439px;height: 290px;background:#FF6767;">
+				<p  style="text-align: center;color: black;font-size: 20px;margin-top:4px;margin-bottom:4px;">请在下方留下您的宝贵意见</p>
+				<div style="position: relative;cursor: pointer;">
+				 <textarea name="textarea" id="TextArea1" cols="70" rows="10" onkeyup="words_deal();" style="width: 439px;" ></textarea>
+                  <span id="textCount">0/400</span><br /> 
+                  <p style="color: #666666;position: absolute;top:2px;left: 2px;" class="tishi">输入您的意见...</p>
+				</div>
+				<button class="btn btn-info btn2" style="margin-left: 179px;width: 82px;margin-top: 4px;">提交</button>
+			</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js">
+    	
+    </script>
+	<script type="text/javascript">
+	var shuzu=[];
+      $(".picture1 table p").click(function(){
+      	
+      	shuzu=[];
+      	var index=$(this).index();//index代表的是第几个子标签
+//    	console.log(index);
+      	var title=$(this).text();//当前标题的内容
+      	if(index==1){
+      		index=1;
+      		console.log("没有上一项  下一项是:"+$(this).parent().find(" p").eq(1).text());
+      		Content(title,"null",$(this).parent().find(" p").eq(1).text());
+      	}else if(index==19){
+      		index=6;
+      		console.log("没有下一项  上一项是:"+$(this).parent().find(" p").eq(5).text());
+      		Content(title,$(this).parent().find(" p").eq(5).text(),"null");
+      	}else if(index==4){
+      		index=1;
+//    		console.log($(this).text(),index);
+//    	    console.log("上一项是:"+$(this).parent().find(" p").eq(index-1).text()+"下一项是:"+$(this).parent().find(" p").eq(index+1).text());
+      	    Content(title,$(this).parent().find(" p").eq(index-1).text(),$(this).parent().find(" p").eq(index+1).text());
+      	}else if(index==7){
+      		index=2;
+//    		console.log($(this).text(),index);
+//    	    console.log("上一项是:"+$(this).parent().find(" p").eq(index-1).text()+"下一项是:"+$(this).parent().find(" p").eq(index+1).text());
+            Content(title,$(this).parent().find(" p").eq(index-1).text(),$(this).parent().find(" p").eq(index+1).text());
+      	}else if(index==10){
+      		index=3;
+//    		console.log($(this).text(),index);
+//    	    console.log("上一项是:"+$(this).parent().find(" p").eq(index-1).text()+"下一项是:"+$(this).parent().find(" p").eq(index+1).text());
+      	    Content(title,$(this).parent().find(" p").eq(index-1).text(),$(this).parent().find(" p").eq(index+1).text());
+      	}else if(index==13){
+      		index=4;
+//    		console.log($(this).text(),index);
+//    	    console.log("上一项是:"+$(this).parent().find(" p").eq(index-1).text()+"下一项是:"+$(this).parent().find(" p").eq(index+1).text());
+            Content(title,$(this).parent().find(" p").eq(index-1).text(),$(this).parent().find(" p").eq(index+1).text());
+      	}else if(index==16){
+      		index=5;
+//    		console.log($(this).text(),index);
+//    	    console.log("上一项是:"+$(this).parent().find(" p").eq(index-1).text()+"下一项是:"+$(this).parent().find(" p").eq(index+1).text());
+      	    Content(title,$(this).parent().find(" p").eq(index-1).text(),$(this).parent().find(" p").eq(index+1).text());
+      	}
+      	
+      	 window.location.href="content.html";
+      });
+      function Content(content1,content2,content3){//content1代表的是当前点击的标题  content2代表的是上一个标题  content3代表的是下一个标题
+      	shuzu.push(content1);
+      	shuzu.push(content2);
+      	shuzu.push(content3);
+      	console.log(shuzu);
+      	localStorage.setItem("shuzu1",JSON.stringify(shuzu)); 
+      }
+          var shuzu2=[],shuzu3=[];
+         
+          	    for(var i=0;i<28;i++){
+          	    	shuzu3.push($(".Table td").find("p").eq(i).text());
+          	    	
+          	    }
+          		shuzu2.push(shuzu3);
+          		
+          	
+          
+          localStorage.setItem("shuzu2",JSON.stringify(shuzu2));
+          console.log(shuzu2);
+       
+	</script>
+</html>

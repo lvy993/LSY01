@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.3"/>
+		<title>爱情鲜花</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syhead.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<style type="text/css">
+		a{
+		   text-decoration:none; 
+		   color: black;		
+	    }
+			
+			.content{
+				width: 1200px;
+				margin:0 auto;
+			}
+			.content .ai_left{
+				float: left;
+				width: 260px;
+				height: 675px;
+				color: white;
+				background: rgba(0,0,0,0.8);
+			}
+			.content .ai_left ul{
+				margin-left: 30px;
+				margin-top: 108px;
+			}
+			.content .ai_left li{
+			   margin-top: 15px;
+			   cursor:pointer 
+			}
+			
+			.content .ai_left li span{
+				margin-left: 15px;
+			}
+		     .content .ai_right{
+				float: left;
+			}
+			
+			
+			.content .flower{
+				width: 940px;
+				min-width: 940px;
+				margin: 50px auto 0  auto;
+				overflow: hidden;
+			}
+			.content .flower .flower_1{
+				width: 280px;
+				float: left;
+				margin-left: 18px;
+				margin-bottom: 30px;
+				text-align:center;
+				position: relative;
+			}
+			.content .flower .flower_1 a{
+					color: black;
+                text-decoration:none; 
+			}
+			.content .flower .flower_1 .flower_name{
+				padding: 10px 0;
+				border-bottom: 1px dashed  lightgrey;
+			}
+			.content .flower .flower_1 .flower_m{
+				font-size: 18px;
+				color: #c40000;
+				margin: 5px 0;
+			}
+			.content .flower .flower_1 .flower_bg{
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				display: none;
+			}
+			.mengban{
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				min-width: 1200px;
+				top: 0;
+				left: 0;
+				background: rgba(0,0,0,0.3);
+				display: none;
+			}
+			.mengban .fixeds{
+				width: 890px;
+				height: 650px;
+				background: white;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+
+			}
+			.fixeds .del{
+				display: block;
+				width: 16px;
+				height: 16px;
+				overflow: hidden;
+				outline: 0;
+				text-decoration: none;
+				text-indent: -999px;
+				position: absolute;
+				top: 22px;
+				right: 22px;
+				background: url(img/slide.png) no-repeat 0 -420px;
+			}
+			.fixeds .fixeds_l{
+
+				height: 400px;              
+				margin: 150px 0  0 100px;
+				overflow: hidden;
+			}
+			.left_l{
+				float: left;
+			}
+			.right_r{
+				float: left;
+				margin-left: 60px;
+			}
+			.right_r h3{
+				padding-bottom: 10px;
+				border-bottom: 1px dashed lightgray;
+				margin-bottom: 20px;
+			}
+			.right_r span{
+				display: inline-block;
+				font-size:22px;
+				color: #c40000;
+				font-weight: 700;
+			}
+			.fx_img{
+				text-align: center;
+			}
+			.fx_img img{
+				width: 80px;
+				height: 80px;
+			}
+			.fx_img .img2{
+				border: 2px solid #c40000;
+			}
+		</style>
+	</head>
+	<body>
+		<!--页面头部分-->
+			<div class="shead">
+				<h1>思源 <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+				<input type="text" name="" id="" value=""  placeholder="  请输入鲜花的名称"/>
+				<a href=""><img class="soso" src="img/soso.jpg"/></a>
+			</div>
+			
+
+<!--导航目录 -->
+        <div class="daoh"> 
+            <ul > 
+                <li class="active"><a href="#">网站首页</a></li> 
+                <li><a href="#">全部鲜花</a></li> 
+                <li><a href="#">爱情鲜花</a></li> 
+                <li><a href="#">开业鲜花</a></li> 
+                <li><a href="#">话语大全</a></li> 
+                <li ><a href="###" class="advice">提出意见</a> </li>
+                <li><a href="###" class="Login">登录</a></li>
+                <li><a href="###" class="Register">注册</a></li>
+            </ul>  
+        </div>
+		<div class="content">
+			<div class="ai_left">
+				<ul>
+					<li>按用途送花</li>
+					<li>爱情鲜花</li>
+					<li><span>百合</span><span>玫瑰</span><span>郁金香</span></li>
+					<li>友情鲜花</li>
+					<li><span>向日葵</span><span>小雏菊</span><span>满天星</span></li>
+					<li>开业鲜花</li>
+					<li><span>开业花篮</span><span>礼盒花</span></li>
+					<li>商务用花</li>
+					<li><span>会议台花</span><span>花束</span></li>
+					<li>按对象送花</li>
+					<li>问候长辈</li>
+					<li><span>康乃馨</span><span>太阳花</span><span>马蹄莲</span></li>
+					<li>答谢恩师</li>
+				</ul>
+				
+			</div>
+			<div class="flower flowers">
+				<div class="flower_1">
+					<a href="javascript:void(0);">
+						<div class="flower_img">
+						    <img src="img/kai1.png"/>
+					    </div>
+					    <div class="flower_name">
+						        开业花篮商业庆典
+					    </div>
+					    <div class="flower_m">
+						     ￥310.00
+					    </div>
+					    <div class="flower_bg">
+					    	<img src="img/sou.png"/>
+					    </div>
+					</a>					
+				</div>
+				<div class="flower_1">
+					<a href="javascript:void(0);">
+						<div class="flower_img">
+						    <img src="img/kai2.png"/>
+					    </div>
+					    <div class="flower_name">
+						         开张鲜花
+					    </div>
+					    <div class="flower_m">
+						     ￥310.00
+					    </div>
+					    <div class="flower_bg">
+					    	<img src="img/sou.png"/>
+					    </div>
+					</a>					
+				</div>
+				<div class="flower_1">
+					<a href="javascript:void(0);">
+						<div class="flower_img">
+						    <img src="img/kai3.png"/>
+					    </div>
+					    <div class="flower_name">
+						          开张鲜花大吉大利
+					    </div>
+					    <div class="flower_m">
+						     ￥310.00
+					    </div>
+					    <div class="flower_bg">
+					    	<img src="img/sou.png"/>
+					    </div>
+					</a>					
+				</div>
+				<div class="flower_1">
+					<a href="javascript:void(0);">
+						<div class="flower_img">
+						    <img src="img/kai4.png"/>
+					    </div>
+					    <div class="flower_name">
+						          开张鲜花乔迁商业开张
+					    </div>
+					    <div class="flower_m">
+						     ￥310.00
+					    </div>
+					    <div class="flower_bg">
+					    	<img src="img/sou.png"/>
+					    </div>
+					</a>					
+				</div>
+				<div class="flower_1">
+					<a href="javascript:void(0);">
+						<div class="flower_img">
+						    <img src="img/kai5.png"/>
+					    </div>
+					    <div class="flower_name">
+						           开张鲜花乔迁商业庆典
+					    </div>
+					    <div class="flower_m">
+						     ￥310.00
+					    </div>
+					    <div class="flower_bg">
+					    	<img src="img/sou.png"/>
+					    </div>
+					</a>					
+				</div>
+				<div class="flower_1">
+					<a href="javascript:void(0);">
+						<div class="flower_img">
+						    <img src="img/kai6.png"/>
+					    </div>
+					    <div class="flower_name">
+						         商业庆典
+					    </div>
+					    <div class="flower_m">
+						     ￥310.00
+					    </div>
+					    <div class="flower_bg">
+					    	<img src="img/sou.png"/>
+					    </div>
+					</a>					
+				</div>
+				
+				
+			</div>
+		    
+		</div>
+		<div class="mengban">
+			<div class="fixeds">
+				<a class="del"></a>
+				<div class="fixeds_l">
+					<div class="left_l">
+						<img src="img/flower4.jpg"/>
+					</div>
+					<div class="right_r">
+						<h3>缪斯女神----红玫瑰16枝</h3>
+						<p>价格: <span>￥310.00</span></p>
+					</div>
+				</div>
+				<div class="fx_img">
+					<img class="img1 img2" src="img/kai1.png"/>
+					<img class="img1" src="img/kai2.png"/>
+					<img class="img1" src="img/kai3.png" />
+					<img class="img1" src="img/kai4.png" />
+					<img class="img1" src="img/kai5.png" />
+					<img class="img1"  src="img/kai6.png" />
+				</div>
+			</div>
+			<!--<div class="meng_l">
+				
+			</div>
+			<div class="meng_r">
+				
+			</div>-->
+		</div>
+		<!--公共底部-->
+	<div class="footer" >
+		<ul class="fsas">
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUop-fH9wMwHjgt.png"/>
+				<div><p>鲜花电商龙头</p><span>销量领先，权威认证龙头企业</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgkKmfvgUo3ozdiwEwJzgt.png"/>
+				<div><p>多年品牌，真实口碑</p><span>销量领先，好评率高达90%</span> </div></li>
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUo34PFmwcwMDgn.png"/>
+				<div><p>客户实拍鲜花展示</p><span>敢秀敢拍敢展示的鲜花网</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgg6mfvgUoyIeOgAEwODgn.png"/>
+				<div><p>24小时鲜花配送</p><span>全国连锁，同城极速送花</span></div> </li>
+		</ul>
+		<div class="bottom">
+			<h1>思源   <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+			<ul class="bsas">
+				<li>常用服务</li>
+				<li>付款条例</li>
+				<li>配送方式</li>
+				<li>问题查询</li>
+				<li>在线付款</li>
+				<li>易速快递</li>
+				<li>订单查询</li>
+				<li>货到付款</li>
+				<li>上门自提</li>
+			</ul>
+			<img src="img/QQ图片20170504220944.jpg"/>
+		</div>
+	</div>	
+	<!---->
+		<!--蒙版效果 当点击 提供意见的时候   显示出来-->
+		<div class="Hide" style="display: none;">
+			<div class="hide1" style="width: 439px;height: 290px;background:#FF6767;">
+				<p  class="text-center">请在下方留下您的宝贵意见</p>
+				<div style="position: relative;cursor: pointer;">
+				 <textarea name="textarea" id="TextArea1" cols="70" rows="10" onkeyup="words_deal();" style="width: 439px;" ></textarea>
+                  <span id="textCount">0/400</span><br /> 
+                  <p style="color: #666666;position: absolute;top:2px;left: 2px;" class="tishi">输入您的意见...</p>
+				</div>
+				<button class="btn btn-info btn2" style="margin-left: 179px;width: 82px;margin-top: 4px;">提交</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	var txt1=[];//存储的每个图片的src地址
+	var num1=0;
+	//设置蒙板内容
+	//点击小图
+	$(".img1").click(function(){
+		
+		var txt=[["开业花篮商业庆典","￥288.00"],["开张鲜花","￥288.00"],["开张鲜花大吉大利","￥210.00"],["开张鲜花乔迁商业开张","￥255.00"],["开张鲜花乔迁商业庆典","￥233.00"],["商业庆典","￥310.00"]]
+		var index=$(this).index();
+		$(".right_r h3").text(txt[index][0]);
+		$(".right_r span").text(txt[index][1]);
+		
+		$(".img1").css({"border":"0"});		
+		$(this).css({"border":"2px solid #c40000"})
+        console.log($(this)[0].src)
+		$(".left_l img").attr("src",$(this)[0].src)
+
+	})
+	//开启蒙板
+	$(".flower_1").click(function(){
+		$(".mengban").show();		
+			var txt=[["开业花篮商业庆典","￥288.00"],["开张鲜花","￥288.00"],["开张鲜花大吉大利","￥288.00"],["开张鲜花乔迁商业开张","￥255.00"],["开张鲜花乔迁商业庆典","￥233.00"],["商业庆典","￥310.00"]];	
+		var index=$(this).index();
+		$(".right_r h3").text(txt[index][0]);
+		$(".right_r span").text(txt[index][1]);
+		console.log(txt1);
+		num1=$(this).index();
+		console.log(num1);
+		if(txt1==""){
+			$(".left_l img").attr("src",$(".img1").eq(num1)[0].src);
+		
+		}else{
+			$(".left_l img").attr("src",txt1[num1]);
+		}
+		
+		$(".img1").css({"border":"0"});		
+		$(".img1").eq(num1).css({"border":"2px solid #c40000"})
+			for(var i=0;i<txt1.length;i++){
+			$(".fx_img img").eq(i).attr("src",txt1[i])
+		}
+		
+		
+	})
+	//关闭蒙板
+	
+	$(".del").click(function(){
+		$(".mengban").hide();
+	})
+         
+	     $(".flower").hide();
+	     $(".flowers").show();	    
+			 
+	 $(".flower .flower_1").mousemove(function(){
+		var index=$(this).index();
+		$(".flower").find(".flower_bg").eq(index).fadeIn();//find找到搜索图标
+//		$(".flower_bg").eq(index).fadeIn();
+	  })
+	$(".flower .flower_1").mouseleave(function(){
+		var index=$(this).index();
+		$(".flower").find(".flower_bg").eq(index).fadeOut();
+	})
+//
+
+
+	
+	</script>
+</html>

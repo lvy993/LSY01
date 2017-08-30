@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.3"/>
+		<title>鲜花网站</title>
+		<style type="text/css">
+	        /*.img-rounded{
+				background: url(img/content_one.jpg) no-repeat center center;
+			}*/
+			.Img{
+				
+				display: inline-block;
+				height: 20px;
+				width: 20px;
+				
+			}
+			td:nth-child(2) .Img{
+				background: url(img/n_shareIcn.png) -29px -26px no-repeat;
+			}
+			td:nth-child(3) .Img{
+				background: url(img/n_shareIcn.png) -437px -26px no-repeat;
+			}
+			td:nth-child(4) .Img{
+				background: url(img/n_shareIcn.png) -332px -26px no-repeat;
+			}
+			td:nth-child(5) .Img{
+				background: url(img/n_shareIcn.png) -56px -26px no-repeat;
+			}
+			td:nth-child(6) .Img{
+				background: url(img/n_shareIcn.png) -387px -26px no-repeat;
+			}
+			td:nth-child(7) .Img{
+				background: url(img/n_shareIcn.png) -140px -26px no-repeat;
+			}
+			td:nth-child(8) .Img{
+				background: url(img/n_shareIcn.png) -84px -26px no-repeat;
+			}
+			td:nth-child(9) .Img{
+				background: url(img/n_shareIcn.png) -253px -26px no-repeat;
+			}
+			td:nth-child(10) .Img{
+				background: url(img/n_shareIcn.png) -305px -26px no-repeat;
+			}
+			td:nth-child(11) .Img{
+				background: url(img/n_shareIcn.png) -412px -26px no-repeat;
+			}
+			td:hover .Img{
+				background-position-y:0 ;
+			}
+			td{
+				position: relative;
+				width: 123px;
+				margin-top: 10px;
+			}
+			.txt{
+				position: absolute;
+				top:16px;
+				left: 35px;
+				
+			}
+			td a{
+				color: black;
+			}
+			.Txt{
+				line-height: 30px;
+				margin-left: 76px;
+				color: gray;
+				width: 1085px;
+			}
+			.pro,.next{
+				margin-left: 76px;
+				color: gray;
+			}
+			
+			.Txt:hover{
+				color: #FF6767;
+			}
+			.pro:hover{
+				color: #FF6767;
+			}
+			.next:hover{
+				color: #FF6767;
+			}
+			.text-center{
+				font-size: 18px;
+				color: #575757;
+			}
+			.text-center:hover{
+				color: #FF6767;
+			}
+			table{
+				position: relative;
+			}
+			.Td1:nth-child(1),.Td1:nth-child(2),.Td1:nth-child(3),.Td1:nth-child(4),.Td1:nth-child(5){
+				position: absolute;
+				top:-10px;
+				left: 15px;
+				/*background: red;*/
+				/*border: 1px solid blue;*/
+			}
+			.Td1:nth-child(6),.Td1:nth-child(7),.Td1:nth-child(8),.Td1:nth-child(9){
+				position: absolute;
+				top:-10px;
+				right:-124px;
+				/*border: 1px solid red;*/
+			}
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/syhead.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		
+	</head>
+	<body>
+		<!--页面头部分-->
+			<div class="shead">
+				<h1>思源   <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+				<input type="text" name="" id="" value=""  placeholder="  请输入鲜花的名称"/>
+				<a href=""><img class="soso" src="img/soso.jpg"/></a>
+			</div>
+			
+
+<!--导航目录 -->
+        <div class="daoh"> 
+            <ul > 
+                <li class="active"><a href="#">网站首页</a></li> 
+                <li><a href="#">全部鲜花</a></li> 
+                <li><a href="#">爱情鲜花</a></li> 
+                <li><a href="#">开业鲜花</a></li> 
+                <li><a href="#">话语大全</a></li> 
+                <li ><a href="###" class="advice">提出意见</a> </li>
+                <li><a href="###" class="Login">登录</a></li>
+                <li><a href="###" class="Register">注册</a></li>
+            </ul> 
+        </div>
+		
+		<!--<div  class="img-rounded" style="width: 100%;height: 400px; min-width:1200px;"/></div>-->
+		<div  style="width: 100%;min-width:1200px;margin-top: 20px;">
+			<div class="picture" style="margin: 0 auto;width: 1194px;position: relative;cursor: pointer;">
+				<p class="text-center" ></p>
+				<p style="position: absolute;display: inline-block;width: 82px;height: 34px;background: white;top: 44px;left: 78px;z-index: 2;"></p>
+				<table class="table" style="margin-bottom: 0;overflow: hidden;width: 1085px;margin: 0 auto;">
+					<tr>
+						 <td style="width: 130px;color: #666666;z-index: 3;">
+						 	<button class="btn btn-info btn-share" style="margin-left: 15px;width: 82px;">点击分享</button>
+						 </td>
+						<td style="width: 94px;padding-top: 16px;"class="Td1">
+							<a href="###"  >
+								<div class="Img"></div><span class="txt">微博</span>
+							</a>
+						</td>
+						<td style="padding-top: 16px;" class="Td1">
+							<a href="###">
+							<div class="Img"></div><span class="txt">复制网址</span>
+							</a>
+						</td>
+						<td style="padding-top: 16px;" class="Td1">
+							<a href="###">
+							<div class="Img"></div><span class="txt">腾讯微博</span>
+							</a>
+						</td>
+						<td style="padding-top: 16px;" class="Td1">
+							<a href="###">
+							<div class="Img"></div><span class="txt">新浪微博</span>
+							</a>
+						</td>
+						<td style="padding-top: 16px;" class="Td1">
+							<a href="###">
+							<div class="Img"></div><span class="txt">QQ空间</span>
+							</a>
+						</td>
+						<td style="padding-top: 16px;" class="Td1">
+							<a href="###">
+							<div class="Img"></div><span class="txt">开心网</span>
+							</a>
+						</td>
+						<td style="padding-top: 16px;" class="Td1">
+							<a href="###">
+							<div class="Img"></div><span class="txt">人人网</span>
+							</a>
+						</td>
+						<td style="padding-top: 16px;" class="Td1">
+							<a href="###">
+							<div class="Img"></div><span class="txt">豆瓣网</span>
+							</a>
+						</td>
+						
+					</tr>
+					
+				</table>
+				<p class="Txt">
+					可爱甜美，万宠公主——郁金香</br>
+郁金香（学名：Tulipa gesneriana），百合科郁金香属的草本植物，是土耳其、哈萨克斯坦、荷兰的国花。被称为世界花后。
+</p>
+</br>
+<p class="Txt">
+性感冷艳，气质女神——嘉兰
+</br>
+嘉兰百合，学名（Gloriosa superba L.），来源于拉丁文的“惊叹”“美丽”之意。是津巴布韦的国花。嘉兰花形奇特，花瓣向后反卷，花瓣边缘是波浪形，如燃烧的火焰。
+</p>
+</br>
+<p class="Txt">
+能力过人，傲骨女郎——依米花
+</br>
+依米花生长在非洲的戈壁滩上，只有一条主根，只有努力地向地下深处寻找养分。
+</br>
+依米花生长5年才能开一次花，第6年开花时，花期只有2天，随后花朵凋零，整个植株也死去。是生命极致的绽放。
+</br>
+</p>
+<p class="Txt" style="padding-top: 13px;">
+端庄秀丽，大家闺秀——牡丹花
+</br>
+牡丹花，中国特有的木本名贵花卉，有数千年的自然生长和1500多年的人工栽培历史，被拥戴为花中之王，有关文化和绘画作品很丰富。
+</br>
+				</p>
+		<p class="pro"></p>
+		<p class="next"></p>
+		
+		</div>
+		</div>
+		<!--公共底部-->
+	<div class="footer" >
+		<ul class="fsas">
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUop-fH9wMwHjgt.png"/>
+				<div><p>鲜花电商龙头</p><span>销量领先，权威认证龙头企业</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgkKmfvgUo3ozdiwEwJzgt.png"/>
+				<div><p>多年品牌，真实口碑</p><span>销量领先，好评率高达90%</span> </div></li>
+			<li><img src="img/AD0I46D4BBAEGAAggqmfvgUo34PFmwcwMDgn.png"/>
+				<div><p>客户实拍鲜花展示</p><span>敢秀敢拍敢展示的鲜花网</span></div> </li>
+			<li><img src="img/AD0I46D4BBAEGAAgg6mfvgUoyIeOgAEwODgn.png"/>
+				<div><p>24小时鲜花配送</p><span>全国连锁，同城极速送花</span></div> </li>
+		</ul>
+		<div class="bottom">
+			<h1>思源  <mark style="color: #D43F3A;background: none;font-size: 40px;">鲜花</mark> </h1>
+			<ul class="bsas">
+				<li>常用服务</li>
+				<li>付款条例</li>
+				<li>配送方式</li>
+				<li>问题查询</li>
+				<li>在线付款</li>
+				<li>易速快递</li>
+				<li>订单查询</li>
+				<li>货到付款</li>
+				<li>上门自提</li>
+			</ul>
+			<img src="img/QQ图片20170504220944.jpg"/>
+		</div>
+	</div>	
+		<!--提出意见部分-->
+		<!--蒙版效果 当点击 提供意见的时候   显示出来-->
+		<div class="Hide" style="z-index: 10;display: none;" >
+			<div class="Hide1">
+				<div class="hide1" style="width: 439px;height: 290px;background:#FF6767;">
+				<p  style="text-align: center;color: black;font-size: 20px;margin-top:4px;margin-bottom:4px;">请在下方留下您的宝贵意见</p>
+				<div style="position: relative;cursor: pointer;">
+				 <textarea name="textarea" id="TextArea1" cols="70" rows="10" onkeyup="words_deal();" style="width: 439px;" ></textarea>
+                  <span id="textCount">0/400</span><br /> 
+                  <p style="color: #666666;position: absolute;top:2px;left: 2px;" class="tishi">输入您的意见...</p>
+				</div>
+				<button class="btn btn-info btn2" style="margin-left: 179px;width: 82px;margin-top: 4px;">提交</button>
+			</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js">
+    	
+    </script>
+	<script type="text/javascript">
+	    var shuzu1=JSON.parse(localStorage.getItem("shuzu1"));
+	    var shuzu2=JSON.parse(localStorage.getItem("shuzu2"));
+	   console.log(shuzu1);
+	   console.log(shuzu2);
+	   
+	   $(".text-center").text(shuzu1[0]);
+	   if(shuzu1[1]=="null"){//没有上一个标题
+	   	  $(".pro").hide();
+	   	  $(".next").text("下一篇："+shuzu1[2]);
+	   }else if(shuzu1[2]=="null"){//没有下一个标题
+	   	  $(".next").hide();
+	   	  $(".pro").text("上一篇："+shuzu1[1]);
+	   }else{
+	   	  $(".pro").text("上一篇："+shuzu1[1]);
+	      $(".next").text("下一篇："+shuzu1[2]);
+	   }
+	   //点击分享按钮
+	   var num=0;
+	   $(".btn-share").click(function(){
+	   	num++;
+	   	if(num%2!=0){
+//	   		console.log("aa");
+	   	$(".btn-share").attr("disabled","disabled");
+	   	
+	   	 
+	   	$(".Td1:nth-child(2)").animate({
+	   	 	"left":"130px",
+	   	},function(){
+	   		$(".Td1:nth-child(3)").animate({
+	   			"left":"224px",
+	   		},function(){
+	   			$(".Td1:nth-child(4)").animate({
+	   				"left":"347px",
+	   			},function(){
+	   				$(".Td1:nth-child(5)").animate({
+	   					"left":"470px",
+	   				},function(){
+	   					$(".btn-info").text("收起");
+	   					$(".btn-info").attr("disabled",false);
+	   					
+	   				});
+//	   				
+	   			})
+	   		});
+	   	});
+	   	
+	   		$(".Td1:nth-child(9)").animate({
+	   	 	"right":"0",
+	   	},function(){
+	   		$(".Td1:nth-child(8)").animate({
+	   			"right":"123px",
+	   		},function(){
+	   			$(".Td1:nth-child(7)").animate({
+	   				"right":"246px",
+	   			},function(){
+	   				$(".Td1:nth-child(6)").animate({
+	   					"right":"369px",
+	   				} );
+	   			});
+	   		})
+	   	})
+	   	}else if(num%2==0){
+//	   		console.log("aa");
+	   	$(".btn-share").attr("disabled","disabled");
+	   	 
+	   	$(".Td1:nth-child(5)").animate({
+	   	 	"left":"15px",
+	   	},function(){
+	   		$(".Td1:nth-child(4)").animate({
+	   			"left":"15px",
+	   		},function(){
+	   			$(".Td1:nth-child(3)").animate({
+	   				"left":"15px",
+	   			},function(){
+	   				$(".Td1:nth-child(2)").animate({
+	   					"left":"15px",
+	   				},function(){
+	   					$(".btn-share").text("点击分享");
+	   					$(".btn-share").attr("disabled",false);
+	   				});
+//	   				
+                    
+	   			})
+	   		});
+	   	});
+	   	
+	   		$(".Td1:nth-child(6)").animate({
+	   	 	"right":"-124px",
+	   	},function(){
+	   		$(".Td1:nth-child(7)").animate({
+	   			"right":"-124px",
+	   		},function(){
+	   			$(".Td1:nth-child(8)").animate({
+	   				"right":"-124px",
+	   			},function(){
+	   				$(".Td1:nth-child(9)").animate({
+	   					"right":"-124px",
+	   				} );
+	   			});
+	   		})
+	   	})
+	   	}
+	   	
+	   });
+	   $(".next").click(function(){
+	   	  judge(".next");
+	   });
+	   $(".pro").click(function(){
+	   	 judge(".pro");
+	   });
+//	   
+      function judge(txt){
+      	 for(var i=0;i<shuzu2[0].length;i++){
+	   	  	if($(txt).text().substring(4,$(txt).text().length)==shuzu2[0][i]){
+	   	  		console.log(i);
+	   	  		if(i==0||i==7||i==14||i==21){
+	   	  			//没有上一个标题
+	   	  		$(".next").show();
+	   	        $(".pro").hide();
+	   	        $(".next").text("下一篇："+shuzu2[0][i+1]);
+	   	         $(".text-center").text(shuzu2[0][i]);
+	   	  		}else if(i==6||i==13||i==20||i==27){
+	   	  		//没有下一个标题
+	   	      $(".next").hide();
+	   	      $(".pro").show();
+	   	      $(".pro").text("上一篇："+shuzu2[0][i-1]);
+	   	       $(".text-center").text(shuzu2[0][i]);
+	   	  	}else{
+	   	  		 $(".pro").show();
+	   	  		 $(".next").show();
+	   	  		$(".pro").text("上一篇："+shuzu2[0][i-1]);
+	            $(".next").text("下一篇："+shuzu2[0][i+1]);
+	             $(".text-center").text(shuzu2[0][i]);
+	   	  	}
+	   	  	  i=shuzu2[0].length;//使for循环停止
+	   	  	}else{
+	   	  		
+	   	  	}
+	   	  }
+      }
+      //加了此句之后 蒙版高度不够的bug不出现 
+//    console.log($("body").height());
+      $(".Hide").css({
+	  	"height":$("body").height()+"px",
+	  	
+	  });
+	</script>
+</html>
